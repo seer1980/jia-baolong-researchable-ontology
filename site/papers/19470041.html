@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Phase Transition from Nothing to Something: From Primordial Soup to Particle Zoo in Four Parameters · Jia Baolong Absolute Truth Theory</title>
+  <meta name="description" content="Emergence of Particle-like Structures in Bounded-Rate Graph Dynamics Abstract We investigate whether particle-like entities—defined as stable, propagating, and interaction-capable structures—can emerge spontaneously in a minimal dynamical system with no prede…">
+  <link rel="canonical" href="https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/papers/19470041.html">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <script>window.MathJax = {tex: {inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['\\[', '\\]'], ['$$', '$$']]}, options: {skipHtmlTags: ['script','noscript','style','textarea','pre','code']}};</script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script defer src="../assets/search.js"></script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ScholarlyArticle", "name": "The Phase Transition from Nothing to Something: From Primordial Soup to Particle Zoo in Four Parameters", "headline": "The Phase Transition from Nothing to Something: From Primordial Soup to Particle Zoo in Four Parameters", "description": "Emergence of Particle-like Structures in Bounded-Rate Graph Dynamics Abstract We investigate whether particle-like entities—defined as stable, propagating, and interaction-capable structures—can emerge spontaneously in a minimal dynamical system with no prede…", "url": "https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/papers/19470041.html", "author": {"@type": "Person", "name": "Jia Baolong"}, "datePublished": "2026-04-08", "sameAs": "https://doi.org/10.5281/zenodo.19470041"}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../index.html">贾宝龙绝对真理理论</a>
+      <nav aria-label="主导航"><a href="../index.html">首页</a><a href="../guide/index.html">理论导读</a><a href="index.html">论文</a><a href="../search.html">搜索</a></nav>
+    </div>
+  </header>
+  <main class="page-shell">
+    <div class="breadcrumbs"><a href="../index.html">首页</a> <span>›</span> <span>paper</span></div>
+    <article class="document">
+      <h1>Emergence of Particle-like Structures in Bounded-Rate Graph Dynamics</h1>
+      <div class="page-meta"><span>Jia Baolong</span> · <span>2026-04-08</span> · <a href="https://zenodo.org/records/19470041">Zenodo record</a> · <a href="https://doi.org/10.5281/zenodo.19470041">DOI</a></div>
+      <div class="document-body"><h2 id="abstract">Abstract</h2>
+<p>We investigate whether particle-like entities—defined as stable, propagating, and interaction-capable structures—can emerge spontaneously in a minimal dynamical system with no predefined geometry. We study a bounded-rate stochastic graph process (BRGP), where nodes and edges evolve under local rules with finite update constraints. We provide operational definitions of particle-like structures, propose measurable criteria for detection, and outline both theoretical arguments and computational experiments suggesting that such structures are not only possible but generically expected under broad conditions.</p>
+<hr>
+<h2 id="1-introduction">1. Introduction</h2>
+<p>A central question in complex systems and theoretical physics is whether "particles" are fundamental, or whether they can emerge from deeper dynamical substrates. In lattice models and cellular automata, localized propagating structures (e.g., gliders) are well-known. However, these systems typically rely on fixed spatial grids.</p>
+<p>We ask a stronger question:</p>
+<blockquote>
+<p>Can particle-like structures emerge in a system with no fixed geometry, only relational dynamics?</p>
+</blockquote>
+<p>To address this, we study bounded-rate graph dynamics.</p>
+<hr>
+<h2 id="2-model-bounded-rate-graph-process-brgp">2. Model: Bounded-Rate Graph Process (BRGP)</h2>
+<p>Let G_t = (V_t, E_t) be a finite directed graph.</p>
+<p>At each discrete time step, the system evolves via:</p>
+<ol>
+<li>Local selection rule S acting on neighborhoods</li>
+<li>Edge/node updates subject to bounds:
+   - Node creation ≤ v1
+   - Node deletion ≤ v2
+   - Edge creation per node ≤ v3
+   - Edge deletion per node ≤ v4</li>
+</ol>
+<p>All updates are local (radius r).</p>
+<p>We assume stochasticity in conflict resolution.</p>
+<hr>
+<h2 id="3-definition-of-particle-like-structures">3. Definition of Particle-like Structures</h2>
+<p>We define a particle-like structure P as a subgraph satisfying:</p>
+<h3 id="1-persistence">(1) Persistence</h3>
+<p>P remains isomorphic to itself over time with high probability:</p>
+<p>P ⊆ G_t → P ⊆ G_{t+Δt}</p>
+<h3 id="2-localization">(2) Localization</h3>
+<p>P occupies a bounded region relative to graph distance.</p>
+<h3 id="3-propagation">(3) Propagation</h3>
+<p>There exists a trajectory such that the "center" of P moves across the graph over time.</p>
+<h3 id="4-stability-under-perturbation">(4) Stability under perturbation</h3>
+<p>Small local perturbations do not destroy P.</p>
+<hr>
+<h2 id="4-mechanism-of-emergence">4. Mechanism of Emergence</h2>
+<p>We propose that particle-like structures arise due to:</p>
+<h3 id="41-locality-constraint">4.1 Locality constraint</h3>
+<p>Information propagates at finite speed → enables coherent motion.</p>
+<h3 id="42-nonlinearity">4.2 Nonlinearity</h3>
+<p>Most structures decay → only self-consistent ones survive.</p>
+<h3 id="43-self-repair">4.3 Self-repair</h3>
+<p>Certain motifs encode their own reconstruction rules.</p>
+<hr>
+<h2 id="5-theoretical-claim-informal">5. Theoretical Claim (Informal)</h2>
+<p><strong>Claim:</strong> In BRGP with v3 &gt; v4 and sufficient locality, there exists a non-zero probability of emergence of persistent propagating subgraphs.</p>
+<p>Sketch:
+- Cycles are persistent (low deletion probability)
+- Local update rules can reconstruct missing edges
+- Propagation occurs when reconstruction is biased spatially</p>
+<hr>
+<h2 id="6-simulation-protocol">6. Simulation Protocol</h2>
+<p>To test emergence:</p>
+<ol>
+<li>Initialize random graph G0</li>
+<li>Run for T &gt;&gt; 1 steps</li>
+<li>Detect subgraphs via pattern matching</li>
+<li>Track:
+   - Lifetime
+   - Displacement
+   - Collision behavior</li>
+</ol>
+<p>Metrics:
+- Lifetime distribution
+- Velocity spectrum
+- Interaction outcomes</p>
+<hr>
+<h2 id="7-expected-results">7. Expected Results</h2>
+<p>If particle-like structures emerge, we expect:</p>
+<ul>
+<li>Discrete set of stable motifs</li>
+<li>Non-zero velocity clusters</li>
+<li>Repeatable collision patterns</li>
+</ul>
+<hr>
+<h2 id="8-discussion">8. Discussion</h2>
+<p>This framework suggests particles may be dynamical invariants rather than primitives. The absence of fixed geometry makes this closer to pre-geometric physics models.</p>
+<hr>
+<h2 id="9-limitations">9. Limitations</h2>
+<ul>
+<li>No rigorous proof yet</li>
+<li>Strong dependence on rule choice</li>
+<li>Detection is computationally nontrivial</li>
+</ul>
+<hr>
+<h2 id="10-conclusion">10. Conclusion</h2>
+<p>Particle-like structures are expected to emerge in bounded-rate graph systems under general conditions. Establishing this rigorously and empirically is a promising research direction bridging complex systems and fundamental physics.</p>
+<hr>
+<h2 id="future-work">Future Work</h2>
+<ul>
+<li>Formal proof of existence</li>
+<li>Large-scale simulations</li>
+<li>Classification of particle types</li>
+</ul></div>
+    </article>
+  </main>
+  <footer class="site-footer"><a href="../index.html">贾宝龙绝对真理理论</a><span>Markdown 全文 · HTML 网站</span></footer>
+</body>
+</html>

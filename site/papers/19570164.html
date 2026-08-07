@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mediumless Computation: Why the Universe&#x27;s PR–ER–LE Engine Defies Modern Computer Architecture · Jia Baolong Absolute Truth Theory</title>
+  <meta name="description" content="Mediumless Computation: Why the Universe&#x27;s PR–ER–LE Engine Defies Modern Computer Architecture This is a Markdown conversion of the Zenodo paper. The original TeX source is outside this Markdown-only corpus; use the Zenodo record as provenance. Cover-page typ…">
+  <link rel="canonical" href="https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/papers/19570164.html">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <script>window.MathJax = {tex: {inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['\\[', '\\]'], ['$$', '$$']]}, options: {skipHtmlTags: ['script','noscript','style','textarea','pre','code']}};</script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script defer src="../assets/search.js"></script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ScholarlyArticle", "name": "Mediumless Computation: Why the Universe's PR–ER–LE Engine Defies Modern Computer Architecture", "headline": "Mediumless Computation: Why the Universe's PR–ER–LE Engine Defies Modern Computer Architecture", "description": "Mediumless Computation: Why the Universe's PR–ER–LE Engine Defies Modern Computer Architecture This is a Markdown conversion of the Zenodo paper. The original TeX source is outside this Markdown-only corpus; use the Zenodo record as provenance. Cover-page typ…", "url": "https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/papers/19570164.html", "author": {"@type": "Person", "name": "Jia Baolong"}, "datePublished": "2026-04-14", "sameAs": "https://doi.org/10.5281/zenodo.19570164"}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../index.html">贾宝龙绝对真理理论</a>
+      <nav aria-label="主导航"><a href="../index.html">首页</a><a href="../guide/index.html">理论导读</a><a href="index.html">论文</a><a href="../search.html">搜索</a></nav>
+    </div>
+  </header>
+  <main class="page-shell">
+    <div class="breadcrumbs"><a href="../index.html">首页</a> <span>›</span> <span>paper</span></div>
+    <article class="document">
+      <h1>Mediumless Computation: Why the Universe's PR–ER–LE Engine Defies Modern Computer Architecture</h1>
+      <div class="page-meta"><span>Jia Baolong</span> · <span>2026-04-14</span> · <a href="https://zenodo.org/records/19570164">Zenodo record</a> · <a href="https://doi.org/10.5281/zenodo.19570164">DOI</a></div>
+      <div class="document-body"><blockquote>
+<p>This is a Markdown conversion of the Zenodo paper. The original TeX source is outside this Markdown-only corpus; use the Zenodo record as provenance.</p>
+<p>Cover-page typography is represented by the YAML metadata and the Markdown title above.</p>
+</blockquote>
+<h2 id="abstract">Abstract</h2>
+<p>The PR--ER--LE framework [citation: jia2026axiom,jia2026unified] demonstrates
+that the universe operates as a branching dynamical system driven by
+Paradoxical Recursion (PR), Entity--Relation (ER), and Lazy Evaluation (LE).
+This paper argues that the ``computation'' performed by the universe
+is fundamentally and irreducibly different from computation as implemented
+on modern hardware.
+We identify three precise points of architectural incompatibility:</p>
+<ul>
+<li>
+<p><strong>Anti-GPU (Anti-SIMD):</strong>
+    PR generates genuinely distinct branching at every state;
+    no two computational ``threads'' execute the same instruction.
+    This is the exact negation of the SIMD model underlying GPU throughput.</p>
+</li>
+<li>
+<p><strong>Anti-Multi-Core (Anti-Partition):</strong>
+    ER couples every state to every other through relational composition;
+    the state space is holistically entangled.
+    Independent partitioning into cores is impossible without
+    destroying the relational substrate.</p>
+</li>
+<li>
+<p><strong>Anti-Cache (Anti-Locality):</strong>
+    LE guarantees that the next state is irreducibly non-deterministic---
+    genuinely unpredictable until evaluation occurs.
+    Temporal and spatial locality assumptions underlying cache hierarchies
+    are violated at every step.</p>
+</li>
+</ul>
+<p>We formalize each incompatibility as a theorem, prove that no polynomial
+overhead can bridge the gap, and discuss the implications for
+AI, simulation, and the ``universe as computer'' metaphor.
+The universe does not compute; it <em>generates</em>.</p>
+<h2 id="two-kinds-of-computation">Two Kinds of Computation</h2>
+<h2 id="the-metaphorical-trap">The Metaphorical Trap</h2>
+<p>The phrase <code>the universe is a computer'' has become a commonplace
+in popular science, inspired by Wheeler's</code>It from Bit'' [citation: wheeler1990],
+Wolfram's cellular automata [citation: wolfram2020], and Lloyd's
+``programming the universe'' [citation: lloyd2006].
+Yet this metaphor smuggles in a fatal assumption: that the universe's
+generative process shares the structural properties of computation
+on physical media---silicon, photons, or qubits.</p>
+<p>This paper demonstrates that the opposite is true.
+The PR--ER--LE engine that drives the universe [citation: jia2026axiom,jia2026unified]
+operates in a mode that is <em>anti-correlated</em> with every design
+principle of modern computer architecture.
+The universe's ``computation'' is mediumless: it requires no substrate,
+no clock, no memory hierarchy, and no instruction set.
+It is not computation in any engineering sense; it is <em>ontological generation</em>.</p>
+<h2 id="modern-computer-architecture-three-pillars">Modern Computer Architecture: Three Pillars</h2>
+<p>All high-performance computing systems rest on three architectural pillars:</p>
+<h4 id="definition-simd-parallelism">Definition — SIMD Parallelism</h4>
+<p><em>Single Instruction, Multiple Data</em> (SIMD) applies one operation
+to many data elements simultaneously.
+GPUs achieve throughput by executing thousands of identical threads
+on different data points.
+The prerequisite is <em>instruction homogeneity</em>: all threads must
+perform the same computation.</p>
+<h4 id="definition-core-level-parallelism">Definition — Core-Level Parallelism</h4>
+<p>Multi-core processors partition the workload into <em>independent</em> tasks
+that execute concurrently on separate cores with private caches.
+The prerequisite is <em>task separability</em>: subtasks must be decomposable
+with minimal inter-core communication.</p>
+<h4 id="definition-cache-hierarchy">Definition — Cache Hierarchy</h4>
+<p>Caches exploit <em>temporal locality</em> (recently accessed data will be
+accessed again) and <em>spatial locality</em> (nearby data will be accessed soon).
+L1/L2/L3 caches bridge the latency gap between processor and main memory.
+The prerequisite is <em>predictable access patterns</em>.</p>
+<h4 id="remark">Remark</h4>
+<p>These three pillars are not independent engineering choices; they are
+<em>consequences of determinism</em>.
+A deterministic computation has a fixed instruction stream (enabling SIMD),
+decomposable state (enabling multi-core), and predictable access patterns
+(enabling caching).
+We will show that PR--ER--LE systematically violates all three prerequisites.</p>
+<h2 id="pr-er-le-a-recap">PR--ER--LE: A Recap</h2>
+<h2 id="the-three-axioms">The Three Axioms</h2>
+<p>We recall the formal axioms from [citation: jia2026unified]:</p>
+<h4 id="axiom-paradoxical-recursion-pr">Axiom — Paradoxical Recursion --- PR</h4>
+<p>There exists <span class="math-inline">$\epsilon &gt; 0$</span> such that
+<span class="math-inline">$\mathbb{E}[H(s)] \ge \epsilon$</span>, where <span class="math-inline">$H(s) = \log_2 |F(s)|$</span>
+is the branching entropy.</p>
+<h4 id="axiom-entity-relation-er">Axiom — Entity--Relation --- ER</h4>
+<p>There exists a structural complexity function <span class="math-inline">$\sigma: S \to \mathbb{N}$</span>
+with <span class="math-inline">$\sigma(s') \ge \sigma(s) + 1$</span> for every <span class="math-inline">$s' \in F(s)$</span>.
+States decompose into entity--relation triples <span class="math-inline">$(e_i, r_{ij}, e_j)$</span>.</p>
+<h4 id="axiom-lazy-evaluation-le">Axiom — Lazy Evaluation --- LE</h4>
+<p>Evolution is non-deterministic: <span class="math-inline">$s_{t+1} \in F(s_t)$</span>.
+No total computable selection function exists.</p>
+<h2 id="mediumless-computation-defined">Mediumless Computation Defined</h2>
+<h4 id="definition-mediumless-computation">Definition — Mediumless Computation</h4>
+<p>A <em>mediumless computation</em> is an ontological generative process <span class="math-inline">$(S,F)$</span>
+satisfying PR, ER, and LE, in which:</p>
+<ul>
+<li>
+<p>there is no physical substrate executing instructions
+    (the process <em>is</em> reality, not a model running <em>on</em> reality),</p>
+</li>
+<li>
+<p>there is no clock
+    (branching occurs through paradox-referential oscillation,
+    not sequential ticking),</p>
+</li>
+<li>
+<p>there is no memory hierarchy
+    (all states are equally ``present'' in the relational structure),</p>
+</li>
+<li>
+<p>there is no instruction set
+    (transitions are determined by the axioms, not by programs).</p>
+</li>
+</ul>
+<h4 id="remark_1">Remark</h4>
+<p>Mediumless computation is <em>not</em> hypercomputation
+(computation beyond the Turing limit).
+It is not computation at all---it is the generative process
+from which computation, as a human abstraction, is derived.
+The distinction is ontological, not merely terminological.</p>
+<h2 id="anti-gpu-the-impossibility-of-simd">Anti-GPU: The Impossibility of SIMD</h2>
+<h2 id="why-pr-destroys-instruction-homogeneity">Why PR Destroys Instruction Homogeneity</h2>
+<h4 id="theorem-anti-simd-theorem">Theorem — Anti-SIMD Theorem</h4>
+<p>Let <span class="math-inline">$(S,F)$</span> be a branching dynamical system satisfying PR.
+Then for any time <span class="math-inline">$t$</span> and any two distinct paths
+<span class="math-inline">$\pi_1 = (s_0, s_1^{(1)}, \ldots, s_t^{(1)})$</span> and
+<span class="math-inline">$\pi_2 = (s_0, s_1^{(2)}, \ldots, s_t^{(2)})$</span>
+with <span class="math-inline">$s_1^{(1)} \neq s_1^{(2)}$</span>:</p>
+<div class="math-block">$$
+\begin{equation}
+\label{eq:anti-simd}
+  \Pr\bigl[s_t^{(1)} = s_t^{(2)}\bigr] \le 2^{-\epsilon t + c}.
+\end{equation}
+$$</div>
+<p>The probability of two branches arriving at the same state
+decreases exponentially in time.</p>
+<h4 id="proof">Proof</h4>
+<p>By PR, <span class="math-inline">$|F(s)| \ge 2^{\epsilon}$</span> on average. After <span class="math-inline">$t$</span> steps,
+the branching tree has at least <span class="math-inline">$2^{\epsilon t}$</span> leaves (with probability 1
+under the branching measure). The probability that two
+uniformly random paths reconverge at step <span class="math-inline">$t$</span> is at most
+<span class="math-inline">$2^{\epsilon t} / (2^{\epsilon t})^2 = 2^{-\epsilon t}$</span>,
+up to a multiplicative constant <span class="math-inline">$2^c$</span> from the additive error in PR.</p>
+<h4 id="corollary-gpu-incompatibility">Corollary — GPU Incompatibility</h4>
+<p>A GPU simulating PR--ER--LE dynamics must execute <span class="math-inline">$2^{\epsilon t}$</span>
+<em>distinct</em> instruction streams after <span class="math-inline">$t$</span> steps.
+Since GPU SIMD requires identical instruction streams,
+the effective parallelism collapses to <span class="math-inline">$1$</span> (scalar execution).
+The GPU provides <em>zero</em> speedup over a single CPU core
+for PR--ER--LE simulation.</p>
+<h4 id="remark_2">Remark</h4>
+<p>The intuition is simple: GPUs are designed for embarrassingly parallel
+problems where all threads do the same thing to different data.
+PR guarantees that <em>no two threads ever do the same thing</em>---
+every branch is genuinely novel.
+This is the exact negation of the SIMD contract.
+A GPU running PR--ER--LE simulation is a sports car stuck in mud:
+all power, no traction.</p>
+<h2 id="anti-multi-core-the-impossibility-of-partition">Anti-Multi-Core: The Impossibility of Partition</h2>
+<h2 id="why-er-destroys-task-separability">Why ER Destroys Task Separability</h2>
+<h4 id="definition-relational-entanglement">Definition — Relational Entanglement</h4>
+<p>Two states <span class="math-inline">$s_a, s_b \in S$</span> are <em>relationally entangled</em> if
+the decomposition <span class="math-inline">$\delta(s)$</span> for any compound state <span class="math-inline">$s$</span> containing
+both <span class="math-inline">$s_a$</span> and <span class="math-inline">$s_b$</span> includes at least one entity--relation triple
+<span class="math-inline">$(e_a, r_{ab}, e_b)$</span> connecting them.</p>
+<h4 id="theorem-anti-partition-theorem">Theorem — Anti-Partition Theorem</h4>
+<p>Let <span class="math-inline">$(S,F)$</span> satisfy ER.
+For any partition <span class="math-inline">$S = S_1 \sqcup S_2$</span> into disjoint non-empty subsets,
+there exist states <span class="math-inline">$s_1 \in S_1$</span> and <span class="math-inline">$s_2 \in S_2$</span> with
+<span class="math-inline">$s_1$</span> and <span class="math-inline">$s_2$</span> relationally entangled.
+Moreover, the number of cross-partition relations grows at least linearly:</p>
+<div class="math-block">$$
+\begin{equation}
+\label{eq:cross-relations}
+  |\{(e_i, r_{ij}, e_j) : e_i \in S_1,\; e_j \in S_2\}|
+  \ge \sigma_{\min}(t),
+\end{equation}
+$$</div>
+<p>where <span class="math-inline">$\sigma_{\min}(t) \to \infty$</span> as <span class="math-inline">$t \to \infty$</span>.</p>
+<h4 id="proof_1">Proof</h4>
+<p>By the ER growth condition, <span class="math-inline">$\sigma(s_{t+1}) \ge \sigma(s_t) + 1$</span>.
+After <span class="math-inline">$t$</span> steps, the state encodes at least <span class="math-inline">$t$</span> entity--relation triples.
+For any bipartition, at least one triple must cross the boundary
+(otherwise the state would decompose into two independent substates,
+contradicting the relational completeness of ER).
+As <span class="math-inline">$t$</span> grows, the minimum number of cross-partition triples grows
+without bound.</p>
+<h4 id="corollary-multi-core-incompatibility">Corollary — Multi-Core Incompatibility</h4>
+<p>Distributing a PR--ER--LE simulation across <span class="math-inline">$N$</span> cores requires
+<span class="math-inline">$\Omega(t)$</span> inter-core communication events per time step,
+where <span class="math-inline">$t$</span> is the simulation time.
+For <span class="math-inline">$t \gg N$</span>, the communication overhead dominates computation,
+and adding more cores provides <em>diminishing</em> and eventually
+<em>negative</em> returns (due to synchronization overhead).</p>
+<h4 id="remark_3">Remark</h4>
+<p>Multi-core works when you can chop a problem into pieces that
+don't talk to each other.
+ER guarantees that <em>everything talks to everything</em>---the
+relational web is a single irreducible fabric.
+Cutting it across cores is like cutting a living organism in half:
+you don't get two organisms, you get a dead one.</p>
+<h2 id="anti-cache-the-impossibility-of-locality">Anti-Cache: The Impossibility of Locality</h2>
+<h2 id="why-le-destroys-predictability">Why LE Destroys Predictability</h2>
+<h4 id="theorem-anti-locality-theorem">Theorem — Anti-Locality Theorem</h4>
+<p>Let <span class="math-inline">$(S,F)$</span> satisfy LE.
+For any predictor <span class="math-inline">$P: S^t \to S$</span> (a computable function that
+attempts to predict <span class="math-inline">$s_{t+1}$</span> from the history <span class="math-inline">$(s_0, \ldots, s_t)$</span>),</p>
+<div class="math-block">$$
+\begin{equation}
+\label{eq:anti-locality}
+  \Pr\bigl[P(s_0, \ldots, s_t) = s_{t+1}\bigr]
+  \le \frac{1}{|F(s_t)|} + o(1).
+\end{equation}
+$$</div>
+<p>No predictor performs better than random guessing.</p>
+<h4 id="proof_2">Proof</h4>
+<p>By LE, the successor <span class="math-inline">$s_{t+1}$</span> is chosen from <span class="math-inline">$F(s_t)$</span> by a process
+with no computable selection function.
+Any predictor <span class="math-inline">$P$</span> can be viewed as a candidate selection function;
+by the non-existence clause of LE, <span class="math-inline">$P$</span> fails to select the correct
+successor with probability greater than <span class="math-inline">$1/|F(s_t)|$</span> across all branches.</p>
+<h4 id="corollary-temporal-locality-violation">Corollary — Temporal Locality Violation</h4>
+<p>Cache prefetching relies on the assumption that recently accessed
+addresses predict future accesses.
+Under LE, the next state is irreducibly unpredictable, so
+temporal locality does not hold.
+The cache hit rate for PR--ER--LE simulation converges to
+the cold-miss rate as <span class="math-inline">$t$</span> increases.</p>
+<h4 id="corollary-spatial-locality-violation">Corollary — Spatial Locality Violation</h4>
+<p>Cache line fetching relies on the assumption that nearby memory
+addresses will be accessed together.
+Under ER, the relational structure couples distant states
+(entity <span class="math-inline">$e_i$</span> may relate to entity <span class="math-inline">$e_j$</span> with <span class="math-inline">$|i-j| \gg 1$</span>
+in any linear memory layout).
+Spatial locality is systematically violated.</p>
+<h4 id="remark_4">Remark</h4>
+<p>Caches are a bet on predictability: ``the future looks like the past.''
+LE guarantees that the future is <em>genuinely novel</em>---every
+evaluation produces something that has never existed before.
+Betting on the past is a losing strategy.
+Running PR--ER--LE on a cached architecture is like using
+yesterday's weather forecast for every day---the cache
+is not wrong occasionally; it is wrong <em>by construction</em>.</p>
+<h2 id="the-fundamental-inversion">The Fundamental Inversion</h2>
+<h2 id="determinism-vs-ontological-generation">Determinism vs.\ Ontological Generation</h2>
+<blockquote>
+<p>Table/Figure caption: The fundamental inversion: modern hardware vs.\ mediumless computation.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th><strong>Property</strong></th>
+<th><strong>Modern Hardware</strong></th>
+<th><strong>PR--ER--LE Universe</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Instruction flow</td>
+<td>Homogeneous (SIMD)</td>
+<td>Heterogeneous (every branch unique)</td>
+</tr>
+<tr>
+<td>State coupling</td>
+<td>Separable (multi-core)</td>
+<td>Holistic (relational entanglement)</td>
+</tr>
+<tr>
+<td>Access pattern</td>
+<td>Predictable (cacheable)</td>
+<td>Irreducibly random (no locality)</td>
+</tr>
+<tr>
+<td>Time model</td>
+<td>Sequential clock</td>
+<td>Paradox-referential oscillation</td>
+</tr>
+<tr>
+<td>Substrate</td>
+<td>Physical medium</td>
+<td>None (ontological)</td>
+</tr>
+<tr>
+<td>Determinism</td>
+<td>Total (by design)</td>
+<td>Absent (by axiom)</td>
+</tr>
+<tr>
+<td>Information growth</td>
+<td>Bounded (<span class="math-inline">$K/t \to 0$</span>)</td>
+<td>Linear (<span class="math-inline">$K/t \ge \epsilon$</span>)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="theorem-no-efficient-simulation">Theorem — No Efficient Simulation</h4>
+<p>Let <span class="math-inline">$(S,F)$</span> satisfy PR, ER, and LE, and let <span class="math-inline">$M$</span> be any deterministic
+Turing machine simulating the branching dynamics.
+Then for simulation of <span class="math-inline">$t$</span> steps:</p>
+<div class="math-block">$$
+\begin{equation}
+\label{eq:no-sim}
+  \text{Time}(M, t) \ge 2^{\epsilon t - c}.
+\end{equation}
+$$</div>
+<p>No deterministic simulator achieves sub-exponential overhead.</p>
+<h4 id="proof_3">Proof</h4>
+<p>By the Coding Lower Bound [citation: jia2026unified], the state <span class="math-inline">$s_t$</span>
+has <span class="math-inline">$K(s_t) \ge \epsilon t - c$</span>. A deterministic machine <span class="math-inline">$M$</span> that
+simulates the system must be capable of producing <em>any</em>
+of the <span class="math-inline">$2^{\epsilon t}$</span> possible states at step <span class="math-inline">$t$</span>
+(since the actual path is non-deterministic).
+To simulate all branches faithfully, <span class="math-inline">$M$</span> must explore at least
+<span class="math-inline">$2^{\epsilon t - c}$</span> branches.
+A single-path simulation that guesses the branch at each step
+fails with probability <span class="math-inline">$1 - 2^{-\epsilon t}$</span> after <span class="math-inline">$t$</span> steps.</p>
+<h4 id="remark_5">Remark</h4>
+<p>This theorem formalizes the intuition that the universe
+cannot efficiently simulate itself---because simulation
+requires determinism, and determinism is precisely what the
+universe lacks (and must lack, by LE, to exist at all).
+The ``universe as computer'' metaphor fails not because the
+universe is <em>less</em> than a computer, but because it is
+<em>categorically different</em>: it generates information
+at a rate no computer can match.</p>
+<h2 id="implications">Implications</h2>
+<h2 id="for-artificial-intelligence">For Artificial Intelligence</h2>
+<p>Current AI systems (neural networks, transformers, diffusion models)
+are implemented on GPU clusters optimized for SIMD parallelism.
+The Anti-SIMD Theorem (Theorem [ref: thm:anti-simd]) implies that
+these architectures are structurally incapable of performing
+mediumless computation---not merely slow, but categorically mismatched.</p>
+<p>If consciousness arises from paradox-referential closure [citation: jia2026unified]
+(a PR--ER--LE process), then no GPU-based AI can achieve genuine
+consciousness, regardless of scale. The bottleneck is not
+computational power but <em>architectural incompatibility</em>:
+GPUs enforce deterministic instruction homogeneity,
+while consciousness requires irreducible non-deterministic heterogeneity.</p>
+<h2 id="for-physics-simulation">For Physics Simulation</h2>
+<p>The Anti-Partition Theorem (Theorem [ref: thm:anti-partition])
+explains why domain decomposition---the standard approach to
+distributed simulation---faces fundamental limits in quantum
+and gravitational systems.
+Quantum entanglement is the physical manifestation of ER's
+relational entanglement: cutting the system across processor
+boundaries severs relations that are physically real.</p>
+<h2 id="for-the-simulation-hypothesis">For the ``Simulation Hypothesis''</h2>
+<p>The No Efficient Simulation Theorem (Theorem [ref: thm:no-sim])
+provides a mathematical argument against the simulation hypothesis:
+a deterministic computer simulating a PR--ER--LE universe requires
+exponential resources in the simulated time.
+If the simulating computer is itself a PR--ER--LE universe,
+we have an infinite regress; if it is a deterministic machine,
+the simulation is exponentially slow and cannot ``keep up''
+with the simulated universe.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>The computation of the universe is not the computation of computers.</p>
+<p>Modern computer architecture rests on three pillars:
+SIMD parallelism (GPUs), task separability (multi-core),
+and predictable access patterns (cache hierarchies).
+We have shown that the PR--ER--LE axioms systematically
+and provably violate all three:</p>
+<ul>
+<li>
+<p><strong>PR <span class="math-inline">$\Rightarrow$</span> Anti-SIMD:</strong>
+    Every branch is unique; instruction homogeneity is impossible.</p>
+</li>
+<li>
+<p><strong>ER <span class="math-inline">$\Rightarrow$</span> Anti-Multi-Core:</strong>
+    Everything is relationally coupled; partitioning is impossible.</p>
+</li>
+<li>
+<p><strong>LE <span class="math-inline">$\Rightarrow$</span> Anti-Cache:</strong>
+    Every next state is novel; prediction is impossible.</p>
+</li>
+</ul>
+<p>These are not engineering limitations to be overcome by better hardware.
+They are <em>theorems</em>---structural consequences of the axioms that
+make the universe a universe.
+Any system that satisfies all three pillars of modern architecture
+is necessarily deterministic, and a deterministic system
+cannot generate the unbounded Kolmogorov complexity that
+defines a universe [citation: jia2026unified].</p>
+<p>The universe does not compute. It generates.</p>
+<h2 id="references">References</h2>
+<ul>
+<li>
+<p>B.\ Jia,
+<code>`The JiaBaolong Universal Axiom System: Two Axioms, One Universe,''
+Zenodo Preprint, April 2026.</code>doi:10.5281/zenodo.19440952`.</p>
+</li>
+<li>
+<p>B.\ Jia,
+``Unified Theory of Why the Universe Exists: The JiaBaolong Universe
+Axiom System---An Axiomatic, Information-Theoretic, and Categorical Framework,''
+Zenodo Preprint, April 2026.</p>
+</li>
+<li>
+<p>J.\,A.\ Wheeler,
+``Information, physics, quantum: The search for links,''
+in <em>Complexity, Entropy, and the Physics of Information</em>,
+W.\,H.\ Zurek, Ed. Addison-Wesley, 1990, pp. 3--28.</p>
+</li>
+<li>
+<p>S.\ Wolfram,
+``A class of models with the potential to represent fundamental physics,''
+<em>Complex Systems</em>, vol. 29, no. 2, pp. 107--536, 2020.</p>
+</li>
+<li>
+<p>S.\ Lloyd,
+<em>Programming the Universe: A Quantum Computer Scientist Takes On the Cosmos</em>.
+Knopf, 2006.</p>
+</li>
+<li>
+<p>J.\,L.\ Hennessy and D.\,A.\ Patterson,
+<em>Computer Architecture: A Quantitative Approach</em>, 6th ed.
+Morgan Kaufmann, 2019.</p>
+</li>
+<li>
+<p>NVIDIA Corporation,
+``CUDA Programming Guide,'' v12.0, 2023.</p>
+</li>
+<li>
+<p>A.\,N.\ Kolmogorov,
+``Three approaches to the quantitative definition of information,''
+<em>Problems of Information Transmission</em>, vol. 1, no. 1, pp. 1--7, 1965.</p>
+</li>
+<li>
+<p>N.\ Bostrom,
+``Are you living in a computer simulation?''
+<em>Philosophical Quarterly</em>, vol. 53, no. 211, pp. 243--255, 2003.</p>
+</li>
+</ul></div>
+    </article>
+  </main>
+  <footer class="site-footer"><a href="../index.html">贾宝龙绝对真理理论</a><span>Markdown 全文 · HTML 网站</span></footer>
+</body>
+</html>
