@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/sitemap.xml
+Sitemap: https://seer1980.github.io/jia-baolong-researchable-ontology/sitemap.xml

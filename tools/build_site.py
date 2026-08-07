@@ -17,6 +17,7 @@ import markdown
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_OUTPUT = ROOT / "site"
+DEFAULT_SITE_BASE_URL = "https://seer1980.github.io/jia-baolong-researchable-ontology"
 
 
 def parse_frontmatter(text: str) -> tuple[dict[str, str], str]:
@@ -85,7 +86,9 @@ def default_base_url() -> str:
         if name.lower() == f"{owner}.github.io".lower():
             return f"https://{name}"
         return f"https://{owner}.github.io/{name}"
-    return "https://YOUR-USERNAME.github.io/YOUR-REPOSITORY"
+    # Keep local builds production-correct too. GitHub Actions still derives
+    # the URL from GITHUB_REPOSITORY when that variable is available.
+    return DEFAULT_SITE_BASE_URL
 
 
 def repository_url() -> str:
@@ -138,7 +141,13 @@ def page_template(
     guides = relative_url(target, Path("guide/index.html"))
     styles = relative_url(target, Path("assets/styles.css"))
     script = relative_url(target, Path("assets/search.js"))
-    canonical_path = "" if target == Path("index.html") else f"/{target.as_posix()}"
+    target_posix = target.as_posix()
+    if target_posix == "index.html":
+        canonical_path = "/"
+    elif target_posix.endswith("/index.html"):
+        canonical_path = f"/{target_posix[:-len('index.html')]}"
+    else:
+        canonical_path = f"/{target_posix}"
     canonical = f"{base_url}{canonical_path}"
     author = meta.get("author") or "Jia Baolong"
     date = meta.get("publication_date") or meta.get("date") or ""
@@ -408,10 +417,8 @@ def build(output_root: Path) -> None:
     sitemap += "".join(f"  <url><loc>{html.escape(url)}</loc></url>\n" for url in sorted(set(sitemap_urls)))
     sitemap += "</urlset>\n"
     (output_root / "sitemap.xml").write_text(sitemap, encoding="utf-8")
-    (output_root / "robots.txt").write_text(
-        f"User-agent: *\nAllow: /\n\nSitemap: {base_url}/sitemap.xml\n",
-        encoding="utf-8",
-    )
+    robots = f"User-agent: *\nAllow: /\n\nSitemap: {base_url}/sitemap.xml\n"
+    (output_root / "robots.txt").write_text(robots, encoding="utf-8")
     (output_root / "site-config.json").write_text(
         json.dumps({"base_url": base_url, "github_repository": repo_url, "source_markdown_count": len(source_files)}, ensure_ascii=False, indent=2),
         encoding="utf-8",
