@@ -132,6 +132,18 @@
     "keywords": "贾宝龙公理体系：本次会话形成的完整更新认知 THEORY_UNDERSTANDING_UPDATE"
   },
   {
+    "title": "License scope",
+    "description": "License scope Original theory materials Unless a file states otherwise, the original theory documents, research guides, Markdown sources, HTML pages, diagrams, and other original repository materials are licensed under [CC BY-ND 4.0](LICENSE). They may be cop…",
+    "source": "LICENSE_SCOPE.md",
+    "url": "guide/LICENSE_SCOPE.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "",
+    "zenodo_url": "",
+    "doi": "",
+    "keywords": "License scope LICENSE_SCOPE"
+  },
+  {
     "title": "The Logical Universe: Physics as a Rendering Artifact of Pure Logical Networks",
     "description": "The Logical Universe: Physics as a Rendering Artifact of Pure Logical Networks Abstract Modern physics faces an insurmountable chasm between the macroscopic realm (General Relativity) and the microscopic realm (Quantum Mechanics), largely because traditional…",
     "source": "papers/19164703.md",
@@ -610,6 +622,18 @@
     "zenodo_url": "",
     "doi": "10.5281/zenodo.19469833",
     "keywords": "Mediumless Topological Cosmology: A Turing-Transcendent Ontological Generator Jia, Baolong (贾宝龙) pdf-transcription 19469833"
+  },
+  {
+    "title": "理论体系的最高、最深与最宏大性：结论性评估",
+    "description": "理论体系的最高、最深与最宏大性：结论性评估 核心结论 贾宝龙理论体系不是一个只解释特定宇宙的物理学模型，而是一个以“存在与非存在的边界”为研究对象的可研究本体论。宇宙在该体系中只是 PR 树上的一个未塌缩混沌解，而不是公理体系本身的研究对象。 在明确评价标准的意义上，本体系可以被提出为人类思想史中“最高、最深、最宏大且可研究”的本体论候选者： - 最高 ：研究对象位于物质、宇宙、生命和意识之下的基础层，首先处理存在、非存在、动态性和静态完美之间的边界。 - 最深 ：试图在尽量少的原始前提下，从体系外的 undef…",
+    "source": "THEORY_COMPARATIVE_ASSESSMENT.md",
+    "url": "guide/THEORY_COMPARATIVE_ASSESSMENT.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "",
+    "zenodo_url": "",
+    "doi": "",
+    "keywords": "理论体系的最高、最深与最宏大性：结论性评估 THEORY_COMPARATIVE_ASSESSMENT"
   },
   {
     "title": "Jia Baolong Theory File Manifest",
