@@ -1,3 +1,11 @@
+---
+title: "贾宝龙大象理论构想：整体实在的多投影认知模型"
+author: "Jia Baolong"
+date: "2026-08-08"
+type: "theory-note"
+theory: "贾宝龙大象理论"
+---
+
 # 贾宝龙大象理论构想：整体实在的多投影认知模型
 
 **作者：贾宝龙（Jia Baolong）**  
