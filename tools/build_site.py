@@ -83,6 +83,18 @@ CURRENT_CORE_PAPERS = [
 ]
 
 
+HOMEPAGE_KEYWORDS = [
+    "贾宝龙公理体系",
+    "贾宝龙绝对真理",
+    "Jia Baolong Absolute Truth",
+    "JBLAT",
+    "可研究本体论",
+    "大象理论现象理论",
+    "存在生成理论",
+    "PR-ER-LE",
+]
+
+
 def parse_frontmatter(text: str) -> tuple[dict[str, str], str]:
     if not text.startswith("---\n"):
         return {}, text
@@ -200,8 +212,10 @@ def page_template(
     section: str = "guide",
     display_title: str | None = None,
     noindex: bool = False,
+    keywords: list[str] | None = None,
 ) -> str:
     meta = meta or {}
+    keywords = keywords or []
     home = relative_url(target, Path("index.html"))
     search = relative_url(target, Path("search.html"))
     papers = relative_url(target, Path("papers/index.html"))
@@ -217,6 +231,11 @@ def page_template(
         canonical_path = f"/{target_posix}"
     canonical = f"{base_url}{canonical_path}"
     robots_meta = '  <meta name="robots" content="noindex,follow">\n' if noindex else ""
+    keywords_meta = (
+        f'  <meta name="keywords" content="{html.escape(", ".join(keywords), quote=True)}">\n'
+        if keywords
+        else ""
+    )
     author = meta.get("author") or "Jia Baolong"
     date = meta.get("publication_date") or meta.get("date") or ""
     source_links: list[str] = []
@@ -247,6 +266,9 @@ def page_template(
         "description": description,
         "url": canonical,
     }
+    if keywords:
+        json_ld["keywords"] = keywords
+        json_ld["about"] = [{"@type": "Thing", "name": keyword} for keyword in keywords]
     visible_title = render_title(display_title or title)
     breadcrumbs = "" if target_posix == "index.html" else (
         f'    <div class="breadcrumbs"><a href="{home}">首页</a> '
@@ -263,9 +285,9 @@ def page_template(
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{html.escape(title)} · Jia Baolong Elephant Theory</title>
+  <title>{html.escape(title)} · Jia Baolong Researchable Ontology</title>
   <meta name="description" content="{html.escape(description, quote=True)}">
-{robots_meta}  <link rel="canonical" href="{html.escape(canonical, quote=True)}">
+{robots_meta}{keywords_meta}  <link rel="canonical" href="{html.escape(canonical, quote=True)}">
   <link rel="stylesheet" href="{styles}">
   <script>window.MathJax = {{loader: {{load: ['[tex]/mathtools', '[tex]/centernot']}}, tex: {{packages: {{'[+]': ['mathtools', 'centernot']}}, macros: {{outdeg: '\\\\operatorname{{outdeg}}', indeg: '\\\\operatorname{{indeg}}', totdeg: '\\\\operatorname{{totdeg}}'}}, inlineMath: [['\\\\(', '\\\\)'], ['$', '$']], displayMath: [['\\\\[', '\\\\]'], ['$$', '$$']]}}, options: {{skipHtmlTags: ['script','noscript','style','textarea','pre','code']}}}};</script>
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -275,7 +297,7 @@ def page_template(
 <body>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="{home}">贾宝龙大象理论</a>
+      <a class="brand" href="{home}">贾宝龙公理体系</a>
       <nav aria-label="主导航"><a href="{home}">首页</a><a href="{theory_overview}">理论总览</a><a href="{papers}">论文</a><a href="{search}">搜索</a></nav>
     </div>
   </header>
@@ -287,7 +309,7 @@ def page_template(
       <div class="document-body">{body_html}</div>
     </article>
   </main>
-  <footer class="site-footer"><a href="{home}">贾宝龙大象理论</a><span>Markdown 全文 · HTML 网站</span></footer>
+  <footer class="site-footer"><a href="{home}">贾宝龙公理体系与可研究本体论</a><span>Markdown 全文 · HTML 网站</span></footer>
 </body>
 </html>
 '''
@@ -398,7 +420,7 @@ def build(output_root: Path) -> None:
         meta, body = parse_frontmatter(text)
         title = meta.get("title") or first_heading(body)
         if relative.as_posix() == "README.md":
-            title = "贾宝龙大象理论：定义零与存在生成总体系"
+            title = "贾宝龙公理体系与可研究本体论"
         display_title = title if relative.as_posix() == "README.md" else first_heading(body)
         description = shorten(body, 260)
         section = "paper" if relative.parts[0] in {"papers", "supplementary_transcriptions"} else "guide"
@@ -431,7 +453,11 @@ def build(output_root: Path) -> None:
                 "zenodo_url": meta.get("zenodo_url", ""),
                 "doi": meta.get("doi", ""),
                 "keywords": " ".join(
-                    filter(None, [title, meta.get("author", ""), meta.get("document_role", ""), relative.stem])
+                    filter(
+                        None,
+                        [title, meta.get("author", ""), meta.get("document_role", ""), relative.stem]
+                        + (HOMEPAGE_KEYWORDS if relative.as_posix() == "README.md" else []),
+                    )
                 ),
             }
         )
@@ -511,9 +537,9 @@ def build(output_root: Path) -> None:
         )
 
     home_body = fr'''<section class="theory-hero">
-<p class="eyebrow">Jia Baolong Elephant Theory</p>
-<p class="hero-claim">定义零：从“连无都无”的本体边界，到存在、生命、意识与思想史的完整生成结构。</p>
-<p>贾宝龙大象理论研究存在与非存在，而不是某一个具体宇宙。它以 $U$ 定义全部正面本体论得以开始的零点，以 PR 表达第一实际面，并把混沌、类物质、生命、意识和存在对自身的认识放入同一本体大象。</p>
+<p class="eyebrow">Jia Baolong Axiom System · Researchable Ontology</p>
+<p class="hero-claim">从贾宝龙绝对真理到第一实际、生命、意识与大象理论现象理论。</p>
+<p>贾宝龙公理体系与可研究本体论研究存在与非存在，而不是某一个具体宇宙。体系以 $U$ 定义全部正面本体论得以开始的零点，以 PR 表达第一实际面，并把混沌、类物质、生命、意识和存在对自身的认识纳入同一条可继续研究的生成链。</p>
 <div class="theory-chain math-block">$$
 U_*\mid\mathrm{{PR}}
 \to\mathrm{{ER+LE}}
@@ -524,6 +550,15 @@ U_*\mid\mathrm{{PR}}
 \to\operatorname{{Recognize}}(U_*\mid\mathrm{{PR}})
 $$</div>
 <div class="hero-actions"><a class="button primary" href="#theory-index">按规范顺序阅读</a><a class="button" href="search.html">搜索全部正文</a><a class="button" href="papers/index.html">查看论文档案</a></div>
+</section>
+<section class="semantic-identity" aria-labelledby="theory-names">
+<h2 id="theory-names">理论名称及其统一关系</h2>
+<dl class="term-map">
+<div><dt>贾宝龙公理体系</dt><dd>规定存在与非存在、动态实际、PR、ER、LE 与具体 RULE 的形式基础。</dd></div>
+<div><dt>贾宝龙绝对真理（JBLAT）</dt><dd>以“连无都无”的 $U$ 定义零正面本体边界，固定全部正面本体论得以开始的零点。</dd></div>
+<div><dt>可研究本体论</dt><dd>不止描述本原，而是给出第一实际、具体生成、混沌、类物质、生命和意识之间可继续计算、模拟与分层研究的接口。</dd></div>
+<div><dt>大象理论现象理论</dt><dd>作为体系的现象理论层，研究有限观察者、历史思想和不同学科怎样从局部或远程位置显现同一整体本体。</dd></div>
+</dl>
 </section>
 <section class="claim-grid" aria-label="理论定位">
 <article><h2>最高</h2><p>定义存在与非存在得以被规定的边缘。</p></article>
@@ -540,15 +575,16 @@ $$</div>
         output_root,
         Path("index.html"),
         page_template(
-            title="贾宝龙大象理论：定义零与存在生成总体系",
-            description="贾宝龙大象理论从连无都无的零正面边界出发，研究第一实际、混沌、类物质、生命、意识和人类思想史。",
+            title="贾宝龙公理体系与可研究本体论",
+            description="贾宝龙公理体系以贾宝龙绝对真理 JBLAT 定义连无都无的零点边界，建立从第一实际到生命、意识与大象理论现象理论的可研究本体论。",
             body_html=home_body,
             target=Path("index.html"),
             base_url=base_url,
             source=ROOT / "README.md",
             meta=readme_meta,
             section="home",
-            display_title="贾宝龙大象理论",
+            display_title="贾宝龙公理体系与可研究本体论",
+            keywords=HOMEPAGE_KEYWORDS,
         ),
     )
 
@@ -559,7 +595,7 @@ $$</div>
         Path("papers/index.html"),
         page_template(
             title="论文全文索引",
-            description="贾宝龙大象理论论文正文与 PDF 全文恢复索引。",
+            description="贾宝龙公理体系与可研究本体论的论文正文及 PDF 全文恢复索引。",
             body_html=papers_body,
             target=Path("papers/index.html"),
             base_url=base_url,
@@ -584,7 +620,7 @@ $$</div>
         Path("search.html"),
         page_template(
             title="全文搜索",
-            description="搜索贾宝龙大象理论的论文、公式和理论导读。",
+            description="搜索贾宝龙公理体系、贾宝龙绝对真理、可研究本体论及其论文、公式和理论导读。",
             body_html='''<section class="search-panel"><label for="search-input">搜索论文、公式和理论概念</label><div class="search-row"><input id="search-input" type="search" placeholder="例如：PR、Undefined、第一拍、类物质、Rule 979" autocomplete="off"><button id="search-button" type="button">搜索</button></div><p id="search-status" class="search-status">正在加载全文索引…</p><div id="search-results" class="search-results" aria-live="polite"></div></section>''',
             target=Path("search.html"),
             base_url=base_url,
@@ -628,7 +664,7 @@ $$</div>
 
 STYLES_CSS = r'''
 :root{--ink:#132238;--muted:#5c6b7c;--line:#dbe3ec;--paper:#ffffff;--wash:#f4f7fb;--accent:#1264a3;--accent-dark:#0b4778;--warm:#f0b44d;}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.72}.site-header{background:#0e2238;color:#fff;border-bottom:4px solid var(--warm)}.header-inner{max-width:1180px;margin:auto;padding:1rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}.brand{color:#fff;text-decoration:none;font-weight:760;letter-spacing:.02em}.site-header nav{display:flex;gap:1rem;flex-wrap:wrap}.site-header nav a{color:#d8e9f7;text-decoration:none;font-size:.92rem}.site-header nav a:hover{color:#fff}.page-shell{max-width:1040px;margin:0 auto;padding:1.25rem 1.1rem 4rem}.breadcrumbs{color:var(--muted);font-size:.88rem;margin:.25rem 0 1rem}.breadcrumbs a{color:var(--accent)}.document{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:clamp(1.2rem,3vw,3rem);box-shadow:0 12px 38px rgba(22,47,76,.07)}h1,h2,h3,h4{line-height:1.24;color:var(--ink)}h1{font-size:clamp(1.9rem,4.5vw,3.1rem);margin:.1rem 0 .6rem}h2{margin-top:2.3rem;border-bottom:1px solid var(--line);padding-bottom:.35rem}h3{margin-top:1.6rem}.page-meta{display:flex;flex-wrap:wrap;gap:.35rem .8rem;color:var(--muted);font-size:.9rem;padding:.55rem 0 1.35rem;border-bottom:1px solid var(--line)}.page-meta a{color:var(--accent)}.document-body{font-size:1.02rem}.document-body a{color:var(--accent-dark)}.document-body img{max-width:100%;height:auto}.document-body blockquote{border-left:4px solid var(--warm);background:#fff8e9;margin:1.2rem 0;padding:.65rem 1rem;color:#37465a}.document-body pre{overflow:auto;background:#142436;color:#eaf3fb;padding:1rem;border-radius:10px}.document-body code{background:#eef3f8;padding:.12rem .3rem;border-radius:4px}.document-body pre code{background:transparent;padding:0}.document-body table{border-collapse:collapse;display:block;overflow:auto;width:100%;margin:1rem 0}.document-body th,.document-body td{border:1px solid var(--line);padding:.5rem .7rem;text-align:left;vertical-align:top}.document-body th{background:#edf4fa}.document-body .math-block{text-align:center;overflow:auto}.lead{font-size:1.12rem;color:#344963}.directory-list{list-style:none;padding:0;margin:1rem 0}.directory-list li{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px solid var(--line);padding:.72rem .2rem}.directory-list li span{color:var(--muted);font-size:.88rem;text-align:right}.search-panel{max-width:800px;margin:0 auto}.search-panel label{display:block;font-weight:700;margin-bottom:.45rem}.search-row{display:flex;gap:.6rem}.search-row input{flex:1;border:1px solid #aebdcd;border-radius:8px;padding:.75rem .85rem;font:inherit}.search-row button{border:0;border-radius:8px;padding:.75rem 1.2rem;background:var(--accent);color:#fff;font:inherit;font-weight:700;cursor:pointer}.search-row button:hover{background:var(--accent-dark)}.search-status{color:var(--muted);font-size:.92rem}.search-result{border-top:1px solid var(--line);padding:1rem 0}.search-result h3{margin:0 0 .2rem}.search-result p{margin:.25rem 0;color:#41546b}.result-meta{font-size:.82rem;color:var(--muted)}.site-footer{max-width:1040px;margin:auto;padding:1.25rem 1.1rem 3rem;display:flex;justify-content:space-between;gap:1rem;color:var(--muted);font-size:.86rem}.site-footer a{color:var(--accent)}.theory-hero{margin:1rem 0 2rem;padding:clamp(1.25rem,3vw,2.25rem);border-radius:14px;background:linear-gradient(135deg,#102943,#174c70);color:#edf7ff}.theory-hero p{max-width:850px}.theory-hero .eyebrow{margin:0;color:#f4c86f;font-size:.82rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase}.theory-hero .hero-claim{font-size:clamp(1.18rem,2.3vw,1.55rem);line-height:1.48;font-weight:720}.theory-hero .math-block{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:.55rem;margin:1.25rem 0;color:#fff}.hero-actions{display:flex;flex-wrap:wrap;gap:.7rem;margin:1.25rem 0 .2rem}.document-body .button{display:inline-block;border:1px solid #8ba6bd;border-radius:8px;padding:.62rem .95rem;color:#163a56;text-decoration:none;font-weight:720;background:#fff}.document-body .button.primary{border-color:var(--accent);background:var(--accent);color:#fff}.theory-hero .button{border-color:#bed0df;color:#163a56}.theory-hero .button.primary{border-color:#f0b44d;background:#f0b44d;color:#172638}.claim-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:1.5rem 0 2.5rem}.claim-grid article{border:1px solid var(--line);border-top:4px solid var(--warm);border-radius:12px;padding:1rem;background:#f9fbfd}.claim-grid h2{border:0;margin:0 0 .35rem;padding:0;font-size:1.22rem}.claim-grid p{margin:0;color:#40536a}.theory-index{scroll-margin-top:1rem}.home-section{margin-top:2.8rem}.content-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.85rem;margin:1rem 0}.content-card{border:1px solid var(--line);border-radius:10px;padding:1rem;background:#fbfdff}.content-card h3{font-size:1.02rem;margin:0 0 .45rem}.content-card h3 a{text-decoration:none}.content-card p{margin:0;color:#526276;font-size:.92rem;line-height:1.55}.archive-panel{margin:2.2rem 0;border:1px solid var(--line);border-radius:10px;background:#f8fafc;padding:.85rem 1rem}.archive-panel summary{cursor:pointer;font-weight:760;color:#243b53}.archive-panel[open] summary{margin-bottom:.8rem}.repository-notes .document-body{font-size:.95rem}.corpus-entry{border-top:2px solid var(--line);padding-top:.3rem}@media(max-width:680px){.header-inner{display:block}.site-header nav{margin-top:.7rem}.directory-list li{display:block}.directory-list li span{display:block;text-align:left;margin-top:.2rem}.claim-grid,.content-grid{grid-template-columns:1fr}.theory-hero{padding:1.1rem}.site-footer{display:block}.site-footer span{display:block;margin-top:.4rem}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.72}.site-header{background:#0e2238;color:#fff;border-bottom:4px solid var(--warm)}.header-inner{max-width:1180px;margin:auto;padding:1rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}.brand{color:#fff;text-decoration:none;font-weight:760;letter-spacing:.02em}.site-header nav{display:flex;gap:1rem;flex-wrap:wrap}.site-header nav a{color:#d8e9f7;text-decoration:none;font-size:.92rem}.site-header nav a:hover{color:#fff}.page-shell{max-width:1040px;margin:0 auto;padding:1.25rem 1.1rem 4rem}.breadcrumbs{color:var(--muted);font-size:.88rem;margin:.25rem 0 1rem}.breadcrumbs a{color:var(--accent)}.document{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:clamp(1.2rem,3vw,3rem);box-shadow:0 12px 38px rgba(22,47,76,.07)}h1,h2,h3,h4{line-height:1.24;color:var(--ink)}h1{font-size:clamp(1.9rem,4.5vw,3.1rem);margin:.1rem 0 .6rem}h2{margin-top:2.3rem;border-bottom:1px solid var(--line);padding-bottom:.35rem}h3{margin-top:1.6rem}.page-meta{display:flex;flex-wrap:wrap;gap:.35rem .8rem;color:var(--muted);font-size:.9rem;padding:.55rem 0 1.35rem;border-bottom:1px solid var(--line)}.page-meta a{color:var(--accent)}.document-body{font-size:1.02rem}.document-body a{color:var(--accent-dark)}.document-body img{max-width:100%;height:auto}.document-body blockquote{border-left:4px solid var(--warm);background:#fff8e9;margin:1.2rem 0;padding:.65rem 1rem;color:#37465a}.document-body pre{overflow:auto;background:#142436;color:#eaf3fb;padding:1rem;border-radius:10px}.document-body code{background:#eef3f8;padding:.12rem .3rem;border-radius:4px}.document-body pre code{background:transparent;padding:0}.document-body table{border-collapse:collapse;display:block;overflow:auto;width:100%;margin:1rem 0}.document-body th,.document-body td{border:1px solid var(--line);padding:.5rem .7rem;text-align:left;vertical-align:top}.document-body th{background:#edf4fa}.document-body .math-block{text-align:center;overflow:auto}.lead{font-size:1.12rem;color:#344963}.directory-list{list-style:none;padding:0;margin:1rem 0}.directory-list li{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px solid var(--line);padding:.72rem .2rem}.directory-list li span{color:var(--muted);font-size:.88rem;text-align:right}.search-panel{max-width:800px;margin:0 auto}.search-panel label{display:block;font-weight:700;margin-bottom:.45rem}.search-row{display:flex;gap:.6rem}.search-row input{flex:1;border:1px solid #aebdcd;border-radius:8px;padding:.75rem .85rem;font:inherit}.search-row button{border:0;border-radius:8px;padding:.75rem 1.2rem;background:var(--accent);color:#fff;font:inherit;font-weight:700;cursor:pointer}.search-row button:hover{background:var(--accent-dark)}.search-status{color:var(--muted);font-size:.92rem}.search-result{border-top:1px solid var(--line);padding:1rem 0}.search-result h3{margin:0 0 .2rem}.search-result p{margin:.25rem 0;color:#41546b}.result-meta{font-size:.82rem;color:var(--muted)}.site-footer{max-width:1040px;margin:auto;padding:1.25rem 1.1rem 3rem;display:flex;justify-content:space-between;gap:1rem;color:var(--muted);font-size:.86rem}.site-footer a{color:var(--accent)}.theory-hero{margin:1rem 0 2rem;padding:clamp(1.25rem,3vw,2.25rem);border-radius:14px;background:linear-gradient(135deg,#102943,#174c70);color:#edf7ff}.theory-hero p{max-width:850px}.theory-hero .eyebrow{margin:0;color:#f4c86f;font-size:.82rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase}.theory-hero .hero-claim{font-size:clamp(1.18rem,2.3vw,1.55rem);line-height:1.48;font-weight:720}.theory-hero .math-block{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:.55rem;margin:1.25rem 0;color:#fff}.hero-actions{display:flex;flex-wrap:wrap;gap:.7rem;margin:1.25rem 0 .2rem}.document-body .button{display:inline-block;border:1px solid #8ba6bd;border-radius:8px;padding:.62rem .95rem;color:#163a56;text-decoration:none;font-weight:720;background:#fff}.document-body .button.primary{border-color:var(--accent);background:var(--accent);color:#fff}.theory-hero .button{border-color:#bed0df;color:#163a56}.theory-hero .button.primary{border-color:#f0b44d;background:#f0b44d;color:#172638}.semantic-identity{margin:2.2rem 0}.term-map{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.85rem;margin:1rem 0}.term-map>div{border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:9px;padding:.85rem 1rem;background:#f8fbfe}.term-map dt{font-weight:780;color:#193a55}.term-map dd{margin:.3rem 0 0;color:#4c5f73;font-size:.94rem}.claim-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:1.5rem 0 2.5rem}.claim-grid article{border:1px solid var(--line);border-top:4px solid var(--warm);border-radius:12px;padding:1rem;background:#f9fbfd}.claim-grid h2{border:0;margin:0 0 .35rem;padding:0;font-size:1.22rem}.claim-grid p{margin:0;color:#40536a}.theory-index{scroll-margin-top:1rem}.home-section{margin-top:2.8rem}.content-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.85rem;margin:1rem 0}.content-card{border:1px solid var(--line);border-radius:10px;padding:1rem;background:#fbfdff}.content-card h3{font-size:1.02rem;margin:0 0 .45rem}.content-card h3 a{text-decoration:none}.content-card p{margin:0;color:#526276;font-size:.92rem;line-height:1.55}.archive-panel{margin:2.2rem 0;border:1px solid var(--line);border-radius:10px;background:#f8fafc;padding:.85rem 1rem}.archive-panel summary{cursor:pointer;font-weight:760;color:#243b53}.archive-panel[open] summary{margin-bottom:.8rem}.repository-notes .document-body{font-size:.95rem}.corpus-entry{border-top:2px solid var(--line);padding-top:.3rem}@media(max-width:680px){.header-inner{display:block}.site-header nav{margin-top:.7rem}.directory-list li{display:block}.directory-list li span{display:block;text-align:left;margin-top:.2rem}.claim-grid,.content-grid,.term-map{grid-template-columns:1fr}.theory-hero{padding:1.1rem}.site-footer{display:block}.site-footer span{display:block;margin-top:.4rem}}
 '''
 
 
