@@ -14,12 +14,12 @@
     query.split(/[\s,，、。/]+/).filter(Boolean).forEach(t=>fields.forEach((f,i)=>{if(f.includes(t))n+=(i===0?18:3)})); return n;
   }
   function render(){
-    const q=input.value.trim(); if(!q){status.textContent='输入关键词搜索 53 个 Markdown 文档的 HTML 页面。';results.innerHTML='';return;}
+    const q=input.value.trim(); if(!q){status.textContent='输入关键词搜索全部 Markdown 文档的 HTML 页面。';results.innerHTML='';return;}
     const found=index.map(item=>({item,s:score(item,q)})).filter(x=>x.s>0).sort((a,b)=>b.s-a.s).slice(0,50);
     status.textContent=`找到 ${found.length} 个相关页面`;
     results.innerHTML=found.length?found.map(({item})=>`<article class="search-result"><h3><a href="${item.url}">${escapeHtml(item.title)}</a></h3><div class="result-meta">${escapeHtml(item.source)} · ${escapeHtml(item.section)}</div><p>${escapeHtml(item.description)}</p></article>`).join(''):'<p>没有找到匹配内容。</p>';
   }
   function escapeHtml(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
-  fetch('search.json').then(r=>r.json()).then(data=>{index=data;const q=new URLSearchParams(location.search).get('q');if(q){input.value=q;render()}else{status.textContent='输入关键词搜索 53 个 Markdown 文档的 HTML 页面。'}}).catch(()=>status.textContent='搜索索引加载失败，请直接浏览论文索引。');
+  fetch('search.json').then(r=>r.json()).then(data=>{index=data;const q=new URLSearchParams(location.search).get('q');if(q){input.value=q;render()}else{status.textContent=`输入关键词搜索 ${index.length} 个 Markdown 文档的 HTML 页面。`}}).catch(()=>status.textContent='搜索索引加载失败，请直接浏览论文索引。');
   button.addEventListener('click',render); input.addEventListener('keydown',e=>{if(e.key==='Enter')render()});
 })();

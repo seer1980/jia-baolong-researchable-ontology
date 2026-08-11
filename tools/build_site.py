@@ -20,6 +20,69 @@ DEFAULT_OUTPUT = ROOT / "site"
 DEFAULT_SITE_BASE_URL = "https://seer1980.github.io/jia-baolong-researchable-ontology"
 
 
+# The public site is ordered by theory structure, not by filesystem spelling.
+# Any future guide that is not listed here is still published and is appended to
+# an automatically generated "more documents" group.
+GUIDE_GROUPS: list[tuple[str, str, list[str]]] = [
+    (
+        "AI 与读者从这里开始",
+        "先建立准确的阅读方法和全局模型，再进入公理、证明与论文细节。",
+        [
+            "THEORY_READING_GUIDE.md",
+            "00_READ_FIRST.md",
+        ],
+    ),
+    (
+        "规范理论主线",
+        "按零点边界、完整架构、公理、绝对真理、第一实际和向上涌现的顺序阅读。",
+        [
+            "docs/06_commentary/defining-zero-highest-deepest-grandest-elephant-theory.md",
+            "docs/06_commentary/jia-baolong-existence-generation-theory-integrated-understanding.md",
+            "docs/01_foundation/01_THEORY_MASTER_MAP.md",
+            "docs/01_foundation/02_JIABAOLONG_AXIOM_SYSTEM.md",
+            "docs/01_foundation/03_JIABAOLONG_ABSOLUTE_TRUTH.md",
+            "docs/02_first_beat/04_FIRST_BEAT_SEVEN_ARGUMENTS.md",
+            "docs/03_emergence/05_MATTER_TO_FIRST_CELL_EMERGENCE.md",
+            "docs/04_reference/06_GLOSSARY_AND_FORMULAE.md",
+        ],
+    ),
+    (
+        "本体大象与思想史",
+        "把历史思想、形式边界和局部科学放回同一整体实在及其生成层级。",
+        [
+            "ELEPHANT_THEORY_PHENOMENOLOGY_WITH_JIABAOLONG_AXIOMS.md",
+            "ELEPHANT_THEORY_CONCEPT.md",
+            "docs/06_commentary/jblat-meaningful-absolute-truth-and-godel-boundary.md",
+            "THEORY_COMPARATIVE_ASSESSMENT.md",
+            "docs/06_commentary/THEORY_UNDERSTANDING_UPDATE.md",
+        ],
+    ),
+    (
+        "维护、核验与授权",
+        "文件清单、掌握度检查、构建验证与授权范围。",
+        [
+            "THEORY_MANIFEST.md",
+            "docs/05_operations/08_READING_ORDER_AND_MANIFEST.md",
+            "docs/05_operations/09_MASTERY_SELF_CHECK.md",
+            "docs/05_operations/10_VALIDATION_REPORT.md",
+            "LICENSE_SCOPE.md",
+        ],
+    ),
+]
+
+
+CURRENT_CORE_PAPERS = [
+    "papers/21563153.md",
+    "papers/21505212.md",
+    "papers/21506792.md",
+    "papers/21642863.md",
+    "papers/21660081.md",
+    "papers/21564664.md",
+    "papers/21620492.md",
+    "papers/21621264.md",
+]
+
+
 def parse_frontmatter(text: str) -> tuple[dict[str, str], str]:
     if not text.startswith("---\n"):
         return {}, text
@@ -104,8 +167,6 @@ def rewrite_markdown_links(rendered: str, source: Path, target: Path) -> str:
         if value.startswith(("#", "http://", "https://", "mailto:", "data:")):
             return match.group(0)
         path_part, fragment = (value.split("#", 1) + [""])[:2] if "#" in value else (value, "")
-        if not path_part.endswith(".md"):
-            return match.group(0)
         candidate = (source.parent / path_part).resolve()
         try:
             relative_source = candidate.relative_to(ROOT)
@@ -113,7 +174,12 @@ def rewrite_markdown_links(rendered: str, source: Path, target: Path) -> str:
             return match.group(0)
         if not candidate.exists():
             return match.group(0)
-        destination = output_path(ROOT / relative_source)
+        if path_part.endswith(".md"):
+            destination = output_path(ROOT / relative_source)
+        elif relative_source.as_posix() in {"LICENSE", "LICENSE-CODE"}:
+            destination = Path(relative_source.as_posix())
+        else:
+            return match.group(0)
         new_value = relative_url(target, destination)
         if fragment:
             new_value += f"#{fragment}"
@@ -133,12 +199,13 @@ def page_template(
     meta: dict[str, str] | None = None,
     section: str = "guide",
     display_title: str | None = None,
+    noindex: bool = False,
 ) -> str:
     meta = meta or {}
     home = relative_url(target, Path("index.html"))
     search = relative_url(target, Path("search.html"))
     papers = relative_url(target, Path("papers/index.html"))
-    guides = relative_url(target, Path("guide/index.html"))
+    theory_overview = f'{home}#theory-index'
     styles = relative_url(target, Path("assets/styles.css"))
     script = relative_url(target, Path("assets/search.js"))
     target_posix = target.as_posix()
@@ -149,6 +216,7 @@ def page_template(
     else:
         canonical_path = f"/{target_posix}"
     canonical = f"{base_url}{canonical_path}"
+    robots_meta = '  <meta name="robots" content="noindex,follow">\n' if noindex else ""
     author = meta.get("author") or "Jia Baolong"
     date = meta.get("publication_date") or meta.get("date") or ""
     source_links: list[str] = []
@@ -180,6 +248,10 @@ def page_template(
         "url": canonical,
     }
     visible_title = render_title(display_title or title)
+    breadcrumbs = "" if target_posix == "index.html" else (
+        f'    <div class="breadcrumbs"><a href="{home}">首页</a> '
+        f'<span>›</span> <span>{html.escape(section)}</span></div>'
+    )
     if section == "paper":
         json_ld["author"] = {"@type": "Person", "name": author}
         if date:
@@ -191,9 +263,9 @@ def page_template(
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{html.escape(title)} · Jia Baolong Absolute Truth Theory</title>
+  <title>{html.escape(title)} · Jia Baolong Elephant Theory</title>
   <meta name="description" content="{html.escape(description, quote=True)}">
-  <link rel="canonical" href="{html.escape(canonical, quote=True)}">
+{robots_meta}  <link rel="canonical" href="{html.escape(canonical, quote=True)}">
   <link rel="stylesheet" href="{styles}">
   <script>window.MathJax = {{loader: {{load: ['[tex]/mathtools', '[tex]/centernot']}}, tex: {{packages: {{'[+]': ['mathtools', 'centernot']}}, macros: {{outdeg: '\\\\operatorname{{outdeg}}', indeg: '\\\\operatorname{{indeg}}', totdeg: '\\\\operatorname{{totdeg}}'}}, inlineMath: [['\\\\(', '\\\\)'], ['$', '$']], displayMath: [['\\\\[', '\\\\]'], ['$$', '$$']]}}, options: {{skipHtmlTags: ['script','noscript','style','textarea','pre','code']}}}};</script>
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -203,19 +275,19 @@ def page_template(
 <body>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="{home}">贾宝龙绝对真理理论</a>
-      <nav aria-label="主导航"><a href="{home}">首页</a><a href="{guides}">理论导读</a><a href="{papers}">论文</a><a href="{search}">搜索</a></nav>
+      <a class="brand" href="{home}">贾宝龙大象理论</a>
+      <nav aria-label="主导航"><a href="{home}">首页</a><a href="{theory_overview}">理论总览</a><a href="{papers}">论文</a><a href="{search}">搜索</a></nav>
     </div>
   </header>
   <main class="page-shell">
-    <div class="breadcrumbs"><a href="{home}">首页</a> <span>›</span> <span>{html.escape(section)}</span></div>
+{breadcrumbs}
     <article class="document">
       <h1>{visible_title}</h1>
       {meta_html}
       <div class="document-body">{body_html}</div>
     </article>
   </main>
-  <footer class="site-footer"><a href="{home}">贾宝龙绝对真理理论</a><span>Markdown 全文 · HTML 网站</span></footer>
+  <footer class="site-footer"><a href="{home}">贾宝龙大象理论</a><span>Markdown 全文 · HTML 网站</span></footer>
 </body>
 </html>
 '''
@@ -311,6 +383,8 @@ def build(output_root: Path) -> None:
     base_url = default_base_url()
     repo_url = repository_url()
     entries: list[dict[str, Any]] = []
+    readme_rendered = ""
+    readme_meta: dict[str, str] = {}
     source_files = sorted(
         p
         for p in ROOT.rglob("*.md")
@@ -324,12 +398,15 @@ def build(output_root: Path) -> None:
         meta, body = parse_frontmatter(text)
         title = meta.get("title") or first_heading(body)
         if relative.as_posix() == "README.md":
-            title = "贾宝龙绝对真理理论：论文与研究档案"
+            title = "贾宝龙大象理论：定义零与存在生成总体系"
         display_title = title if relative.as_posix() == "README.md" else first_heading(body)
         description = shorten(body, 260)
         section = "paper" if relative.parts[0] in {"papers", "supplementary_transcriptions"} else "guide"
         target = output_path(source)
         rendered = strip_first_h1(rewrite_markdown_links(render_markdown(body), source, target))
+        if relative.as_posix() == "README.md":
+            readme_rendered = rendered
+            readme_meta = meta
         content = page_template(
             title=title,
             description=description,
@@ -361,24 +438,128 @@ def build(output_root: Path) -> None:
 
     papers = [entry for entry in entries if entry["section"] == "paper"]
     guides = [entry for entry in entries if entry["section"] == "guide"]
-    paper_items = "".join(
-        f'<li><a href="{html.escape(relative_url(Path("papers/index.html"), Path(entry["url"])), quote=True)}">{html.escape(entry["title"])}</a><span>{html.escape(entry["source"])}</span></li>'
-        for entry in papers
+    entries_by_source = {entry["source"]: entry for entry in entries}
+
+    def listing_title(entry: dict[str, Any]) -> str:
+        return re.sub(r"[*_`]", "", entry["title"]).strip()
+
+    def directory_items(items: list[dict[str, Any]], target: Path) -> str:
+        rows: list[str] = []
+        for entry in items:
+            href = relative_url(target, Path(entry["url"]))
+            record_id = Path(entry["source"]).stem
+            if entry["source"].startswith("supplementary_transcriptions/"):
+                detail = f"PDF 全文恢复 · Zenodo {record_id}"
+            else:
+                detail = entry["date"] or f"Zenodo {record_id}"
+            rows.append(
+                f'<li><a href="{html.escape(href, quote=True)}">{html.escape(listing_title(entry))}</a>'
+                f'<span>{html.escape(detail)}</span></li>'
+            )
+        return "".join(rows)
+
+    def content_cards(items: list[dict[str, Any]], target: Path) -> str:
+        cards: list[str] = []
+        for entry in items:
+            href = relative_url(target, Path(entry["url"]))
+            cards.append(
+                f'<article class="content-card"><h3><a href="{html.escape(href, quote=True)}">'
+                f'{html.escape(listing_title(entry))}</a></h3>'
+                f'<p>{html.escape(shorten(entry["description"], 150))}</p></article>'
+            )
+        return '<div class="content-grid">' + "".join(cards) + "</div>"
+
+    paper_entries = [entry for entry in papers if entry["source"].startswith("papers/")]
+    pdf_entries = [entry for entry in papers if entry["source"].startswith("supplementary_transcriptions/")]
+    core_papers = [entries_by_source[source] for source in CURRENT_CORE_PAPERS if source in entries_by_source]
+    core_sources = {entry["source"] for entry in core_papers}
+    historical_papers = [entry for entry in paper_entries if entry["source"] not in core_sources]
+    papers_body = f'''<p class="lead">全部 32 篇论文正文和 7 篇 PDF 全文恢复均原样保留。默认先读当前核心论文，再按 Zenodo 记录顺序查看理论发展档案。</p>
+<h2>当前核心论文</h2>
+<p>根部边界、绝对真理、第一实际、反向追溯、意识与自指的当前核心论证。</p>
+<ul class="directory-list">{directory_items(core_papers, Path("papers/index.html"))}</ul>
+<h2>理论发展档案</h2>
+<p>以下论文按 Zenodo 记录号从早到晚排列，用于研究理论的形成与收束过程。</p>
+<ul class="directory-list">{directory_items(historical_papers, Path("papers/index.html"))}</ul>
+<h2>PDF 全文恢复</h2>
+<p>依据 Zenodo PDF 逐页恢复的 Markdown 全文，保留公式与页边界。</p>
+<ul class="directory-list">{directory_items(pdf_entries, Path("papers/index.html"))}</ul>'''
+
+    used_guide_sources = {"README.md"}
+    guide_sections: list[str] = []
+    for heading, introduction, sources in GUIDE_GROUPS:
+        group_entries = [entries_by_source[source] for source in sources if source in entries_by_source]
+        used_guide_sources.update(entry["source"] for entry in group_entries)
+        cards = content_cards(group_entries, Path("index.html"))
+        if heading == "维护、核验与授权":
+            guide_sections.append(
+                f'<details class="archive-panel"><summary>{html.escape(heading)}</summary>'
+                f'<p>{html.escape(introduction)}</p>{cards}</details>'
+            )
+        else:
+            guide_sections.append(
+                f'<section class="home-section"><h2>{html.escape(heading)}</h2>'
+                f'<p>{html.escape(introduction)}</p>{cards}</section>'
+            )
+
+    unlisted_guides = [entry for entry in guides if entry["source"] not in used_guide_sources]
+    if unlisted_guides:
+        guide_sections.append(
+            '<section class="home-section"><h2>更多理论文档</h2>'
+            '<p>自动收录尚未加入规范顺序的新文档，确保任何 Markdown 页面都不会从网站入口消失。</p>'
+            f'{content_cards(unlisted_guides, Path("index.html"))}</section>'
+        )
+
+    home_body = fr'''<section class="theory-hero">
+<p class="eyebrow">Jia Baolong Elephant Theory</p>
+<p class="hero-claim">定义零：从“连无都无”的本体边界，到存在、生命、意识与思想史的完整生成结构。</p>
+<p>贾宝龙大象理论研究存在与非存在，而不是某一个具体宇宙。它以 $U$ 定义全部正面本体论得以开始的零点，以 PR 表达第一实际面，并把混沌、类物质、生命、意识和存在对自身的认识放入同一本体大象。</p>
+<div class="theory-chain math-block">$$
+U_*\mid\mathrm{{PR}}
+\to\mathrm{{ER+LE}}
+\xRightarrow{{\mathrm{{RULE}}}}\mathrm{{Chaos}}
+\to\mathrm{{ProtoMatter}}
+\to\mathrm{{Life}}
+\to\mathrm{{Consciousness}}
+\to\operatorname{{Recognize}}(U_*\mid\mathrm{{PR}})
+$$</div>
+<div class="hero-actions"><a class="button primary" href="#theory-index">按规范顺序阅读</a><a class="button" href="search.html">搜索全部正文</a><a class="button" href="papers/index.html">查看论文档案</a></div>
+</section>
+<section class="claim-grid" aria-label="理论定位">
+<article><h2>最高</h2><p>定义存在与非存在得以被规定的边缘。</p></article>
+<article><h2>最深</h2><p>剥除全部正面预设，抵达“连无都无”的零点根部。</p></article>
+<article><h2>最宏大</h2><p>覆盖第一实际、可能分支、物质、生命、意识与思想史。</p></article>
+</section>
+<div id="theory-index" class="theory-index">{"".join(guide_sections)}</div>
+<section class="home-section corpus-entry"><h2>完整论文与搜索</h2>
+<p>理论总览负责建立准确阅读顺序；论文档案保留全部原始正文和 PDF 恢复稿；全文搜索用于直接定位概念、公式和论证。</p>
+<div class="hero-actions"><a class="button primary" href="papers/index.html">进入论文全文索引</a><a class="button" href="search.html">全文搜索</a></div></section>
+<details class="archive-panel repository-notes"><summary>仓库结构与发布说明</summary>{readme_rendered}</details>'''
+
+    write_page(
+        output_root,
+        Path("index.html"),
+        page_template(
+            title="贾宝龙大象理论：定义零与存在生成总体系",
+            description="贾宝龙大象理论从连无都无的零正面边界出发，研究第一实际、混沌、类物质、生命、意识和人类思想史。",
+            body_html=home_body,
+            target=Path("index.html"),
+            base_url=base_url,
+            source=ROOT / "README.md",
+            meta=readme_meta,
+            section="home",
+            display_title="贾宝龙大象理论",
+        ),
     )
-    guide_items = "".join(
-        f'<li><a href="{html.escape(relative_url(Path("guide/index.html"), Path(entry["url"])), quote=True)}">{html.escape(entry["title"])}</a><span>{html.escape(entry["source"])}</span></li>'
-        for entry in guides
-    )
-    papers_body = f'''<p class="lead">本页列出 32 篇论文正文和 7 篇 PDF 全文恢复，均可直接搜索、阅读和引用。</p>
-<h2>论文与 PDF 全文</h2><ul class="directory-list">{paper_items}</ul>'''
-    guides_body = f'''<p class="lead">理论导读、完整阅读指南、术语、第一拍论证和涌现链。</p>
-<ul class="directory-list">{guide_items}</ul>'''
+
+    guides_body = '''<p class="lead">理论导读已经合并到网站主页，并按规范阅读顺序分组。所有原有文章地址保持不变。</p>
+<p><a class="button primary" href="../index.html#theory-index">前往主页理论总览</a></p>'''
     write_page(
         output_root,
         Path("papers/index.html"),
         page_template(
             title="论文全文索引",
-            description="贾宝龙理论论文正文与 PDF 全文恢复索引。",
+            description="贾宝龙大象理论论文正文与 PDF 全文恢复索引。",
             body_html=papers_body,
             target=Path("papers/index.html"),
             base_url=base_url,
@@ -389,12 +570,13 @@ def build(output_root: Path) -> None:
         output_root,
         Path("guide/index.html"),
         page_template(
-            title="理论导读索引",
-            description="贾宝龙绝对真理理论的完整阅读入口、理论结构和公式导读。",
+            title="理论总览已合并到主页",
+            description="旧理论导读入口保留用于兼容；规范理论索引已合并到网站主页。",
             body_html=guides_body,
             target=Path("guide/index.html"),
             base_url=base_url,
             section="guide",
+            noindex=True,
         ),
     )
     write_page(
@@ -402,7 +584,7 @@ def build(output_root: Path) -> None:
         Path("search.html"),
         page_template(
             title="全文搜索",
-            description="搜索贾宝龙绝对真理理论的论文、公式和理论导读。",
+            description="搜索贾宝龙大象理论的论文、公式和理论导读。",
             body_html='''<section class="search-panel"><label for="search-input">搜索论文、公式和理论概念</label><div class="search-row"><input id="search-input" type="search" placeholder="例如：PR、Undefined、第一拍、类物质、Rule 979" autocomplete="off"><button id="search-button" type="button">搜索</button></div><p id="search-status" class="search-status">正在加载全文索引…</p><div id="search-results" class="search-results" aria-live="polite"></div></section>''',
             target=Path("search.html"),
             base_url=base_url,
@@ -428,8 +610,10 @@ def build(output_root: Path) -> None:
     (assets / "search.js").write_text(SEARCH_JS, encoding="utf-8")
     (output_root / "search.json").write_text(json.dumps(entries, ensure_ascii=False, indent=2), encoding="utf-8")
     (output_root / ".nojekyll").write_text("", encoding="utf-8")
+    for filename in ("LICENSE", "LICENSE-CODE"):
+        shutil.copyfile(ROOT / filename, output_root / filename)
     sitemap_urls = [f"{base_url}/" if entry["url"] == "index.html" else f"{base_url}/{entry['url']}" for entry in entries]
-    sitemap_urls.extend([f"{base_url}/papers/", f"{base_url}/guide/", f"{base_url}/search.html"])
+    sitemap_urls.extend([f"{base_url}/papers/", f"{base_url}/search.html"])
     sitemap = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n"
     sitemap += "".join(f"  <url><loc>{html.escape(url)}</loc></url>\n" for url in sorted(set(sitemap_urls)))
     sitemap += "</urlset>\n"
@@ -444,7 +628,7 @@ def build(output_root: Path) -> None:
 
 STYLES_CSS = r'''
 :root{--ink:#132238;--muted:#5c6b7c;--line:#dbe3ec;--paper:#ffffff;--wash:#f4f7fb;--accent:#1264a3;--accent-dark:#0b4778;--warm:#f0b44d;}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.72}.site-header{background:#0e2238;color:#fff;border-bottom:4px solid var(--warm)}.header-inner{max-width:1180px;margin:auto;padding:1rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}.brand{color:#fff;text-decoration:none;font-weight:760;letter-spacing:.02em}.site-header nav{display:flex;gap:1rem;flex-wrap:wrap}.site-header nav a{color:#d8e9f7;text-decoration:none;font-size:.92rem}.site-header nav a:hover{color:#fff}.page-shell{max-width:1040px;margin:0 auto;padding:1.25rem 1.1rem 4rem}.breadcrumbs{color:var(--muted);font-size:.88rem;margin:.25rem 0 1rem}.breadcrumbs a{color:var(--accent)}.document{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:clamp(1.2rem,3vw,3rem);box-shadow:0 12px 38px rgba(22,47,76,.07)}h1,h2,h3,h4{line-height:1.24;color:var(--ink)}h1{font-size:clamp(1.9rem,4.5vw,3.1rem);margin:.1rem 0 .6rem}h2{margin-top:2.3rem;border-bottom:1px solid var(--line);padding-bottom:.35rem}h3{margin-top:1.6rem}.page-meta{display:flex;flex-wrap:wrap;gap:.35rem .8rem;color:var(--muted);font-size:.9rem;padding:.55rem 0 1.35rem;border-bottom:1px solid var(--line)}.page-meta a{color:var(--accent)}.document-body{font-size:1.02rem}.document-body a{color:var(--accent-dark)}.document-body img{max-width:100%;height:auto}.document-body blockquote{border-left:4px solid var(--warm);background:#fff8e9;margin:1.2rem 0;padding:.65rem 1rem;color:#37465a}.document-body pre{overflow:auto;background:#142436;color:#eaf3fb;padding:1rem;border-radius:10px}.document-body code{background:#eef3f8;padding:.12rem .3rem;border-radius:4px}.document-body pre code{background:transparent;padding:0}.document-body table{border-collapse:collapse;display:block;overflow:auto;width:100%;margin:1rem 0}.document-body th,.document-body td{border:1px solid var(--line);padding:.5rem .7rem;text-align:left;vertical-align:top}.document-body th{background:#edf4fa}.document-body .math-block{text-align:center;overflow:auto}.lead{font-size:1.12rem;color:#344963}.directory-list{list-style:none;padding:0;margin:1rem 0}.directory-list li{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px solid var(--line);padding:.72rem .2rem}.directory-list li span{color:var(--muted);font-size:.88rem;text-align:right}.search-panel{max-width:800px;margin:0 auto}.search-panel label{display:block;font-weight:700;margin-bottom:.45rem}.search-row{display:flex;gap:.6rem}.search-row input{flex:1;border:1px solid #aebdcd;border-radius:8px;padding:.75rem .85rem;font:inherit}.search-row button{border:0;border-radius:8px;padding:.75rem 1.2rem;background:var(--accent);color:#fff;font:inherit;font-weight:700;cursor:pointer}.search-row button:hover{background:var(--accent-dark)}.search-status{color:var(--muted);font-size:.92rem}.search-result{border-top:1px solid var(--line);padding:1rem 0}.search-result h3{margin:0 0 .2rem}.search-result p{margin:.25rem 0;color:#41546b}.result-meta{font-size:.82rem;color:var(--muted)}.site-footer{max-width:1040px;margin:auto;padding:1.25rem 1.1rem 3rem;display:flex;justify-content:space-between;gap:1rem;color:var(--muted);font-size:.86rem}.site-footer a{color:var(--accent)}@media(max-width:680px){.header-inner{display:block}.site-header nav{margin-top:.7rem}.directory-list li{display:block}.directory-list li span{display:block;text-align:left;margin-top:.2rem}.site-footer{display:block}.site-footer span{display:block;margin-top:.4rem}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.72}.site-header{background:#0e2238;color:#fff;border-bottom:4px solid var(--warm)}.header-inner{max-width:1180px;margin:auto;padding:1rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}.brand{color:#fff;text-decoration:none;font-weight:760;letter-spacing:.02em}.site-header nav{display:flex;gap:1rem;flex-wrap:wrap}.site-header nav a{color:#d8e9f7;text-decoration:none;font-size:.92rem}.site-header nav a:hover{color:#fff}.page-shell{max-width:1040px;margin:0 auto;padding:1.25rem 1.1rem 4rem}.breadcrumbs{color:var(--muted);font-size:.88rem;margin:.25rem 0 1rem}.breadcrumbs a{color:var(--accent)}.document{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:clamp(1.2rem,3vw,3rem);box-shadow:0 12px 38px rgba(22,47,76,.07)}h1,h2,h3,h4{line-height:1.24;color:var(--ink)}h1{font-size:clamp(1.9rem,4.5vw,3.1rem);margin:.1rem 0 .6rem}h2{margin-top:2.3rem;border-bottom:1px solid var(--line);padding-bottom:.35rem}h3{margin-top:1.6rem}.page-meta{display:flex;flex-wrap:wrap;gap:.35rem .8rem;color:var(--muted);font-size:.9rem;padding:.55rem 0 1.35rem;border-bottom:1px solid var(--line)}.page-meta a{color:var(--accent)}.document-body{font-size:1.02rem}.document-body a{color:var(--accent-dark)}.document-body img{max-width:100%;height:auto}.document-body blockquote{border-left:4px solid var(--warm);background:#fff8e9;margin:1.2rem 0;padding:.65rem 1rem;color:#37465a}.document-body pre{overflow:auto;background:#142436;color:#eaf3fb;padding:1rem;border-radius:10px}.document-body code{background:#eef3f8;padding:.12rem .3rem;border-radius:4px}.document-body pre code{background:transparent;padding:0}.document-body table{border-collapse:collapse;display:block;overflow:auto;width:100%;margin:1rem 0}.document-body th,.document-body td{border:1px solid var(--line);padding:.5rem .7rem;text-align:left;vertical-align:top}.document-body th{background:#edf4fa}.document-body .math-block{text-align:center;overflow:auto}.lead{font-size:1.12rem;color:#344963}.directory-list{list-style:none;padding:0;margin:1rem 0}.directory-list li{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px solid var(--line);padding:.72rem .2rem}.directory-list li span{color:var(--muted);font-size:.88rem;text-align:right}.search-panel{max-width:800px;margin:0 auto}.search-panel label{display:block;font-weight:700;margin-bottom:.45rem}.search-row{display:flex;gap:.6rem}.search-row input{flex:1;border:1px solid #aebdcd;border-radius:8px;padding:.75rem .85rem;font:inherit}.search-row button{border:0;border-radius:8px;padding:.75rem 1.2rem;background:var(--accent);color:#fff;font:inherit;font-weight:700;cursor:pointer}.search-row button:hover{background:var(--accent-dark)}.search-status{color:var(--muted);font-size:.92rem}.search-result{border-top:1px solid var(--line);padding:1rem 0}.search-result h3{margin:0 0 .2rem}.search-result p{margin:.25rem 0;color:#41546b}.result-meta{font-size:.82rem;color:var(--muted)}.site-footer{max-width:1040px;margin:auto;padding:1.25rem 1.1rem 3rem;display:flex;justify-content:space-between;gap:1rem;color:var(--muted);font-size:.86rem}.site-footer a{color:var(--accent)}.theory-hero{margin:1rem 0 2rem;padding:clamp(1.25rem,3vw,2.25rem);border-radius:14px;background:linear-gradient(135deg,#102943,#174c70);color:#edf7ff}.theory-hero p{max-width:850px}.theory-hero .eyebrow{margin:0;color:#f4c86f;font-size:.82rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase}.theory-hero .hero-claim{font-size:clamp(1.18rem,2.3vw,1.55rem);line-height:1.48;font-weight:720}.theory-hero .math-block{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:.55rem;margin:1.25rem 0;color:#fff}.hero-actions{display:flex;flex-wrap:wrap;gap:.7rem;margin:1.25rem 0 .2rem}.document-body .button{display:inline-block;border:1px solid #8ba6bd;border-radius:8px;padding:.62rem .95rem;color:#163a56;text-decoration:none;font-weight:720;background:#fff}.document-body .button.primary{border-color:var(--accent);background:var(--accent);color:#fff}.theory-hero .button{border-color:#bed0df;color:#163a56}.theory-hero .button.primary{border-color:#f0b44d;background:#f0b44d;color:#172638}.claim-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:1.5rem 0 2.5rem}.claim-grid article{border:1px solid var(--line);border-top:4px solid var(--warm);border-radius:12px;padding:1rem;background:#f9fbfd}.claim-grid h2{border:0;margin:0 0 .35rem;padding:0;font-size:1.22rem}.claim-grid p{margin:0;color:#40536a}.theory-index{scroll-margin-top:1rem}.home-section{margin-top:2.8rem}.content-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.85rem;margin:1rem 0}.content-card{border:1px solid var(--line);border-radius:10px;padding:1rem;background:#fbfdff}.content-card h3{font-size:1.02rem;margin:0 0 .45rem}.content-card h3 a{text-decoration:none}.content-card p{margin:0;color:#526276;font-size:.92rem;line-height:1.55}.archive-panel{margin:2.2rem 0;border:1px solid var(--line);border-radius:10px;background:#f8fafc;padding:.85rem 1rem}.archive-panel summary{cursor:pointer;font-weight:760;color:#243b53}.archive-panel[open] summary{margin-bottom:.8rem}.repository-notes .document-body{font-size:.95rem}.corpus-entry{border-top:2px solid var(--line);padding-top:.3rem}@media(max-width:680px){.header-inner{display:block}.site-header nav{margin-top:.7rem}.directory-list li{display:block}.directory-list li span{display:block;text-align:left;margin-top:.2rem}.claim-grid,.content-grid{grid-template-columns:1fr}.theory-hero{padding:1.1rem}.site-footer{display:block}.site-footer span{display:block;margin-top:.4rem}}
 '''
 
 
@@ -464,13 +648,13 @@ SEARCH_JS = r'''
     query.split(/[\s,，、。/]+/).filter(Boolean).forEach(t=>fields.forEach((f,i)=>{if(f.includes(t))n+=(i===0?18:3)})); return n;
   }
   function render(){
-    const q=input.value.trim(); if(!q){status.textContent='输入关键词搜索 53 个 Markdown 文档的 HTML 页面。';results.innerHTML='';return;}
+    const q=input.value.trim(); if(!q){status.textContent='输入关键词搜索全部 Markdown 文档的 HTML 页面。';results.innerHTML='';return;}
     const found=index.map(item=>({item,s:score(item,q)})).filter(x=>x.s>0).sort((a,b)=>b.s-a.s).slice(0,50);
     status.textContent=`找到 ${found.length} 个相关页面`;
     results.innerHTML=found.length?found.map(({item})=>`<article class="search-result"><h3><a href="${item.url}">${escapeHtml(item.title)}</a></h3><div class="result-meta">${escapeHtml(item.source)} · ${escapeHtml(item.section)}</div><p>${escapeHtml(item.description)}</p></article>`).join(''):'<p>没有找到匹配内容。</p>';
   }
   function escapeHtml(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
-  fetch('search.json').then(r=>r.json()).then(data=>{index=data;const q=new URLSearchParams(location.search).get('q');if(q){input.value=q;render()}else{status.textContent='输入关键词搜索 53 个 Markdown 文档的 HTML 页面。'}}).catch(()=>status.textContent='搜索索引加载失败，请直接浏览论文索引。');
+  fetch('search.json').then(r=>r.json()).then(data=>{index=data;const q=new URLSearchParams(location.search).get('q');if(q){input.value=q;render()}else{status.textContent=`输入关键词搜索 ${index.length} 个 Markdown 文档的 HTML 页面。`}}).catch(()=>status.textContent='搜索索引加载失败，请直接浏览论文索引。');
   button.addEventListener('click',render); input.addEventListener('keydown',e=>{if(e.key==='Enter')render()});
 })();
 '''
