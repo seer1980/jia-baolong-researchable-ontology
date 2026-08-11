@@ -195,7 +195,7 @@ def page_template(
   <meta name="description" content="{html.escape(description, quote=True)}">
   <link rel="canonical" href="{html.escape(canonical, quote=True)}">
   <link rel="stylesheet" href="{styles}">
-  <script>window.MathJax = {{tex: {{inlineMath: [['\\\\(', '\\\\)'], ['$', '$']], displayMath: [['\\\\[', '\\\\]'], ['$$', '$$']]}}, options: {{skipHtmlTags: ['script','noscript','style','textarea','pre','code']}}}};</script>
+  <script>window.MathJax = {{loader: {{load: ['[tex]/mathtools', '[tex]/centernot']}}, tex: {{packages: {{'[+]': ['mathtools', 'centernot']}}, macros: {{outdeg: '\\\\operatorname{{outdeg}}', indeg: '\\\\operatorname{{indeg}}', totdeg: '\\\\operatorname{{totdeg}}'}}, inlineMath: [['\\\\(', '\\\\)'], ['$', '$']], displayMath: [['\\\\[', '\\\\]'], ['$$', '$$']]}}, options: {{skipHtmlTags: ['script','noscript','style','textarea','pre','code']}}}};</script>
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <script defer src="{script}"></script>
   <script type="application/ld+json">{json.dumps(json_ld, ensure_ascii=False)}</script>
@@ -221,8 +221,25 @@ def page_template(
 '''
 
 
+def normalize_text_latex(body: str) -> str:
+    """Remove print-only LaTeX commands left outside protected math spans."""
+    body = re.sub(r"(?m)^[ \t]*\\newpage[ \t]*(?:\n|$)", "", body)
+    body = re.sub(
+        r"\\multirow\{[^{}]*\}\{[^{}]*\}\{([^{}]*)\}",
+        lambda match: match.group(1).replace(r"\%", "%"),
+        body,
+    )
+    body = re.sub(
+        r"\\cite\{([^{}]+)\}",
+        lambda match: "[" + "; ".join(key.strip() for key in match.group(1).split(",")) + "]",
+        body,
+    )
+    return body.replace(r"\textless", "<").replace(r"\textgreater", ">")
+
+
 def render_markdown(body: str) -> str:
     protected, replacements = protect_math(body)
+    protected = normalize_text_latex(protected)
     rendered = markdown.markdown(
         protected,
         extensions=["extra", "tables", "fenced_code", "toc", "sane_lists"],

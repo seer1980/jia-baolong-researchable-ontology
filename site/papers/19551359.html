@@ -7,7 +7,7 @@
   <meta name="description" content="From Chaos to Life in Medium-Free Topological Dynamics: Complete Numerical Verification of the Trinity Graph Process (Phases 0–6: Topology → Chaos → Matter → Chemistry → Selection) This is a Markdown conversion of the Zenodo paper. The original TeX source is…">
   <link rel="canonical" href="https://seer1980.github.io/jia-baolong-researchable-ontology/papers/19551359.html">
   <link rel="stylesheet" href="../assets/styles.css">
-  <script>window.MathJax = {tex: {inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['\\[', '\\]'], ['$$', '$$']]}, options: {skipHtmlTags: ['script','noscript','style','textarea','pre','code']}};</script>
+  <script>window.MathJax = {loader: {load: ['[tex]/mathtools', '[tex]/centernot']}, tex: {packages: {'[+]': ['mathtools', 'centernot']}, macros: {outdeg: '\\operatorname{outdeg}', indeg: '\\operatorname{indeg}', totdeg: '\\operatorname{totdeg}'}, inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['\\[', '\\]'], ['$$', '$$']]}, options: {skipHtmlTags: ['script','noscript','style','textarea','pre','code']}};</script>
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <script defer src="../assets/search.js"></script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ScholarlyArticle", "name": "From Chaos to Life in Medium-Free Topological Dynamics: Complete Numerical Verification of the Trinity Graph Process (Phases 0–6: Topology → Chaos → Matter → Chemistry → Selection)", "headline": "From Chaos to Life in Medium-Free Topological Dynamics: Complete Numerical Verification of the Trinity Graph Process (Phases 0–6: Topology → Chaos → Matter → Chemistry → Selection)", "description": "From Chaos to Life in Medium-Free Topological Dynamics: Complete Numerical Verification of the Trinity Graph Process (Phases 0–6: Topology → Chaos → Matter → Chemistry → Selection) This is a Markdown conversion of the Zenodo paper. The original TeX source is…", "url": "https://seer1980.github.io/jia-baolong-researchable-ontology/papers/19551359.html", "author": {"@type": "Person", "name": "Jia Baolong"}, "datePublished": "2026-04-13", "sameAs": "https://doi.org/10.5281/zenodo.19551359"}</script>
@@ -329,7 +329,7 @@ with conservative bulk and boundary dissipation.</p>
 <p>Two TGP simulators are implemented in Rust:</p>
 <h5 id="lattice-tgp">Lattice TGP</h5>
 <p>(<code>rust\_sim</code>, 1{,}200 lines):
-Uses sparse <code>HashMap\textless u32, HashSet\textless u32\textgreater\textgreater</code>
+Uses sparse <code>HashMap&lt; u32, HashSet&lt; u32&gt;&gt;</code>
 adjacency lists on a fixed grid substrate.
 Key optimizations: direct <span class="math-inline">$O(\deg)$</span> neighbor lookup, cascade candidate tracking.
 Performance: <span class="math-inline">$\sim 200$</span> ticks/s at <span class="math-inline">$N = 1{,}000$</span>.</p>
@@ -1952,7 +1952,7 @@ CV computed across all configurations.</p>
 <td>0</td>
 <td><span class="math-inline">$\sim 63\%$</span></td>
 <td>Photon-like (massless)</td>
-<td>\multirow{4}{*}{4.3\%}</td>
+<td>4.3%</td>
 </tr>
 <tr>
 <td>1</td>
