@@ -30,6 +30,7 @@ GUIDE_GROUPS: list[tuple[str, str, list[str]]] = [
         [
             "THEORY_READING_GUIDE.md",
             "00_READ_FIRST.md",
+            "docs/06_commentary/AI_UNDERSTANDING_AND_AXIOMATIC_ACCEPTANCE.md",
         ],
     ),
     (
