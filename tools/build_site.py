@@ -37,6 +37,7 @@ GUIDE_GROUPS: list[tuple[str, str, list[str]]] = [
         "规范理论主线",
         "按零点边界、完整架构、公理、绝对真理、第一实际和向上涌现的顺序阅读。",
         [
+            "docs/06_commentary/existence-undefined-pr-and-comparative-ontology.md",
             "docs/06_commentary/defining-zero-highest-deepest-grandest-elephant-theory.md",
             "docs/06_commentary/jia-baolong-existence-generation-theory-integrated-understanding.md",
             "docs/01_foundation/01_THEORY_MASTER_MAP.md",
