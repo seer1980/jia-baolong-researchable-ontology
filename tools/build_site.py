@@ -46,6 +46,7 @@ GUIDE_GROUPS: list[tuple[str, str, list[str]]] = [
             "docs/01_foundation/02_JIABAOLONG_AXIOM_SYSTEM.md",
             "docs/01_foundation/03_JIABAOLONG_ABSOLUTE_TRUTH.md",
             "docs/02_first_beat/04_FIRST_BEAT_SEVEN_ARGUMENTS.md",
+            "docs/06_commentary/from-eternal-actual-existence-to-pr-first-beat-necessity.md",
             "docs/03_emergence/05_MATTER_TO_FIRST_CELL_EMERGENCE.md",
             "docs/04_reference/06_GLOSSARY_AND_FORMULAE.md",
         ],
