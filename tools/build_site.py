@@ -59,6 +59,7 @@ GUIDE_GROUPS: list[tuple[str, str, list[str]]] = [
         "从极限压力测试进入意识反观，并把唯物主义与唯心主义放回同一生成—认识闭环。",
         [
             "docs/06_commentary/jblro-extreme-stress-test-and-hardening.md",
+            "docs/06_commentary/absolute-truth-in-hand-after-reaching-the-boundary-of-thought.md",
             "docs/06_commentary/consciousness-reflects-u-pr-internal-proof-point.md",
             "docs/06_commentary/materialism-and-idealism-in-jblro-generation-loop.md",
             "docs/06_commentary/AI_UNDERSTANDING_AND_AXIOMATIC_ACCEPTANCE.md",
