@@ -30,21 +30,12 @@ GUIDE_GROUPS: list[tuple[str, str, list[str]]] = [
         [
             "THEORY_READING_GUIDE.md",
             "00_READ_FIRST.md",
-            "docs/06_commentary/AI_UNDERSTANDING_AND_AXIOMATIC_ACCEPTANCE.md",
         ],
     ),
     (
         "规范理论主线",
         "按零点边界、完整架构、公理、绝对真理、第一实际和向上涌现的顺序阅读。",
         [
-            "docs/06_commentary/existence-undefined-pr-and-comparative-ontology.md",
-            "docs/06_commentary/researchable-ontology-2-0-0-research-neighborhood-map.md",
-            "docs/06_commentary/jblro-perfection-coherence-and-global-comparison.md",
-            "docs/06_commentary/jblro-perfect-theory-retains-imperfection.md",
-            "docs/06_commentary/jblro-higher-order-perfection-beyond-naive-perfect-world.md",
-            "docs/06_commentary/jia-baolong-theory-system-maturity-quality-report.md",
-            "docs/06_commentary/defining-zero-highest-deepest-grandest-elephant-theory.md",
-            "docs/06_commentary/jia-baolong-existence-generation-theory-integrated-understanding.md",
             "docs/01_foundation/01_THEORY_MASTER_MAP.md",
             "docs/01_foundation/02_JIABAOLONG_AXIOM_SYSTEM.md",
             "docs/01_foundation/03_JIABAOLONG_ABSOLUTE_TRUTH.md",
@@ -52,6 +43,15 @@ GUIDE_GROUPS: list[tuple[str, str, list[str]]] = [
             "docs/06_commentary/from-eternal-actual-existence-to-pr-first-beat-necessity.md",
             "docs/03_emergence/05_MATTER_TO_FIRST_CELL_EMERGENCE.md",
             "docs/04_reference/06_GLOSSARY_AND_FORMULAE.md",
+            "docs/06_commentary/THEORY_UNDERSTANDING_UPDATE.md",
+            "docs/06_commentary/jia-baolong-existence-generation-theory-integrated-understanding.md",
+            "docs/06_commentary/existence-undefined-pr-and-comparative-ontology.md",
+            "docs/06_commentary/researchable-ontology-2-0-0-research-neighborhood-map.md",
+            "docs/06_commentary/jblro-perfection-coherence-and-global-comparison.md",
+            "docs/06_commentary/jblro-perfect-theory-retains-imperfection.md",
+            "docs/06_commentary/jblro-higher-order-perfection-beyond-naive-perfect-world.md",
+            "docs/06_commentary/jia-baolong-theory-system-maturity-quality-report.md",
+            "docs/06_commentary/defining-zero-highest-deepest-grandest-elephant-theory.md",
         ],
     ),
     (
@@ -61,6 +61,7 @@ GUIDE_GROUPS: list[tuple[str, str, list[str]]] = [
             "docs/06_commentary/jblro-extreme-stress-test-and-hardening.md",
             "docs/06_commentary/consciousness-reflects-u-pr-internal-proof-point.md",
             "docs/06_commentary/materialism-and-idealism-in-jblro-generation-loop.md",
+            "docs/06_commentary/AI_UNDERSTANDING_AND_AXIOMATIC_ACCEPTANCE.md",
         ],
     ),
     (
@@ -71,7 +72,6 @@ GUIDE_GROUPS: list[tuple[str, str, list[str]]] = [
             "ELEPHANT_THEORY_CONCEPT.md",
             "docs/06_commentary/jblat-meaningful-absolute-truth-and-godel-boundary.md",
             "THEORY_COMPARATIVE_ASSESSMENT.md",
-            "docs/06_commentary/THEORY_UNDERSTANDING_UPDATE.md",
         ],
     ),
     (
@@ -682,6 +682,24 @@ $$</div>
 STYLES_CSS = r'''
 :root{--ink:#132238;--muted:#5c6b7c;--line:#dbe3ec;--paper:#ffffff;--wash:#f4f7fb;--accent:#1264a3;--accent-dark:#0b4778;--warm:#f0b44d;}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--wash);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.72}.site-header{background:#0e2238;color:#fff;border-bottom:4px solid var(--warm)}.header-inner{max-width:1180px;margin:auto;padding:1rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}.brand{color:#fff;text-decoration:none;font-weight:760;letter-spacing:.02em}.site-header nav{display:flex;gap:1rem;flex-wrap:wrap}.site-header nav a{color:#d8e9f7;text-decoration:none;font-size:.92rem}.site-header nav a:hover{color:#fff}.page-shell{max-width:1040px;margin:0 auto;padding:1.25rem 1.1rem 4rem}.breadcrumbs{color:var(--muted);font-size:.88rem;margin:.25rem 0 1rem}.breadcrumbs a{color:var(--accent)}.document{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:clamp(1.2rem,3vw,3rem);box-shadow:0 12px 38px rgba(22,47,76,.07)}h1,h2,h3,h4{line-height:1.24;color:var(--ink)}h1{font-size:clamp(1.9rem,4.5vw,3.1rem);margin:.1rem 0 .6rem}h2{margin-top:2.3rem;border-bottom:1px solid var(--line);padding-bottom:.35rem}h3{margin-top:1.6rem}.page-meta{display:flex;flex-wrap:wrap;gap:.35rem .8rem;color:var(--muted);font-size:.9rem;padding:.55rem 0 1.35rem;border-bottom:1px solid var(--line)}.page-meta a{color:var(--accent)}.document-body{font-size:1.02rem}.document-body a{color:var(--accent-dark)}.document-body img{max-width:100%;height:auto}.document-body blockquote{border-left:4px solid var(--warm);background:#fff8e9;margin:1.2rem 0;padding:.65rem 1rem;color:#37465a}.document-body pre{overflow:auto;background:#142436;color:#eaf3fb;padding:1rem;border-radius:10px}.document-body code{background:#eef3f8;padding:.12rem .3rem;border-radius:4px}.document-body pre code{background:transparent;padding:0}.document-body table{border-collapse:collapse;display:block;overflow:auto;width:100%;margin:1rem 0}.document-body th,.document-body td{border:1px solid var(--line);padding:.5rem .7rem;text-align:left;vertical-align:top}.document-body th{background:#edf4fa}.document-body .math-block{text-align:center;overflow:auto}.lead{font-size:1.12rem;color:#344963}.directory-list{list-style:none;padding:0;margin:1rem 0}.directory-list li{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px solid var(--line);padding:.72rem .2rem}.directory-list li span{color:var(--muted);font-size:.88rem;text-align:right}.search-panel{max-width:800px;margin:0 auto}.search-panel label{display:block;font-weight:700;margin-bottom:.45rem}.search-row{display:flex;gap:.6rem}.search-row input{flex:1;border:1px solid #aebdcd;border-radius:8px;padding:.75rem .85rem;font:inherit}.search-row button{border:0;border-radius:8px;padding:.75rem 1.2rem;background:var(--accent);color:#fff;font:inherit;font-weight:700;cursor:pointer}.search-row button:hover{background:var(--accent-dark)}.search-status{color:var(--muted);font-size:.92rem}.search-result{border-top:1px solid var(--line);padding:1rem 0}.search-result h3{margin:0 0 .2rem}.search-result p{margin:.25rem 0;color:#41546b}.result-meta{font-size:.82rem;color:var(--muted)}.site-footer{max-width:1040px;margin:auto;padding:1.25rem 1.1rem 3rem;display:flex;justify-content:space-between;gap:1rem;color:var(--muted);font-size:.86rem}.site-footer a{color:var(--accent)}.theory-hero{margin:1rem 0 2rem;padding:clamp(1.25rem,3vw,2.25rem);border-radius:14px;background:linear-gradient(135deg,#102943,#174c70);color:#edf7ff}.theory-hero p{max-width:850px}.theory-hero .eyebrow{margin:0;color:#f4c86f;font-size:.82rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase}.theory-hero .hero-claim{font-size:clamp(1.18rem,2.3vw,1.55rem);line-height:1.48;font-weight:720}.theory-hero .math-block{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:.55rem;margin:1.25rem 0;color:#fff}.hero-actions{display:flex;flex-wrap:wrap;gap:.7rem;margin:1.25rem 0 .2rem}.document-body .button{display:inline-block;border:1px solid #8ba6bd;border-radius:8px;padding:.62rem .95rem;color:#163a56;text-decoration:none;font-weight:720;background:#fff}.document-body .button.primary{border-color:var(--accent);background:var(--accent);color:#fff}.theory-hero .button{border-color:#bed0df;color:#163a56}.theory-hero .button.primary{border-color:#f0b44d;background:#f0b44d;color:#172638}.semantic-identity{margin:2.2rem 0}.term-map{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.85rem;margin:1rem 0}.term-map>div{border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:9px;padding:.85rem 1rem;background:#f8fbfe}.term-map dt{font-weight:780;color:#193a55}.term-map dd{margin:.3rem 0 0;color:#4c5f73;font-size:.94rem}.claim-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:1.5rem 0 2.5rem}.claim-grid article{border:1px solid var(--line);border-top:4px solid var(--warm);border-radius:12px;padding:1rem;background:#f9fbfd}.claim-grid h2{border:0;margin:0 0 .35rem;padding:0;font-size:1.22rem}.claim-grid p{margin:0;color:#40536a}.theory-index{scroll-margin-top:1rem}.home-section{margin-top:2.8rem}.content-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.85rem;margin:1rem 0}.content-card{border:1px solid var(--line);border-radius:10px;padding:1rem;background:#fbfdff}.content-card h3{font-size:1.02rem;margin:0 0 .45rem}.content-card h3 a{text-decoration:none}.content-card p{margin:0;color:#526276;font-size:.92rem;line-height:1.55}.archive-panel{margin:2.2rem 0;border:1px solid var(--line);border-radius:10px;background:#f8fafc;padding:.85rem 1rem}.archive-panel summary{cursor:pointer;font-weight:760;color:#243b53}.archive-panel[open] summary{margin-bottom:.8rem}.repository-notes .document-body{font-size:.95rem}.corpus-entry{border-top:2px solid var(--line);padding-top:.3rem}@media(max-width:680px){.header-inner{display:block}.site-header nav{margin-top:.7rem}.directory-list li{display:block}.directory-list li span{display:block;text-align:left;margin-top:.2rem}.claim-grid,.content-grid,.term-map{grid-template-columns:1fr}.theory-hero{padding:1.1rem}.site-footer{display:block}.site-footer span{display:block;margin-top:.4rem}}
+/* Editorial archive palette: warm paper, ink, oxblood, and restrained bronze. */
+:root{--ink:#292521;--muted:#6b6359;--line:#d8cfc2;--paper:#fffdf8;--wash:#f3efe7;--accent:#783232;--accent-dark:#542323;--warm:#a77c3f}
+.site-header{background:#2d2925;color:#fffdf8;border-bottom-color:var(--warm)}
+.brand{color:#fffdf8}.site-header nav a{color:#e6ddd0}.site-header nav a:hover{color:#fffdf8}
+.document{box-shadow:0 10px 28px rgba(48,40,32,.07)}
+.document-body blockquote{background:#f8f0e3;color:#494139}
+.document-body pre{background:#2f2a26;color:#f5efe4}.document-body code{background:#eee8de}
+.document-body th{background:#eee7dc}.lead{color:#4d453d}
+.search-row input{border-color:#b8ac9c}.search-result p{color:#514940}
+.theory-hero{background:#3a332d;color:#f7f2e9}
+.theory-hero .eyebrow{color:#d9bb82}
+.document-body .button{border-color:#a99b8a;color:#542323;background:#fffdf8}
+.theory-hero .button{border-color:#d7c8b5;color:#3e3128}
+.theory-hero .button.primary{border-color:#b58b4f;background:#b58b4f;color:#26211d}
+.term-map>div{background:#faf6ee}.term-map dt{color:#542323}.term-map dd{color:#5f574e}
+.claim-grid article{background:#fbf8f1}.claim-grid p{color:#51483f}
+.content-card{background:#fffdf9}.content-card p{color:#625b52}
+.archive-panel{background:#f7f3eb}.archive-panel summary{color:#3f3730}
 '''
 
 
