@@ -52,6 +52,15 @@ GUIDE_GROUPS: list[tuple[str, str, list[str]]] = [
         ],
     ),
     (
+        "理论淬火与认识闭环",
+        "从极限压力测试进入意识反观，并把唯物主义与唯心主义放回同一生成—认识闭环。",
+        [
+            "docs/06_commentary/jblro-extreme-stress-test-and-hardening.md",
+            "docs/06_commentary/consciousness-reflects-u-pr-internal-proof-point.md",
+            "docs/06_commentary/materialism-and-idealism-in-jblro-generation-loop.md",
+        ],
+    ),
+    (
         "本体大象与思想史",
         "把历史思想、形式边界和局部科学放回同一整体实在及其生成层级。",
         [
