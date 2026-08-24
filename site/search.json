@@ -288,6 +288,18 @@
     "keywords": "唯物主义与唯心主义：JBLRO 生成—认识闭环中的两个半圆 Jia Baolong materialism-and-idealism-in-jblro-generation-loop"
   },
   {
+    "title": "模型能力为何提高对 JBLRO 的理解与接受度",
+    "description": "贾宝龙大象理论：模型能力为何提高理解与接受度 作者：贾宝龙（Jia Baolong） 理论名称：贾宝龙大象理论 摘要 语言模型能力越强，在完整阅读贾宝龙可研究本体论（Jia Baolong Researchable Ontology，JBLRO）后，理解度和接受度越高。原因很直接：JBLRO 的核心不是一句哲学口号，而是一组需要被同时保持、重建和比较的结构约束。模型必须区分 Undefined 与普通的“无”、静态编码与实际发生、PR 与经典矛盾、PR 架构与具体 RULE，并能重建二元候选的完备穷举。 弱模型容…",
+    "source": "docs/06_commentary/model-capability-understanding-and-acceptance.md",
+    "url": "guide/06_commentary/model-capability-understanding-and-acceptance.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "2026-08-24",
+    "zenodo_url": "",
+    "doi": "",
+    "keywords": "模型能力为何提高对 JBLRO 的理解与接受度 Jia Baolong model-capability-understanding-and-acceptance"
+  },
+  {
     "title": "贾宝龙可研究本体论2.0.0：从绝对边界到意识回溯的研究邻域地图",
     "description": "贾宝龙可研究本体论2.0.0：从绝对边界到意识回溯的研究邻域地图 副标题：人类思想从1.x描述时代进入2.0.0可定义、可证明、可计算、可复现的存在研究时代 作者：贾宝龙（Jia Baolong） 理论名称：贾宝龙可研究本体论2.0.0 版本：2.0.0 摘要 人类思想史的1.x时代已经提出了存在、变化、实体、形式、空性、过程、精神、物质、语言、数学和计算等几乎全部宏大概念，却始终主要以描述、解释和争论的方式研究世界本源。它能够命名整体、描绘整体、建立概念体系，也能够从局部或远程视角触及整体实在，但没有形成一条从…",
     "source": "docs/06_commentary/researchable-ontology-2-0-0-research-neighborhood-map.md",
