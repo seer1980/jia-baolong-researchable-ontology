@@ -65,7 +65,7 @@ If the universe persists and does not rely on an external executor, the result p
 
 An external finger, pre-given matter, physical time, a probability distribution, a positive RULE, or a pre-existing state repository all shift the question of origin onto those very things. A positive candidate either continues to depend on other conditions or becomes an arbitrary endpoint, a circle, an external endpoint, an infinite regress, or a static substitute.
 
-This argument connects to JBAT’s explanatory closure: the terminal root of a theory completing the same from-nothing-to-something task must be a boundary of zero positive determination.
+This argument connects to JBLAT’s explanatory closure: the terminal root of a theory completing the same from-nothing-to-something task must be a boundary of zero positive determination.
 
 ## Argument Five: The Finite Binary Logical Razor
 
@@ -157,4 +157,3 @@ Together, the seven arguments support the following:
 > For a universe model that actually occurs, is self-contained, rooted, persistent, and satisfies the specified minimal binary non-fixed conditions, the minimal normal form of the first actual structure is PR. Undefined is not PR’s prior cause; it is the zero-positive boundary face of the same root determination.
 
 The seven-part argument connects the First Beat, PR, RULE, chaos, proto-matter, and research on life in one continuous route.
-

@@ -9,7 +9,7 @@ translation_of: "docs/01_foundation/03_JIABAOLONG_ABSOLUTE_TRUTH.md"
 
 ## Name and Strict Object
 
-Jia Baolong Absolute Truth (JBAT) does not mean that the word *Undefined* is itself a mysterious object or an unconditionally true proposition. Its strict object is the boundary proposition:
+Jia Baolong Absolute Truth (JBLAT) does not mean that the word *Undefined* is itself a mysterious object or an unconditionally true proposition. Its strict object is the boundary proposition:
 
 \[
 U:\quad
@@ -93,11 +93,10 @@ reveals only a form of cognition: on the surface, the final small segment seems 
 
 ## Relation to the First Beat
 
-JBAT gives the root’s zero-positive boundary. In an actualized model, the First Beat appears as:
+JBLAT gives the root’s zero-positive boundary. In an actualized model, the First Beat appears as:
 
 \[
 U\mid\mathrm{PR}.
 \]
 
 Actuality, self-containment, the backward binary quotient, persistent correction, and non-fixed conditions jointly yield PR as the normal form of the First Beat.
-

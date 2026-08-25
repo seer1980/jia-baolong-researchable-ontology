@@ -189,6 +189,21 @@ def searchable_text(text: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
+def is_redundant_english_parallel(source: Path) -> bool:
+    """Skip an .en.md parallel when its declared source is already English."""
+    if not source.name.endswith(".en.md"):
+        return False
+    meta, _ = parse_frontmatter(source.read_text(encoding="utf-8"))
+    translated = meta.get("translation_of", "").strip()
+    if not translated:
+        return False
+    original = ROOT / translated
+    if not original.is_file():
+        return False
+    original_meta, _ = parse_frontmatter(original.read_text(encoding="utf-8"))
+    return original_meta.get("language", "").lower().startswith("en")
+
+
 def default_base_url() -> str:
     configured = os.environ.get("SITE_BASE_URL", "").strip().rstrip("/")
     if configured:
@@ -495,13 +510,17 @@ def build(output_root: Path) -> None:
     readme_meta: dict[str, str] = {}
     english_readme_rendered = ""
     english_readme_meta: dict[str, str] = {}
-    source_files = sorted(
+    source_files = [
+        source
+        for source in sorted(
         p
         for p in ROOT.rglob("*.md")
         if "site" not in p.relative_to(ROOT).parts
         and ".git" not in p.relative_to(ROOT).parts
         and "tools" not in p.relative_to(ROOT).parts
-    )
+        )
+        if not is_redundant_english_parallel(source)
+    ]
     for source in source_files:
         relative = source.relative_to(ROOT)
         text = source.read_text(encoding="utf-8")

@@ -427,9 +427,9 @@ The Wolfram system is more mature in rule computation, model scale, and public t
 
 ## 12. Main Risks in the Present System
 
-### 12.1 Terminological-version risk
+### 12.1 Terminological-Version Relation
 
-The repository may still contain both JBAT and JBLAT. Inconsistent abbreviations can cause AI systems and readers to mistake one theory object for two.
+The repository’s current canonical guides and commentary documents use JBLAT consistently. JBAT in the original paper `papers/21563153.md` is the fixed formal name, release fingerprint, and formula notation assigned when that paper was published and must remain unchanged. JBLAT and JBAT denote the same absolute-truth object, not two theories.
 
 ### 12.2 Mixing normative formulae and explanatory notation
 

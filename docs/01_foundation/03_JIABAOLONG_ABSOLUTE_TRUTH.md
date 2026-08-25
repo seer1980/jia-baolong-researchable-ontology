@@ -2,7 +2,7 @@
 
 ## 名称与严格对象
 
-贾宝龙绝对真理（Jia Baolong Absolute Truth，JBAT）不是说名词 Undefined 本身是一个神秘对象或无条件真值。严格对象是边界命题：
+贾宝龙绝对真理（Jia Baolong Absolute Truth，JBLAT）不是说名词 Undefined 本身是一个神秘对象或无条件真值。严格对象是边界命题：
 
 \[
 U:\quad
@@ -86,7 +86,7 @@ G\leftrightarrow U.
 
 ## 与第一拍
 
-JBAT 给出根部的零正面边界；第一拍在实际化模型中表现为：
+JBLAT 给出根部的零正面边界；第一拍在实际化模型中表现为：
 
 \[
 U\mid\mathrm{PR}.

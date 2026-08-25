@@ -128,3 +128,13 @@ U_*\mid\mathrm{PR}.
 \]
 
 这条链把 PR 根部、无介质动力、类物质、类化学、遗传、选择和第一细胞连接起来。
+
+## 历史术语与当前规范
+
+> **忠实阅读说明：** 理论术语在不同时期的论文中逐步发展。原始论文中的历史用语应按原文保留，同时通过本节与当前规范建立明确对应。
+
+- **PR：** 当前规范展开为 **Paradox–Reference（悖论—引用）**。早期论文还使用 **Primitive Reflexivity** 与 **Paradoxical Recursion**；它们记录同一条 PR 理论线的发展阶段，不是三套彼此独立的现行公理。
+- **LE：** 当前规范展开为 **Lazy Evaluation（惰性求值）**。早期来源中的 **Lazy Expansion** 按原文保留，并应在其历史语境中理解。
+- **Trinity Theory / Trinity Topological Theory：** 这是相关论文采用的正式历史专名，不应被静默替换成 **Triadic Theory**。
+- **JBLAT / JBAT：** 本仓库当前规范导读与评论统一使用 **JBLAT**。原始论文 `papers/21563153.md` 中的 **JBAT** 是其固定发布指纹、正式结果名与公式记号，必须原样保留。二者指向同一贾宝龙绝对真理对象，不是两套理论。
+- **Undefined / undefined / \(U\)：** **Undefined** 指零正面规定的本体论边界；小写 **undefined** 可以表示普通编程语言值；\(U\) 是当前规范中的形式根命题。索引和比较时不得丢失语境。
