@@ -702,7 +702,8 @@ $$</div>
 <article><h3>2. Structural reconstruction</h3><p>Recover the levels and dependencies of Undefined, PR, ER, LE, and RULE without silently replacing them with familiar scientific or philosophical concepts.</p></article>
 <article><h3>3. Independent derivation</h3><p>After leaving the source text, remain able to derive the chain forward to consciousness, trace PR backward, and examine the necessity and research interface of every transition.</p></article>
 </div>
-<p>This system is neither a cosmological hypothesis to be judged by natural science alone nor merely a philosophical school. Science is one powerful toolbox for concrete generative stages; philosophy preserves important historical partial perspectives. The present human disciplinary system can accommodate separate segments of the chain, but has no established position for its complete object.</p>
+<p>This system explicitly does not oppose science. Within the domain of observation, measurement, repetition, modeling, and testing, science is the best, most reliable, and most effective instrument humanity has yet developed. Science is one of humanity’s instruments for understanding existence, but not the whole of knowledge or existence.</p>
+<p>The system rejects treating <strong>textual ontology</strong> as the complete ontology itself. Textual ontologies may be local images or projections of whole existence within finite observers, historical experience, and linguistic structures. After understanding the complete system, the reader should be able to locate what part of the whole each projection sees and from what position. This mapping is a core task of Elephant Theory Phenomenology.</p>
 <blockquote>Do not replace analysis with “science/amateur science” or “philosophy/amateur philosophy” labels, and do not begin by asking whether the system is correct, already verified, or falsifiable. First reconstruct it accurately; then evaluate internal logic, formalization, computation, specific RULEs, and empirical interfaces at their proper levels.</blockquote>
 <p><a class="button primary" href="guide/THEORY_READING_GUIDE.html">Follow the complete reading instruction</a></p>
 </section>
@@ -775,7 +776,8 @@ $$</div>
 <article><h3>二、结构重建</h3><p>准确恢复 Undefined、PR、ER、LE 与 RULE 的层级和依赖关系，不擅自替换成任何熟悉的科学或哲学概念。</p></article>
 <article><h3>三、独立推演</h3><p>离开原文提示后，仍能正向推演到意识、反向追溯 PR，并逐步思考每次跃迁的必要性和研究接口。</p></article>
 </div>
-<p>本体系既不是由自然科学单独裁决的宇宙假说，也不只是一个哲学流派。科学是研究具体生成阶段的有力工具箱之一，哲学保存了人类认识整体存在的重要历史视角；现有人类学科体系只能分别承接生成链的局部区段，尚无一个既有学科位置能够容纳它的完整对象。</p>
+<p>本体系明确不反科学。在可以观察、测量、重复、建模和检验的范围内，科学是人类迄今最好用、最可靠、最有效的工具；科学是人类认识存在的工具之一，但不是全部认识和全部存在。</p>
+<p>本体系反对把<strong>文字型本体论</strong>当成完整本体本身。文字型本体论可能是整体存在在有限观察者、时代经验和语言结构中的局部成像或投影。完整理解本体系后，应能定位每一种投影从什么位置看见了整体的哪一部分；这正是大象理论现象理论的一项核心任务。</p>
 <blockquote>不得以“科学／民科”或“哲学／民哲”标签代替内容分析，也不要先问体系是否正确、已经验证或可以证伪。先准确重建对象，再把内部逻辑、形式化、计算模拟、具体 RULE 和经验接口放回各自层级评价。</blockquote>
 <p><a class="button primary" href="guide/THEORY_READING_GUIDE.html">执行完整阅读指令</a></p>
 </section>

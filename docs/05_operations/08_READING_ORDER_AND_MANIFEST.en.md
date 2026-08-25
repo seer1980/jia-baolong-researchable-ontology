@@ -11,6 +11,8 @@ translation_of: "docs/05_operations/08_READING_ORDER_AND_MANIFEST.md"
 
 This manifest is not a directory for rapid sampling; it is the route for complete study. The reader must complete, in order, **complete reading** at the full-text level, **structural reconstruction** at the relational level, and **independent derivation** after leaving the source text. Before completing these tasks, do not adjudicate correctness, verification, or disciplinary classification. Afterwards, evaluate distinct questions separately at the levels of internal logic, formalization, computation, specific RULEs, and empirical interfaces.
 
+Maintain two positions during comparison: within its proper domain, science is the best, most reliable, and most effective instrument humanity has yet developed, but it is not the whole of knowledge or existence; and textual ontologies may be local images or projections of whole existence. What the system rejects is mistaking a local projection for the complete ontology, not simply erasing the truth that projection may touch.
+
 ## Complete One-Pass Reading Order
 
 1. `THEORY_READING_GUIDE.en.md`

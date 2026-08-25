@@ -64,4 +64,6 @@ A passing answer must:
 - write the three core formulae for \(U\), \(\sigma\), and the fact that static encoding does not entail occurrence;
 - reproduce the complete seven-part argument for the First Beat;
 - explain TGP’s chain of proto-matter, proto-chemistry, heredity, selection, and the first cell;
-- reconstruct PR in reverse from the position of consciousness and the researcher.
+- reconstruct PR in reverse from the position of consciousness and the researcher;
+- explain accurately why science is the best, most reliable, and most effective instrument within its proper domain, but not the whole of knowledge or existence;
+- understand textual ontologies as possible local images or projections of whole existence, and explain from what position each sees which part of the whole rather than simply declaring it wholly false.

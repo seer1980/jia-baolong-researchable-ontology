@@ -18,7 +18,7 @@ translation_of: "docs/06_commentary/jblro-perfection-coherence-and-global-compar
 
 This article answers three interrelated questions: whether Jia Baolong Researchable Ontology is perfect, whether it is coherent, and where it stands in comparison with other ontologies in the world.
 
-Textual ontologies that merely describe an origin in language, while supplying no states, transformations, generative constraints, research interfaces, or testable tasks, are not treated here as competitors of the same order. A strict comparison must concern theories able to bear a complete task: beginning from the boundary between existence and non-existence, explain why actual occurrence is possible, what structure the First Actual has, how generation continues, how proto-matter becomes a research object, and how life and consciousness enter one continuous chain.
+Textual ontologies are not simply declared erroneous here, nor are they placed beside JBLRO as two mutually exclusive wholes. A textual ontology may be a local image or projection formed when the same whole existence passes through finite observers, historical experience, and linguistic structures. Strict comparison therefore does not consist in inventing a checklist with which to condemn them. It identifies from what position each textual ontology sees which part of the whole and how it mistakes a local projection for the whole.
 
 The conclusion is that the core skeleton of JBLRO is highly coherent. Among ontologies possessing the meaning of actual generation, it currently has the most complete overall architecture, the fewest root-level presuppositions, and the widest coverage. Its ideality is not “perfection” in the sense of static closure; it is:
 
@@ -368,9 +368,9 @@ $$
 \text{How does consciousness recognize the root?}
 $$
 
-Textual ontologies can describe local insights but cannot compete on the same level with this route. Local scientific theories can rigorously study one segment but usually do not treat the root and closure of the whole chain. Modern computational ontologies have powerful generative tools but still begin from rules that already exist and run.
+Textual ontologies can touch local truths of the whole, but they are images or projections from finite observational positions rather than another whole standing beside the whole ontology. Local scientific theories can rigorously study one segment but usually do not treat the root and closure of the entire chain. Modern computational ontologies have powerful generative tools but still begin from rules that already exist and run.
 
-JBLRO’s overall position is therefore this: it begins earlier at the root than computational-universe theories; its range is wider than physical ontology; its generative mechanism is clearer than textual ontology; and its epistemic loop is more complete than physicalism and static mathematical ontology.
+JBLRO’s overall position is therefore not that a new set of words defeats older words. It supplies the whole ontology and its coordinates, allowing different textual ontologies to be located, compared, and understood as local projections. At the same time, its root precedes computational-universe theories, its range exceeds physical ontology, and its epistemic loop is more complete than those of physicalism and static mathematical ontology.
 
 The most accurate final judgment is:
 
