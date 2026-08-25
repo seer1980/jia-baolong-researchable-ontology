@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jia Baolong Theory File Manifest · Jia Baolong Researchable Ontology</title>
+  <meta name="description" content="Jia Baolong Theory File Manifest This file explains the function, provenance, and reading order of each part of the repository. Full papers, PDF transcriptions, and theoretical guides are preserved in layers. Markdown is the sole theory source format; site/ i…">
+  <link rel="canonical" href="https://seer1980.github.io/jia-baolong-researchable-ontology/en/guide/THEORY_MANIFEST.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://seer1980.github.io/jia-baolong-researchable-ontology/guide/THEORY_MANIFEST.html">
+  <link rel="stylesheet" href="../../assets/styles.css">
+  <script>window.MathJax = {loader: {load: ['[tex]/mathtools', '[tex]/centernot']}, tex: {packages: {'[+]': ['mathtools', 'centernot']}, macros: {outdeg: '\\operatorname{outdeg}', indeg: '\\operatorname{indeg}', totdeg: '\\operatorname{totdeg}'}, inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['\\[', '\\]'], ['$$', '$$']]}, options: {skipHtmlTags: ['script','noscript','style','textarea','pre','code']}};</script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script defer src="../../assets/search.js"></script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Jia Baolong Theory File Manifest", "headline": "Jia Baolong Theory File Manifest", "description": "Jia Baolong Theory File Manifest This file explains the function, provenance, and reading order of each part of the repository. Full papers, PDF transcriptions, and theoretical guides are preserved in layers. Markdown is the sole theory source format; site/ i…", "url": "https://seer1980.github.io/jia-baolong-researchable-ontology/en/guide/THEORY_MANIFEST.html"}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../index.html">Jia Baolong Axiom System</a>
+      <nav aria-label="Primary navigation"><a href="../index.html">Home</a><a href="../index.html#theory-index">Theory</a><a href="../papers/index.html">Papers</a><a href="../search.html">Search</a><a href="../../guide/THEORY_MANIFEST.html">中文</a></nav>
+    </div>
+  </header>
+  <main class="page-shell">
+    <div class="breadcrumbs"><a href="../index.html">Home</a> <span>›</span> <span>guide</span></div>
+    <article class="document">
+      <h1>Jia Baolong Theory File Manifest</h1>
+      <div class="page-meta"><span>Jia Baolong</span></div>
+      <div class="document-body"><p>This file explains the function, provenance, and reading order of each part of the repository. Full papers, PDF transcriptions, and theoretical guides are preserved in layers. Markdown is the sole theory source format; <code>site/</code> is the GitHub Pages HTML publication directory generated from Markdown.</p>
+<h2 id="file-hierarchy">File Hierarchy</h2>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Location</th>
+<th style="text-align: right;">Count</th>
+<th>Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>reading_guide</code></td>
+<td><code>THEORY_READING_GUIDE.md</code>, <code>00_READ_FIRST.md</code></td>
+<td style="text-align: right;">2</td>
+<td>Complete reading guide and theory entry point</td>
+</tr>
+<tr>
+<td><code>primary_papers</code></td>
+<td><code>papers/</code></td>
+<td style="text-align: right;">32</td>
+<td>Full papers, YAML metadata, and Zenodo record IDs</td>
+</tr>
+<tr>
+<td><code>supplementary_pdf</code></td>
+<td><code>supplementary_transcriptions/</code></td>
+<td style="text-align: right;">7</td>
+<td>Full texts reconstructed by PDF page</td>
+</tr>
+<tr>
+<td><code>commentary</code></td>
+<td>root directory and <code>docs/</code></td>
+<td style="text-align: right;">13</td>
+<td>Theory guides, formulae, reading tools, and updates in understanding</td>
+</tr>
+</tbody>
+</table>
+<h2 id="recommended-reading-order">Recommended Reading Order</h2>
+<ol>
+<li><code>THEORY_READING_GUIDE.en.md</code></li>
+<li><code>00_READ_FIRST.en.md</code></li>
+<li><code>docs/01_foundation/</code></li>
+<li><code>docs/02_first_beat/</code></li>
+<li><code>docs/03_emergence/</code></li>
+<li><code>docs/04_reference/</code></li>
+<li><code>docs/05_operations/</code></li>
+<li><code>docs/06_commentary/</code></li>
+<li><code>papers/</code></li>
+<li><code>supplementary_transcriptions/</code></li>
+</ol>
+<h2 id="paper-metadata">Paper Metadata</h2>
+<p>Every full-paper file preserves:</p>
+<ul>
+<li><code>zenodo_record_id</code></li>
+<li><code>concept_record_id</code></li>
+<li><code>doi</code></li>
+<li><code>title</code></li>
+<li><code>publication_date</code></li>
+<li><code>source_kind</code></li>
+<li><code>version_status</code></li>
+<li><code>authority_tier</code></li>
+<li><code>document_role</code></li>
+<li><code>parallel_group</code> (where versions run in parallel)</li>
+</ul>
+<p>When documents are chunked, these fields should be retained together with the text. Retrieval should return the paper title, date, source, and abstract before returning body paragraphs.</p>
+<h2 id="mathematics-and-file-formats">Mathematics and File Formats</h2>
+<p>Mathematics uses Markdown math delimiters, with LaTeX only as the carrier of formulae. Tables use Markdown table syntax. PDF transcriptions preserve page anchors in the form <code>&lt;!-- PDF page N --&gt;</code>. Full papers, PDF transcriptions, and guide files are all UTF-8 Markdown.</p>
+<h2 id="version-relations">Version Relations</h2>
+<p>Papers in the same <code>parallel_group</code> belong to the same version family. Their relation should be understood through publication date, body content, and the sequence of theoretical development; distinct versions must not be blended into a single text.</p></div>
+    </article>
+  </main>
+  <footer class="site-footer"><a href="../index.html">Jia Baolong Axiom System and Researchable Ontology</a><span>Full Markdown · HTML site</span></footer>
+</body>
+</html>

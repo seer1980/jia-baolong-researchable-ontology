@@ -140,6 +140,20 @@ def first_heading(body: str) -> str:
 
 def output_path(source: Path) -> Path:
     relative = source.relative_to(ROOT).as_posix()
+    # English parallel Markdown is published in a stable /en/ tree.  The
+    # language suffix is an authoring detail, not part of the public URL.
+    if source.name.endswith(".en.md"):
+        base_name = source.name[: -len(".en.md")]
+        if relative == "README.en.md":
+            return Path("en/index.html")
+        if relative.startswith("papers/"):
+            return Path("en/papers") / f"{base_name}.html"
+        if relative.startswith("supplementary_transcriptions/"):
+            return Path("en/papers") / f"pdf-{base_name}.html"
+        if relative.startswith("docs/"):
+            translated_relative = relative[5 : -len(".en.md")] + ".html"
+            return Path("en/guide") / translated_relative
+        return Path("en/guide") / f"{base_name}.html"
     if relative == "README.md":
         return Path("index.html")
     if relative.startswith("papers/"):
@@ -205,7 +219,13 @@ def rewrite_markdown_links(rendered: str, source: Path, target: Path) -> str:
         if not candidate.exists():
             return match.group(0)
         if path_part.endswith(".md"):
-            destination = output_path(ROOT / relative_source)
+            # An English parallel page should keep readers inside the English
+            # tree whenever its linked document has a parallel translation.
+            if source.name.endswith(".en.md"):
+                english_candidate = candidate.with_name(f"{candidate.stem}.en.md")
+                if english_candidate.exists():
+                    candidate = english_candidate
+            destination = output_path(candidate)
         elif relative_source.as_posix() in {"LICENSE", "LICENSE-CODE"}:
             destination = Path(relative_source.as_posix())
         else:
@@ -231,12 +251,17 @@ def page_template(
     display_title: str | None = None,
     noindex: bool = False,
     keywords: list[str] | None = None,
+    language: str = "zh-CN",
 ) -> str:
     meta = meta or {}
     keywords = keywords or []
-    home = relative_url(target, Path("index.html"))
-    search = relative_url(target, Path("search.html"))
-    papers = relative_url(target, Path("papers/index.html"))
+    english = language.startswith("en")
+    home_target = Path("en/index.html") if english else Path("index.html")
+    search_target = Path("en/search.html") if english else Path("search.html")
+    papers_target = Path("en/papers/index.html") if english else Path("papers/index.html")
+    home = relative_url(target, home_target)
+    search = relative_url(target, search_target)
+    papers = relative_url(target, papers_target)
     theory_overview = f'{home}#theory-index'
     styles = relative_url(target, Path("assets/styles.css"))
     script = relative_url(target, Path("assets/search.js"))
@@ -248,6 +273,43 @@ def page_template(
     else:
         canonical_path = f"/{target_posix}"
     canonical = f"{base_url}{canonical_path}"
+    alternate_target: Path | None = None
+    alternate_language = "zh-CN" if english else "en"
+    if source is not None:
+        if english and source.name.endswith(".en.md"):
+            original_source = source.with_name(source.name.replace(".en.md", ".md"))
+            if original_source.exists():
+                alternate_target = output_path(original_source)
+        elif not english:
+            english_source = source.with_name(f"{source.stem}.en.md")
+            if english_source.exists():
+                alternate_target = output_path(english_source)
+    if alternate_target is None:
+        paired_indexes = {
+            "papers/index.html": Path("en/papers/index.html"),
+            "en/papers/index.html": Path("papers/index.html"),
+            "search.html": Path("en/search.html"),
+            "en/search.html": Path("search.html"),
+        }
+        alternate_target = paired_indexes.get(target_posix)
+    alternate_html = ""
+    language_switch = ""
+    if alternate_target is not None:
+        alternate_url = relative_url(target, alternate_target)
+        if alternate_target.as_posix() == "index.html":
+            alternate_canonical_path = "/"
+        elif alternate_target.as_posix().endswith("/index.html"):
+            alternate_canonical_path = f"/{alternate_target.as_posix()[:-len('index.html')]}"
+        else:
+            alternate_canonical_path = f"/{alternate_target.as_posix()}"
+        alternate_html = (
+            f'  <link rel="alternate" hreflang="{alternate_language}" '
+            f'href="{html.escape(base_url + alternate_canonical_path, quote=True)}">\n'
+        )
+        language_switch = (
+            f'<a href="{html.escape(alternate_url, quote=True)}">'
+            f'{"中文" if english else "English"}</a>'
+        )
     robots_meta = '  <meta name="robots" content="noindex,follow">\n' if noindex else ""
     keywords_meta = (
         f'  <meta name="keywords" content="{html.escape(", ".join(keywords), quote=True)}">\n'
@@ -288,8 +350,8 @@ def page_template(
         json_ld["keywords"] = keywords
         json_ld["about"] = [{"@type": "Thing", "name": keyword} for keyword in keywords]
     visible_title = render_title(display_title or title)
-    breadcrumbs = "" if target_posix == "index.html" else (
-        f'    <div class="breadcrumbs"><a href="{home}">首页</a> '
+    breadcrumbs = "" if target_posix in {"index.html", "en/index.html"} else (
+        f'    <div class="breadcrumbs"><a href="{home}">{"Home" if english else "首页"}</a> '
         f'<span>›</span> <span>{html.escape(section)}</span></div>'
     )
     if section == "paper":
@@ -299,14 +361,14 @@ def page_template(
         if meta.get("doi"):
             json_ld["sameAs"] = f"https://doi.org/{meta['doi']}"
     return f'''<!doctype html>
-<html lang="zh-CN">
+<html lang="{html.escape(language, quote=True)}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{html.escape(title)} · Jia Baolong Researchable Ontology</title>
   <meta name="description" content="{html.escape(description, quote=True)}">
 {robots_meta}{keywords_meta}  <link rel="canonical" href="{html.escape(canonical, quote=True)}">
-  <link rel="stylesheet" href="{styles}">
+{alternate_html}  <link rel="stylesheet" href="{styles}">
   <script>window.MathJax = {{loader: {{load: ['[tex]/mathtools', '[tex]/centernot']}}, tex: {{packages: {{'[+]': ['mathtools', 'centernot']}}, macros: {{outdeg: '\\\\operatorname{{outdeg}}', indeg: '\\\\operatorname{{indeg}}', totdeg: '\\\\operatorname{{totdeg}}'}}, inlineMath: [['\\\\(', '\\\\)'], ['$', '$']], displayMath: [['\\\\[', '\\\\]'], ['$$', '$$']]}}, options: {{skipHtmlTags: ['script','noscript','style','textarea','pre','code']}}}};</script>
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <script defer src="{script}"></script>
@@ -315,8 +377,8 @@ def page_template(
 <body>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="{home}">贾宝龙公理体系</a>
-      <nav aria-label="主导航"><a href="{home}">首页</a><a href="{theory_overview}">理论总览</a><a href="{papers}">论文</a><a href="{search}">搜索</a></nav>
+      <a class="brand" href="{home}">{"Jia Baolong Axiom System" if english else "贾宝龙公理体系"}</a>
+      <nav aria-label="{'Primary navigation' if english else '主导航'}"><a href="{home}">{"Home" if english else "首页"}</a><a href="{theory_overview}">{"Theory" if english else "理论总览"}</a><a href="{papers}">{"Papers" if english else "论文"}</a><a href="{search}">{"Search" if english else "搜索"}</a>{language_switch}</nav>
     </div>
   </header>
   <main class="page-shell">
@@ -327,7 +389,7 @@ def page_template(
       <div class="document-body">{body_html}</div>
     </article>
   </main>
-  <footer class="site-footer"><a href="{home}">贾宝龙公理体系与可研究本体论</a><span>Markdown 全文 · HTML 网站</span></footer>
+  <footer class="site-footer"><a href="{home}">{"Jia Baolong Axiom System and Researchable Ontology" if english else "贾宝龙公理体系与可研究本体论"}</a><span>{"Full Markdown · HTML site" if english else "Markdown 全文 · HTML 网站"}</span></footer>
 </body>
 </html>
 '''
@@ -425,6 +487,8 @@ def build(output_root: Path) -> None:
     entries: list[dict[str, Any]] = []
     readme_rendered = ""
     readme_meta: dict[str, str] = {}
+    english_readme_rendered = ""
+    english_readme_meta: dict[str, str] = {}
     source_files = sorted(
         p
         for p in ROOT.rglob("*.md")
@@ -439,14 +503,20 @@ def build(output_root: Path) -> None:
         title = meta.get("title") or first_heading(body)
         if relative.as_posix() == "README.md":
             title = "贾宝龙公理体系与可研究本体论"
-        display_title = title if relative.as_posix() == "README.md" else first_heading(body)
+        elif relative.as_posix() == "README.en.md":
+            title = "Jia Baolong Axiom System and Researchable Ontology"
+        display_title = title if relative.as_posix() in {"README.md", "README.en.md"} else first_heading(body)
         description = shorten(body, 260)
         section = "paper" if relative.parts[0] in {"papers", "supplementary_transcriptions"} else "guide"
+        language = "en" if source.name.endswith(".en.md") or meta.get("language", "").lower().startswith("en") else "zh-CN"
         target = output_path(source)
         rendered = strip_first_h1(rewrite_markdown_links(render_markdown(body), source, target))
         if relative.as_posix() == "README.md":
             readme_rendered = rendered
             readme_meta = meta
+        elif relative.as_posix() == "README.en.md":
+            english_readme_rendered = rendered
+            english_readme_meta = meta
         content = page_template(
             title=title,
             description=description,
@@ -457,6 +527,7 @@ def build(output_root: Path) -> None:
             meta=meta,
             section=section,
             display_title=display_title,
+            language=language,
         )
         write_page(output_root, target, content)
         entries.append(
@@ -470,6 +541,8 @@ def build(output_root: Path) -> None:
                 "date": meta.get("publication_date", ""),
                 "zenodo_url": meta.get("zenodo_url", ""),
                 "doi": meta.get("doi", ""),
+                "language": language,
+                "parallel": source.name.endswith(".en.md"),
                 "keywords": " ".join(
                     filter(
                         None,
@@ -480,8 +553,13 @@ def build(output_root: Path) -> None:
             }
         )
 
-    papers = [entry for entry in entries if entry["section"] == "paper"]
-    guides = [entry for entry in entries if entry["section"] == "guide"]
+    # The Chinese archive keeps source records in their original positions;
+    # English parallel sources belong only to the English navigation tree.
+    papers = [entry for entry in entries if entry["section"] == "paper" and not entry["parallel"]]
+    guides = [entry for entry in entries if entry["section"] == "guide" and not entry["parallel"]]
+    english_entries = [entry for entry in entries if entry["language"] == "en"]
+    english_papers = [entry for entry in english_entries if entry["section"] == "paper"]
+    english_guides = [entry for entry in english_entries if entry["section"] == "guide" and entry["source"] != "README.en.md"]
     entries_by_source = {entry["source"]: entry for entry in entries}
 
     def listing_title(entry: dict[str, Any]) -> str:
@@ -528,6 +606,58 @@ def build(output_root: Path) -> None:
 <h2>PDF 全文恢复</h2>
 <p>依据 Zenodo PDF 逐页恢复的 Markdown 全文，保留公式与页边界。</p>
 <ul class="directory-list">{directory_items(pdf_entries, Path("papers/index.html"))}</ul>'''
+
+    def english_directory_items(items: list[dict[str, Any]], target: Path) -> str:
+        rows: list[str] = []
+        for entry in items:
+            href = relative_url(target, Path(entry["url"]))
+            record_id = Path(entry["source"]).stem.removesuffix(".en")
+            detail = (
+                f"PDF transcription · Zenodo {record_id}"
+                if entry["source"].startswith("supplementary_transcriptions/")
+                else entry["date"] or f"Zenodo {record_id}"
+            )
+            rows.append(
+                f'<li><a href="{html.escape(href, quote=True)}">{html.escape(listing_title(entry))}</a>'
+                f'<span>{html.escape(detail)}</span></li>'
+            )
+        return "".join(rows)
+
+    english_home_body = fr'''<section class="theory-hero">
+<p class="eyebrow">Jia Baolong Axiom System · Researchable Ontology</p>
+<p class="hero-claim">A researchable account of existence and nonexistence: from the Undefined boundary and PR to emergence, life, consciousness, and self-recognition.</p>
+<p>The Jia Baolong Axiom System does not study one particular universe. It defines the boundary from which positive ontology can begin, treats PR as the first actual face, and places chaos, proto-matter, life, consciousness, and existence recognizing itself on one researchable generative chain.</p>
+<div class="theory-chain math-block">$$
+U_*\mid\mathrm{{PR}}
+\to\mathrm{{ER+LE}}
+\xRightarrow{{\mathrm{{RULE}}}}\mathrm{{Chaos}}
+\to\mathrm{{ProtoMatter}}
+\to\mathrm{{Life}}
+\to\mathrm{{Consciousness}}
+\to\operatorname{{Recognize}}(U_*\mid\mathrm{{PR}})
+$$</div>
+<div class="hero-actions"><a class="button primary" href="#english-theory-index">Read the theory</a><a class="button" href="search.html">Search English full text</a><a class="button" href="papers/index.html">Browse English papers</a></div>
+</section>
+<section class="semantic-identity" aria-labelledby="english-theory-names">
+<h2 id="english-theory-names">Names of the theory and their relation</h2>
+<dl class="term-map">
+<div><dt>Jia Baolong Axiom System</dt><dd>The formal foundation for existence and nonexistence, dynamic actuality, PR, ER, LE, and concrete RULE.</dd></div>
+<div><dt>Jia Baolong Absolute Truth (JBLAT)</dt><dd>The Undefined boundary, expressed as “even no nonbeing,” that fixes the zero point from which positive ontology begins.</dd></div>
+<div><dt>Researchable Ontology</dt><dd>A program that specifies investigable interfaces among the first actual, concrete generation, chaos, proto-matter, life, and consciousness.</dd></div>
+<div><dt>Elephant Theory / Phenomenology</dt><dd>The phenomenological layer examining how finite observers, intellectual history, and disciplines disclose the same whole ontology from partial or remote positions.</dd></div>
+</dl>
+</section>
+<section class="home-section" id="english-theory-index"><h2>English theory documents</h2>
+<p>Parallel English editions preserve the definitions, arguments, mathematical notation, and research structure of the Chinese archive.</p>
+{content_cards(english_guides, Path("en/index.html"))}</section>
+<section class="home-section corpus-entry"><h2>English papers and search</h2>
+<p>The English archive contains parallel editions of Chinese-primary papers and source documents that were already written in English.</p>
+<div class="hero-actions"><a class="button primary" href="papers/index.html">English paper index</a><a class="button" href="search.html">Search English full text</a></div></section>
+<details class="archive-panel repository-notes"><summary>Repository notes</summary>{english_readme_rendered}</details>'''
+
+    english_papers_body = f'''<p class="lead">English editions and English-original papers in the Jia Baolong Axiom System archive. Mathematical expressions remain in LaTex notation for exact rendering and machine reading.</p>
+<h2>English papers</h2>
+<ul class="directory-list">{english_directory_items(english_papers, Path("en/papers/index.html"))}</ul>'''
 
     used_guide_sources = {"README.md"}
     guide_sections: list[str] = []
@@ -605,6 +735,30 @@ $$</div>
             keywords=HOMEPAGE_KEYWORDS,
         ),
     )
+    write_page(
+        output_root,
+        Path("en/index.html"),
+        page_template(
+            title="Jia Baolong Axiom System and Researchable Ontology",
+            description="An English research archive for the Jia Baolong Axiom System, JBLAT, the PR–ER–LE framework, emergence, consciousness, and Elephant Theory phenomenology.",
+            body_html=english_home_body,
+            target=Path("en/index.html"),
+            base_url=base_url,
+            source=ROOT / "README.en.md",
+            meta=english_readme_meta,
+            section="home",
+            display_title="Jia Baolong Axiom System and Researchable Ontology",
+            keywords=[
+                "Jia Baolong Axiom System",
+                "Jia Baolong Absolute Truth",
+                "JBLAT",
+                "Researchable Ontology",
+                "PR ER LE",
+                "Elephant Theory",
+            ],
+            language="en",
+        ),
+    )
 
     guides_body = '''<p class="lead">理论导读已经合并到网站主页，并按规范阅读顺序分组。所有原有文章地址保持不变。</p>
 <p><a class="button primary" href="../index.html#theory-index">前往主页理论总览</a></p>'''
@@ -618,6 +772,19 @@ $$</div>
             target=Path("papers/index.html"),
             base_url=base_url,
             section="papers",
+        ),
+    )
+    write_page(
+        output_root,
+        Path("en/papers/index.html"),
+        page_template(
+            title="English Paper Index",
+            description="English editions and English-original papers from the Jia Baolong Axiom System archive.",
+            body_html=english_papers_body,
+            target=Path("en/papers/index.html"),
+            base_url=base_url,
+            section="papers",
+            language="en",
         ),
     )
     write_page(
@@ -647,6 +814,19 @@ $$</div>
     )
     write_page(
         output_root,
+        Path("en/search.html"),
+        page_template(
+            title="English Full-Text Search",
+            description="Search English editions of the Jia Baolong Axiom System archive, including papers, formulas, and theory documents.",
+            body_html='''<section class="search-panel"><label for="search-input">Search English papers, formulas, and theory concepts</label><div class="search-row"><input id="search-input" type="search" placeholder="For example: PR, Undefined, first beat, proto-matter, Rule 979" autocomplete="off"><button id="search-button" type="button">Search</button></div><p id="search-status" class="search-status">Loading the English full-text index…</p><div id="search-results" class="search-results" aria-live="polite"></div></section>''',
+            target=Path("en/search.html"),
+            base_url=base_url,
+            section="search",
+            language="en",
+        ),
+    )
+    write_page(
+        output_root,
         Path("404.html"),
         page_template(
             title="页面未找到",
@@ -663,11 +843,26 @@ $$</div>
     (assets / "styles.css").write_text(STYLES_CSS, encoding="utf-8")
     (assets / "search.js").write_text(SEARCH_JS, encoding="utf-8")
     (output_root / "search.json").write_text(json.dumps(entries, ensure_ascii=False, indent=2), encoding="utf-8")
+    english_search_entries: list[dict[str, Any]] = []
+    for entry in english_entries:
+        english_entry = dict(entry)
+        english_entry["url"] = relative_url(Path("en/search.html"), Path(entry["url"]))
+        english_search_entries.append(english_entry)
+    (output_root / "en" / "search.json").write_text(
+        json.dumps(english_search_entries, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
     (output_root / ".nojekyll").write_text("", encoding="utf-8")
     for filename in ("LICENSE", "LICENSE-CODE"):
         shutil.copyfile(ROOT / filename, output_root / filename)
-    sitemap_urls = [f"{base_url}/" if entry["url"] == "index.html" else f"{base_url}/{entry['url']}" for entry in entries]
-    sitemap_urls.extend([f"{base_url}/papers/", f"{base_url}/search.html"])
+    sitemap_urls = [
+        f"{base_url}/"
+        if entry["url"] == "index.html"
+        else f"{base_url}/en/"
+        if entry["url"] == "en/index.html"
+        else f"{base_url}/{entry['url']}"
+        for entry in entries
+    ]
+    sitemap_urls.extend([f"{base_url}/papers/", f"{base_url}/search.html", f"{base_url}/en/papers/", f"{base_url}/en/search.html"])
     sitemap = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n"
     sitemap += "".join(f"  <url><loc>{html.escape(url)}</loc></url>\n" for url in sorted(set(sitemap_urls)))
     sitemap += "</urlset>\n"
@@ -711,6 +906,20 @@ SEARCH_JS = r'''
   const status=document.getElementById('search-status');
   const results=document.getElementById('search-results');
   if(!input||!button||!status||!results)return;
+  const english=document.documentElement.lang.startsWith('en');
+  const copy=english?{
+    prompt:'Enter a keyword to search the full English Markdown archive.',
+    found:n=>`${n} related page${n===1?'':'s'} found`,
+    empty:'No matching pages found.',
+    loading:n=>`Search ${n} English Markdown documents.`,
+    failed:'The search index could not be loaded. Please browse the paper index directly.'
+  }:{
+    prompt:'输入关键词搜索全部 Markdown 文档的 HTML 页面。',
+    found:n=>`找到 ${n} 个相关页面`,
+    empty:'没有找到匹配内容。',
+    loading:n=>`输入关键词搜索 ${n} 个 Markdown 文档的 HTML 页面。`,
+    failed:'搜索索引加载失败，请直接浏览论文索引。'
+  };
   let index=[];
   const normalize=s=>(s||'').toLocaleLowerCase().replace(/\s+/g,' ');
   function score(item,q){
@@ -720,13 +929,13 @@ SEARCH_JS = r'''
     query.split(/[\s,，、。/]+/).filter(Boolean).forEach(t=>fields.forEach((f,i)=>{if(f.includes(t))n+=(i===0?18:3)})); return n;
   }
   function render(){
-    const q=input.value.trim(); if(!q){status.textContent='输入关键词搜索全部 Markdown 文档的 HTML 页面。';results.innerHTML='';return;}
+    const q=input.value.trim(); if(!q){status.textContent=copy.prompt;results.innerHTML='';return;}
     const found=index.map(item=>({item,s:score(item,q)})).filter(x=>x.s>0).sort((a,b)=>b.s-a.s).slice(0,50);
-    status.textContent=`找到 ${found.length} 个相关页面`;
-    results.innerHTML=found.length?found.map(({item})=>`<article class="search-result"><h3><a href="${item.url}">${escapeHtml(item.title)}</a></h3><div class="result-meta">${escapeHtml(item.source)} · ${escapeHtml(item.section)}</div><p>${escapeHtml(item.description)}</p></article>`).join(''):'<p>没有找到匹配内容。</p>';
+    status.textContent=copy.found(found.length);
+    results.innerHTML=found.length?found.map(({item})=>`<article class="search-result"><h3><a href="${item.url}">${escapeHtml(item.title)}</a></h3><div class="result-meta">${escapeHtml(item.source)} · ${escapeHtml(item.section)}</div><p>${escapeHtml(item.description)}</p></article>`).join(''):`<p>${copy.empty}</p>`;
   }
   function escapeHtml(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
-  fetch('search.json').then(r=>r.json()).then(data=>{index=data;const q=new URLSearchParams(location.search).get('q');if(q){input.value=q;render()}else{status.textContent=`输入关键词搜索 ${index.length} 个 Markdown 文档的 HTML 页面。`}}).catch(()=>status.textContent='搜索索引加载失败，请直接浏览论文索引。');
+  fetch('search.json').then(r=>r.json()).then(data=>{index=data;const q=new URLSearchParams(location.search).get('q');if(q){input.value=q;render()}else{status.textContent=copy.loading(index.length)}}).catch(()=>status.textContent=copy.failed);
   button.addEventListener('click',render); input.addEventListener('keydown',e=>{if(e.key==='Enter')render()});
 })();
 '''

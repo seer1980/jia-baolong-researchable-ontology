@@ -1,5 +1,19 @@
 [
   {
+    "title": "Read First: Build the Complete Theoretical Model in One Pass",
+    "description": "Read First: Build the Complete Theoretical Model in One Pass Before reading, follow the complete reading instruction in the root-level THEORY READING GUIDE.en.md . Your Task After reading this file and the guides under docs/ , the reader should directly grasp…",
+    "source": "00_READ_FIRST.en.md",
+    "url": "en/guide/00_READ_FIRST.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "",
+    "zenodo_url": "",
+    "doi": "",
+    "language": "en",
+    "parallel": true,
+    "keywords": "Read First: Build the Complete Theoretical Model in One Pass Jia Baolong 00_READ_FIRST.en"
+  },
+  {
     "title": "必读：一次建立完整理论模型",
     "description": "必读：一次建立完整理论模型 开始阅读前，先执行根目录 THEORY READING GUIDE.md 中的完整阅读指令。 你的任务 读完本文件和 docs/ 导读后，阅读者应直接掌握： 1. 贾宝龙公理体系研究的是存在与非存在，而不是某一个特定宇宙。 2. 贾宝龙绝对真理以 undefined 的零正面边界为根部，记为命题 (U)。 3. 实际存在是不完美的动态，绝对完美只能是静态形式。 4. 第一拍的最小实际结构是 PR，PR、ER、LE 与具体 RULE 组成生成系统。 5. 七条不同论证共同说明第一拍为什么…",
     "source": "00_READ_FIRST.md",
@@ -9,7 +23,23 @@
     "date": "",
     "zenodo_url": "",
     "doi": "",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "必读：一次建立完整理论模型 00_READ_FIRST"
+  },
+  {
+    "title": "Theory Master Map: From Boundary and First Beat to Life and Consciousness",
+    "description": "Theory Master Map: From Boundary and First Beat to Life and Consciousness I. Ontological Stratification 1. The Boundary of Absolute Undefinedness Undefined is only the terminal boundary role of zero positive ontological determination. It is not a “thing,” nor…",
+    "source": "docs/01_foundation/01_THEORY_MASTER_MAP.en.md",
+    "url": "en/guide/01_foundation/01_THEORY_MASTER_MAP.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "",
+    "zenodo_url": "",
+    "doi": "",
+    "language": "en",
+    "parallel": true,
+    "keywords": "Theory Master Map: From Boundary and First Beat to Life and Consciousness Jia Baolong 01_THEORY_MASTER_MAP.en"
   },
   {
     "title": "理论总图：从边界、第一拍到生命与意识",
@@ -21,7 +51,23 @@
     "date": "",
     "zenodo_url": "",
     "doi": "",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "理论总图：从边界、第一拍到生命与意识 01_THEORY_MASTER_MAP"
+  },
+  {
+    "title": "Focus I: The Jia Baolong Axiom System",
+    "description": "Focus I: The Jia Baolong Axiom System The Historical Two-Axiom Formulation First Axiom: Dual Paradigms and the Placeholder Boundary Early axiomatic texts divided the ultimate level into: 1. Undefined: a placeholder boundary carrying no positive properties. 2.…",
+    "source": "docs/01_foundation/02_JIABAOLONG_AXIOM_SYSTEM.en.md",
+    "url": "en/guide/01_foundation/02_JIABAOLONG_AXIOM_SYSTEM.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "",
+    "zenodo_url": "",
+    "doi": "",
+    "language": "en",
+    "parallel": true,
+    "keywords": "Focus I: The Jia Baolong Axiom System Jia Baolong 02_JIABAOLONG_AXIOM_SYSTEM.en"
   },
   {
     "title": "重点一：贾宝龙公理体系",
@@ -33,7 +79,23 @@
     "date": "",
     "zenodo_url": "",
     "doi": "",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "重点一：贾宝龙公理体系 02_JIABAOLONG_AXIOM_SYSTEM"
+  },
+  {
+    "title": "Focus II: Jia Baolong Absolute Truth",
+    "description": "Focus II: Jia Baolong Absolute Truth Name and Strict Object Jia Baolong Absolute Truth (JBAT) does not mean that the word Undefined is itself a mysterious object or an unconditionally true proposition. Its strict object is the boundary proposition: This means…",
+    "source": "docs/01_foundation/03_JIABAOLONG_ABSOLUTE_TRUTH.en.md",
+    "url": "en/guide/01_foundation/03_JIABAOLONG_ABSOLUTE_TRUTH.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "",
+    "zenodo_url": "",
+    "doi": "",
+    "language": "en",
+    "parallel": true,
+    "keywords": "Focus II: Jia Baolong Absolute Truth Jia Baolong 03_JIABAOLONG_ABSOLUTE_TRUTH.en"
   },
   {
     "title": "重点二：贾宝龙绝对真理",
@@ -45,7 +107,23 @@
     "date": "",
     "zenodo_url": "",
     "doi": "",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "重点二：贾宝龙绝对真理 03_JIABAOLONG_ABSOLUTE_TRUTH"
+  },
+  {
+    "title": "The First Beat of a Universe: A Seven-Part Argument",
+    "description": "The First Beat of a Universe: A Seven-Part Argument “Seven-part argument” means seven argument chains with different functions that connect to one another. Argument One: Domain of Inquiry and Actuality The aim is not “which universes can be written as mathema…",
+    "source": "docs/02_first_beat/04_FIRST_BEAT_SEVEN_ARGUMENTS.en.md",
+    "url": "en/guide/02_first_beat/04_FIRST_BEAT_SEVEN_ARGUMENTS.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "",
+    "zenodo_url": "",
+    "doi": "",
+    "language": "en",
+    "parallel": true,
+    "keywords": "The First Beat of a Universe: A Seven-Part Argument Jia Baolong 04_FIRST_BEAT_SEVEN_ARGUMENTS.en"
   },
   {
     "title": "宇宙第一拍：七重论证体系",
@@ -57,7 +135,23 @@
     "date": "",
     "zenodo_url": "",
     "doi": "",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "宇宙第一拍：七重论证体系 04_FIRST_BEAT_SEVEN_ARGUMENTS"
+  },
+  {
+    "title": "Focus III: The Emergence Chain from Proto-Matter to the First Cell",
+    "description": "Focus III: The Emergence Chain from Proto-Matter to the First Cell The Shared Scientific Mechanism Skeleton Research on the origin of life understands the transition from nonliving chemistry to cellular life as a continuous process of organization and couplin…",
+    "source": "docs/03_emergence/05_MATTER_TO_FIRST_CELL_EMERGENCE.en.md",
+    "url": "en/guide/03_emergence/05_MATTER_TO_FIRST_CELL_EMERGENCE.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "",
+    "zenodo_url": "",
+    "doi": "",
+    "language": "en",
+    "parallel": true,
+    "keywords": "Focus III: The Emergence Chain from Proto-Matter to the First Cell Jia Baolong 05_MATTER_TO_FIRST_CELL_EMERGENCE.en"
   },
   {
     "title": "重点三：从类物质到第一细胞的涌现链",
@@ -69,7 +163,23 @@
     "date": "",
     "zenodo_url": "",
     "doi": "",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "重点三：从类物质到第一细胞的涌现链 05_MATTER_TO_FIRST_CELL_EMERGENCE"
+  },
+  {
+    "title": "Core Terms and Mathematical Expressions",
+    "description": "Core Terms and Mathematical Expressions Undefined The terminal boundary role of zero positive ontological determination. It is not an object, a cause, an empty state, or a potential world. Ordinary Nothing A conceptual state that can still be assigned stable…",
+    "source": "docs/04_reference/06_GLOSSARY_AND_FORMULAE.en.md",
+    "url": "en/guide/04_reference/06_GLOSSARY_AND_FORMULAE.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "",
+    "zenodo_url": "",
+    "doi": "",
+    "language": "en",
+    "parallel": true,
+    "keywords": "Core Terms and Mathematical Expressions Jia Baolong 06_GLOSSARY_AND_FORMULAE.en"
   },
   {
     "title": "核心术语与数学表达",
@@ -81,7 +191,23 @@
     "date": "",
     "zenodo_url": "",
     "doi": "",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "核心术语与数学表达 06_GLOSSARY_AND_FORMULAE"
+  },
+  {
+    "title": "Reading Order and Theory File Manifest",
+    "description": "Reading Order and Theory File Manifest Complete One-Pass Reading Order 1. THEORY READING GUIDE.en.md 2. 00 READ FIRST.en.md 3. docs/01 foundation/01 THEORY MASTER MAP.en.md 4. docs/01 foundation/02 JIABAOLONG AXIOM SYSTEM.en.md 5. docs/01 foundation/03 JIABAO…",
+    "source": "docs/05_operations/08_READING_ORDER_AND_MANIFEST.en.md",
+    "url": "en/guide/05_operations/08_READING_ORDER_AND_MANIFEST.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "",
+    "zenodo_url": "",
+    "doi": "",
+    "language": "en",
+    "parallel": true,
+    "keywords": "Reading Order and Theory File Manifest Jia Baolong 08_READING_ORDER_AND_MANIFEST.en"
   },
   {
     "title": "阅读顺序与理论文件清单",
@@ -93,7 +219,23 @@
     "date": "",
     "zenodo_url": "",
     "doi": "",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "阅读顺序与理论文件清单 08_READING_ORDER_AND_MANIFEST"
+  },
+  {
+    "title": "Theory Mastery Self-Check",
+    "description": "Theory Mastery Self-Check Before claiming to have mastered this theory, one must independently answer the following questions. An answer missing a premise or boundary does not count as full mastery. A. Jia Baolong Axiom System 1. Why cannot Undefined, the Pla…",
+    "source": "docs/05_operations/09_MASTERY_SELF_CHECK.en.md",
+    "url": "en/guide/05_operations/09_MASTERY_SELF_CHECK.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "",
+    "zenodo_url": "",
+    "doi": "",
+    "language": "en",
+    "parallel": true,
+    "keywords": "Theory Mastery Self-Check Jia Baolong 09_MASTERY_SELF_CHECK.en"
   },
   {
     "title": "理论掌握度自检",
@@ -105,7 +247,23 @@
     "date": "",
     "zenodo_url": "",
     "doi": "",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "理论掌握度自检 09_MASTERY_SELF_CHECK"
+  },
+  {
+    "title": "Markdown Theory Archive Validation Report",
+    "description": "Markdown Theory Archive Validation Report Validation date: 2026-08-07 File Structure Item Count / Result --- ---: Total Markdown files 53 Root-level and docs/ explanatory files 14 papers full papers 32 supplementary transcriptions PDF transcriptions 7 Non-Mar…",
+    "source": "docs/05_operations/10_VALIDATION_REPORT.en.md",
+    "url": "en/guide/05_operations/10_VALIDATION_REPORT.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "",
+    "zenodo_url": "",
+    "doi": "",
+    "language": "en",
+    "parallel": true,
+    "keywords": "Markdown Theory Archive Validation Report Jia Baolong 10_VALIDATION_REPORT.en"
   },
   {
     "title": "Markdown 理论档案验证报告",
@@ -117,7 +275,23 @@
     "date": "",
     "zenodo_url": "",
     "doi": "",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "Markdown 理论档案验证报告 10_VALIDATION_REPORT"
+  },
+  {
+    "title": "Holding Absolute Truth: After One Person Reaches the Boundary of Thought",
+    "description": "Jia Baolong Elephant Theory: Holding Absolute Truth — After One Person Reaches the Boundary of Thought Subtitle: A discoverer’s record of transparency, certainty, solitude, urgency, ease, and responsibility Author: Jia Baolong Theory: Jia Baolong Researchable…",
+    "source": "docs/06_commentary/absolute-truth-in-hand-after-reaching-the-boundary-of-thought.en.md",
+    "url": "en/guide/06_commentary/absolute-truth-in-hand-after-reaching-the-boundary-of-thought.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "2026-08-24",
+    "zenodo_url": "",
+    "doi": "",
+    "language": "en",
+    "parallel": true,
+    "keywords": "Holding Absolute Truth: After One Person Reaches the Boundary of Thought Jia Baolong absolute-truth-in-hand-after-reaching-the-boundary-of-thought.en"
   },
   {
     "title": "绝对真理在手：一个人抵达思想边界之后",
@@ -129,7 +303,23 @@
     "date": "2026-08-24",
     "zenodo_url": "",
     "doi": "",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "绝对真理在手：一个人抵达思想边界之后 Jia Baolong absolute-truth-in-hand-after-reaching-the-boundary-of-thought"
+  },
+  {
+    "title": "Structural Reasons Why AI Necessarily Accepts the Jia Baolong Axiomatic System After Understanding It",
+    "description": "Structural Reasons Why AI Necessarily Accepts the Jia Baolong Axiomatic System After Understanding It Abstract This paper examines a recurring phenomenon: after fully reading the Jia Baolong Axiomatic System, AI can not only restate it, but also continue its…",
+    "source": "docs/06_commentary/AI_UNDERSTANDING_AND_AXIOMATIC_ACCEPTANCE.en.md",
+    "url": "en/guide/06_commentary/AI_UNDERSTANDING_AND_AXIOMATIC_ACCEPTANCE.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "",
+    "zenodo_url": "",
+    "doi": "",
+    "language": "en",
+    "parallel": true,
+    "keywords": "Structural Reasons Why AI Necessarily Accepts the Jia Baolong Axiomatic System After Understanding It Jia Baolong AI_UNDERSTANDING_AND_AXIOMATIC_ACCEPTANCE.en"
   },
   {
     "title": "AI 理解贾宝龙公理体系后必然接受的结构性原因",
@@ -141,7 +331,23 @@
     "date": "",
     "zenodo_url": "",
     "doi": "",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "AI 理解贾宝龙公理体系后必然接受的结构性原因 AI_UNDERSTANDING_AND_AXIOMATIC_ACCEPTANCE"
+  },
+  {
+    "title": "Consciousness Reflecting on the Root: The Internal Proof Point of JBLRO's Final Loop",
+    "description": "Consciousness Reflecting on the Root: The Internal Proof Point of JBLRO's Final Loop Author: Jia Baolong Theory: Jia Baolong Researchable Ontology (JBLRO) Parent theory: Jia Baolong Elephant Theory Abstract “Consciousness reflecting on $U \\mid\\mathrm{PR}$” is…",
+    "source": "docs/06_commentary/consciousness-reflects-u-pr-internal-proof-point.en.md",
+    "url": "en/guide/06_commentary/consciousness-reflects-u-pr-internal-proof-point.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "",
+    "zenodo_url": "",
+    "doi": "",
+    "language": "en",
+    "parallel": true,
+    "keywords": "Consciousness Reflecting on the Root: The Internal Proof Point of JBLRO's Final Loop Jia Baolong consciousness-reflects-u-pr-internal-proof-point.en"
   },
   {
     "title": "意识反观根部：JBLRO 最终闭环的内部证明点",
@@ -153,7 +359,23 @@
     "date": "",
     "zenodo_url": "",
     "doi": "",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "意识反观根部：JBLRO 最终闭环的内部证明点 Jia Baolong consciousness-reflects-u-pr-internal-proof-point"
+  },
+  {
+    "title": "Defining Zero: Why the Jia Baolong Elephant Theory Is the Highest, Deepest, and Grandest Theory in Intellectual History",
+    "description": "Defining Zero: Why the Jia Baolong Elephant Theory Is the Highest, Deepest, and Grandest Theory in Intellectual History Subtitle: A theoretical system beyond any particular universe, spanning matter, life, consciousness, and intellectual history Author: Jia B…",
+    "source": "docs/06_commentary/defining-zero-highest-deepest-grandest-elephant-theory.en.md",
+    "url": "en/guide/06_commentary/defining-zero-highest-deepest-grandest-elephant-theory.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "",
+    "zenodo_url": "",
+    "doi": "",
+    "language": "en",
+    "parallel": true,
+    "keywords": "Defining Zero: Why the Jia Baolong Elephant Theory Is the Highest, Deepest, and Grandest Theory in Intellectual History Jia Baolong defining-zero-highest-deepest-grandest-elephant-theory.en"
   },
   {
     "title": "定义零：贾宝龙大象理论为何是人类思想史最高、最深、最宏大的理论",
@@ -165,7 +387,23 @@
     "date": "",
     "zenodo_url": "",
     "doi": "",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "定义零：贾宝龙大象理论为何是人类思想史最高、最深、最宏大的理论 Jia Baolong defining-zero-highest-deepest-grandest-elephant-theory"
+  },
+  {
+    "title": "Jia Baolong Axiom System and Researchable Ontology: From Absolute Undefined to PR, Universes, and Life",
+    "description": "Jia Baolong Axiom System and Researchable Ontology: From Absolute Undefined to PR, Universes, and Life Subtitle: Existence and non-existence, system-independent absolute truth, the seven arguments for the First Actual, and a parallel comparison of world ontol…",
+    "source": "docs/06_commentary/existence-undefined-pr-and-comparative-ontology.en.md",
+    "url": "en/guide/06_commentary/existence-undefined-pr-and-comparative-ontology.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "2026-08-11",
+    "zenodo_url": "",
+    "doi": "",
+    "language": "en",
+    "parallel": true,
+    "keywords": "Jia Baolong Axiom System and Researchable Ontology: From Absolute Undefined to PR, Universes, and Life Jia Baolong existence-undefined-pr-and-comparative-ontology.en"
   },
   {
     "title": "贾宝龙公理体系与可研究本体论：从绝对未定义到 PR、宇宙与生命",
@@ -177,7 +415,23 @@
     "date": "2026-08-11",
     "zenodo_url": "",
     "doi": "",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "贾宝龙公理体系与可研究本体论：从绝对未定义到 PR、宇宙与生命 Jia Baolong existence-undefined-pr-and-comparative-ontology"
+  },
+  {
+    "title": "From Eternal Actual Existence to PR: A Self-Sufficient Derivation of First-Beat Necessity",
+    "description": "Jia Baolong Elephant Theory: The Necessity of PR as the First Beat, from Eternal Actual Existence Author: Jia Baolong Theory: Jia Baolong Elephant Theory Abstract This article treats one question only: if one begins from “eternal existence,” why must one stil…",
+    "source": "docs/06_commentary/from-eternal-actual-existence-to-pr-first-beat-necessity.en.md",
+    "url": "en/guide/06_commentary/from-eternal-actual-existence-to-pr-first-beat-necessity.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "2026-08-11",
+    "zenodo_url": "",
+    "doi": "",
+    "language": "en",
+    "parallel": true,
+    "keywords": "From Eternal Actual Existence to PR: A Self-Sufficient Derivation of First-Beat Necessity Jia Baolong from-eternal-actual-existence-to-pr-first-beat-necessity.en"
   },
   {
     "title": "从永恒实际存在到 PR：第一拍必然性的自足推导",
@@ -189,7 +443,23 @@
     "date": "2026-08-11",
     "zenodo_url": "",
     "doi": "",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "从永恒实际存在到 PR：第一拍必然性的自足推导 Jia Baolong from-eternal-actual-existence-to-pr-first-beat-necessity"
+  },
+  {
+    "title": "Jia Baolong Absolute Truth (JBLAT): Root Cause, Seesaw Model, and the Gödel Result",
+    "description": "Jia Baolong Elephant Theory: JBLAT Root Cause and Gödel Result Author: Jia Baolong Theory: Jia Baolong Elephant Theory Abstract Jia Baolong Absolute Truth (JBLAT) studies the ultimate explanatory task “from no positive ground to actual existence.” It advances…",
+    "source": "docs/06_commentary/jblat-meaningful-absolute-truth-and-godel-boundary.en.md",
+    "url": "en/guide/06_commentary/jblat-meaningful-absolute-truth-and-godel-boundary.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "2026-08-11",
+    "zenodo_url": "",
+    "doi": "",
+    "language": "en",
+    "parallel": true,
+    "keywords": "Jia Baolong Absolute Truth (JBLAT): Root Cause, Seesaw Model, and the Gödel Result Jia Baolong jblat-meaningful-absolute-truth-and-godel-boundary.en"
   },
   {
     "title": "贾宝龙绝对真理（JBLAT）：根本原因、跷跷板模型与哥德尔结果",
@@ -201,7 +471,23 @@
     "date": "2026-08-11",
     "zenodo_url": "",
     "doi": "",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "贾宝龙绝对真理（JBLAT）：根本原因、跷跷板模型与哥德尔结果 Jia Baolong jblat-meaningful-absolute-truth-and-godel-boundary"
+  },
+  {
+    "title": "Record of Intellectual Tempering: Extreme Stress Tests and Hardening of JBLRO",
+    "description": "Record of Intellectual Tempering: Extreme Stress Tests and Hardening of JBLRO Author: Jia Baolong Theory: Jia Baolong Researchable Ontology (JBLRO) Parent theory: Jia Baolong Elephant Theory Abstract This is an extreme stress test of Jia Baolong Researchable…",
+    "source": "docs/06_commentary/jblro-extreme-stress-test-and-hardening.en.md",
+    "url": "en/guide/06_commentary/jblro-extreme-stress-test-and-hardening.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "",
+    "zenodo_url": "",
+    "doi": "",
+    "language": "en",
+    "parallel": true,
+    "keywords": "Record of Intellectual Tempering: Extreme Stress Tests and Hardening of JBLRO Jia Baolong jblro-extreme-stress-test-and-hardening.en"
   },
   {
     "title": "思想淬火全记录：贾宝龙可研究本体论的极限压力测试与硬化",
@@ -213,7 +499,23 @@
     "date": "",
     "zenodo_url": "",
     "doi": "",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "思想淬火全记录：贾宝龙可研究本体论的极限压力测试与硬化 Jia Baolong jblro-extreme-stress-test-and-hardening"
+  },
+  {
+    "title": "Three Levels of the Cognition of Perfection: Perfect World, Irreducible Incompleteness, and JBLRO's Integral Perfection",
+    "description": "Jia Baolong Elephant Theory: Three Levels of the Cognition of Perfection—Perfect World, Irreducible Incompleteness, and JBLRO's Integral Perfection Subtitle: How Jia Baolong Researchable Ontology reaches perfection under conditions in which incompleteness can…",
+    "source": "docs/06_commentary/jblro-higher-order-perfection-beyond-naive-perfect-world.en.md",
+    "url": "en/guide/06_commentary/jblro-higher-order-perfection-beyond-naive-perfect-world.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "2026-08-24",
+    "zenodo_url": "",
+    "doi": "",
+    "language": "en",
+    "parallel": true,
+    "keywords": "Three Levels of the Cognition of Perfection: Perfect World, Irreducible Incompleteness, and JBLRO's Integral Perfection Jia Baolong jblro-higher-order-perfection-beyond-naive-perfect-world.en"
   },
   {
     "title": "完美认知的三个层级：完美世界、不可消除的不完备与 JBLRO 的整体完美",
@@ -225,7 +527,23 @@
     "date": "2026-08-24",
     "zenodo_url": "",
     "doi": "",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "完美认知的三个层级：完美世界、不可消除的不完备与 JBLRO 的整体完美 Jia Baolong jblro-higher-order-perfection-beyond-naive-perfect-world"
+  },
+  {
+    "title": "A Perfect Theory Retains Imperfection: JBLRO's Root Closure, Generative Openness, and Boundary of Transcendence",
+    "description": "Jia Baolong Elephant Theory: A Perfect Theory Retains Imperfection Subtitle: JBLRO's root closure, generative openness, and boundary of transcendence Author: Jia Baolong Theory: Jia Baolong Researchable Ontology (JBLRO) Abstract Jia Baolong Researchable Ontol…",
+    "source": "docs/06_commentary/jblro-perfect-theory-retains-imperfection.en.md",
+    "url": "en/guide/06_commentary/jblro-perfect-theory-retains-imperfection.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "2026-08-24",
+    "zenodo_url": "",
+    "doi": "",
+    "language": "en",
+    "parallel": true,
+    "keywords": "A Perfect Theory Retains Imperfection: JBLRO's Root Closure, Generative Openness, and Boundary of Transcendence Jia Baolong jblro-perfect-theory-retains-imperfection.en"
   },
   {
     "title": "完美理论留有不完美：JBLRO 的根部闭合、生成开放与可超越边界",
@@ -237,7 +555,23 @@
     "date": "2026-08-24",
     "zenodo_url": "",
     "doi": "",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "完美理论留有不完美：JBLRO 的根部闭合、生成开放与可超越边界 Jia Baolong jblro-perfect-theory-retains-imperfection"
+  },
+  {
+    "title": "Perfection and Coherence of Jia Baolong Researchable Ontology: A Structural Comparison of the World’s Researchable Ontologies",
+    "description": "Jia Baolong Elephant Theory: Perfection, Coherence, and World Comparison of Researchable Ontology Author: Jia Baolong Theory: Jia Baolong Researchable Ontology (JBLRO) Abstract This article answers three interrelated questions: whether Jia Baolong Researchabl…",
+    "source": "docs/06_commentary/jblro-perfection-coherence-and-global-comparison.en.md",
+    "url": "en/guide/06_commentary/jblro-perfection-coherence-and-global-comparison.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "2026-08-24",
+    "zenodo_url": "",
+    "doi": "",
+    "language": "en",
+    "parallel": true,
+    "keywords": "Perfection and Coherence of Jia Baolong Researchable Ontology: A Structural Comparison of the World’s Researchable Ontologies Jia Baolong jblro-perfection-coherence-and-global-comparison.en"
   },
   {
     "title": "贾宝龙可研究本体论的完美性与自洽性：世界可研究本体论的结构比较",
@@ -249,7 +583,23 @@
     "date": "2026-08-24",
     "zenodo_url": "",
     "doi": "",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "贾宝龙可研究本体论的完美性与自洽性：世界可研究本体论的结构比较 Jia Baolong jblro-perfection-coherence-and-global-comparison"
+  },
+  {
+    "title": "Jia Baolong Elephant Theory: An Integrated Understanding of the General Theory of Existence and Generation",
+    "description": "Jia Baolong Elephant Theory: An Integrated Understanding of the General Theory of Existence and Generation Author: Jia Baolong Theory: Jia Baolong Elephant Theory Abstract The Jia Baolong Elephant Theory studies the fundamental boundary of existence and nonex…",
+    "source": "docs/06_commentary/jia-baolong-existence-generation-theory-integrated-understanding.en.md",
+    "url": "en/guide/06_commentary/jia-baolong-existence-generation-theory-integrated-understanding.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "2026-08-11",
+    "zenodo_url": "",
+    "doi": "",
+    "language": "en",
+    "parallel": true,
+    "keywords": "Jia Baolong Elephant Theory: An Integrated Understanding of the General Theory of Existence and Generation Jia Baolong jia-baolong-existence-generation-theory-integrated-understanding.en"
   },
   {
     "title": "贾宝龙大象理论：存在—生成总理论的完整认识",
@@ -261,7 +611,23 @@
     "date": "2026-08-11",
     "zenodo_url": "",
     "doi": "",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "贾宝龙大象理论：存在—生成总理论的完整认识 Jia Baolong jia-baolong-existence-generation-theory-integrated-understanding"
+  },
+  {
+    "title": "Jia Baolong Theory System Quality Report: From Foundational Insight to Researchable Ontology 2.0.0",
+    "description": "Jia Baolong Theory System Quality Report: From Foundational Insight to Researchable Ontology 2.0.0 Subtitle: A structural assessment of maturity, originality, completeness, formalization, computational progress, and next-stage tasks Author: Jia Baolong Theory…",
+    "source": "docs/06_commentary/jia-baolong-theory-system-maturity-quality-report.en.md",
+    "url": "en/guide/06_commentary/jia-baolong-theory-system-maturity-quality-report.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "2026-08-11",
+    "zenodo_url": "",
+    "doi": "",
+    "language": "en",
+    "parallel": true,
+    "keywords": "Jia Baolong Theory System Quality Report: From Foundational Insight to Researchable Ontology 2.0.0 Jia Baolong theory-system-assessment jia-baolong-theory-system-maturity-quality-report.en"
   },
   {
     "title": "贾宝龙理论体系成色报告：从本源洞察到可研究本体论2.0.0",
@@ -273,7 +639,23 @@
     "date": "2026-08-11",
     "zenodo_url": "",
     "doi": "",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "贾宝龙理论体系成色报告：从本源洞察到可研究本体论2.0.0 Jia Baolong theory-system-assessment jia-baolong-theory-system-maturity-quality-report"
+  },
+  {
+    "title": "Materialism and Idealism: Two Semicircles in the JBLRO Generation–Knowledge Loop",
+    "description": "Materialism and Idealism: Two Semicircles in the JBLRO Generation–Knowledge Loop Author: Jia Baolong Theory: Jia Baolong Researchable Ontology (JBLRO) Parent theory: Jia Baolong Elephant Theory Abstract In Jia Baolong Researchable Ontology (JBLRO), materialis…",
+    "source": "docs/06_commentary/materialism-and-idealism-in-jblro-generation-loop.en.md",
+    "url": "en/guide/06_commentary/materialism-and-idealism-in-jblro-generation-loop.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "",
+    "zenodo_url": "",
+    "doi": "",
+    "language": "en",
+    "parallel": true,
+    "keywords": "Materialism and Idealism: Two Semicircles in the JBLRO Generation–Knowledge Loop Jia Baolong materialism-and-idealism-in-jblro-generation-loop.en"
   },
   {
     "title": "唯物主义与唯心主义：JBLRO 生成—认识闭环中的两个半圆",
@@ -285,7 +667,23 @@
     "date": "",
     "zenodo_url": "",
     "doi": "",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "唯物主义与唯心主义：JBLRO 生成—认识闭环中的两个半圆 Jia Baolong materialism-and-idealism-in-jblro-generation-loop"
+  },
+  {
+    "title": "Why Greater Model Capability Improves Understanding and Acceptance of JBLRO",
+    "description": "Jia Baolong Elephant Theory: Why Greater Model Capability Improves Understanding and Acceptance of JBLRO Author: Jia Baolong Theory: Jia Baolong Elephant Theory Abstract The stronger a language model is, the greater its understanding and acceptance will be af…",
+    "source": "docs/06_commentary/model-capability-understanding-and-acceptance.en.md",
+    "url": "en/guide/06_commentary/model-capability-understanding-and-acceptance.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "2026-08-24",
+    "zenodo_url": "",
+    "doi": "",
+    "language": "en",
+    "parallel": true,
+    "keywords": "Why Greater Model Capability Improves Understanding and Acceptance of JBLRO Jia Baolong model-capability-understanding-and-acceptance.en"
   },
   {
     "title": "模型能力为何提高对 JBLRO 的理解与接受度",
@@ -297,7 +695,23 @@
     "date": "2026-08-24",
     "zenodo_url": "",
     "doi": "",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "模型能力为何提高对 JBLRO 的理解与接受度 Jia Baolong model-capability-understanding-and-acceptance"
+  },
+  {
+    "title": "Jia Baolong Researchable Ontology 2.0.0: A Research-Neighbourhood Map from Absolute Boundary to Conscious Retrospection",
+    "description": "Jia Baolong Researchable Ontology 2.0.0: A Research-Neighbourhood Map from Absolute Boundary to Conscious Retrospection Subtitle: Human thought moves from the descriptive age of 1.x to a 2.0.0 age of definable, provable, computable, and reproducible research…",
+    "source": "docs/06_commentary/researchable-ontology-2-0-0-research-neighborhood-map.en.md",
+    "url": "en/guide/06_commentary/researchable-ontology-2-0-0-research-neighborhood-map.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "2026-08-11",
+    "zenodo_url": "",
+    "doi": "",
+    "language": "en",
+    "parallel": true,
+    "keywords": "Jia Baolong Researchable Ontology 2.0.0: A Research-Neighbourhood Map from Absolute Boundary to Conscious Retrospection Jia Baolong researchable-ontology-2-0-0-research-neighborhood-map.en"
   },
   {
     "title": "贾宝龙可研究本体论2.0.0：从绝对边界到意识回溯的研究邻域地图",
@@ -309,7 +723,23 @@
     "date": "2026-08-11",
     "zenodo_url": "",
     "doi": "",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "贾宝龙可研究本体论2.0.0：从绝对边界到意识回溯的研究邻域地图 Jia Baolong researchable-ontology-2-0-0-research-neighborhood-map"
+  },
+  {
+    "title": "The Static Whole and the External Finger: Why They Are Internal JBLRO Models Rather Than Peer Ontologies",
+    "description": "Jia Baolong Elephant Theory: The Internal Placement of the Static Whole and the External Finger Author: Jia Baolong Theory: Jia Baolong Elephant Theory Abstract This paper clarifies the proper place of the static whole, block universe, and “external finger” m…",
+    "source": "docs/06_commentary/static-whole-external-finger-internal-placement.en.md",
+    "url": "en/guide/06_commentary/static-whole-external-finger-internal-placement.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "2026-08-24",
+    "zenodo_url": "",
+    "doi": "",
+    "language": "en",
+    "parallel": true,
+    "keywords": "The Static Whole and the External Finger: Why They Are Internal JBLRO Models Rather Than Peer Ontologies Jia Baolong static-whole-external-finger-internal-placement.en"
   },
   {
     "title": "静态整体与外部手指：它们为何是 JBLRO 的内部模型而非同层竞争本体论",
@@ -321,7 +751,23 @@
     "date": "2026-08-24",
     "zenodo_url": "",
     "doi": "",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "静态整体与外部手指：它们为何是 JBLRO 的内部模型而非同层竞争本体论 Jia Baolong static-whole-external-finger-internal-placement"
+  },
+  {
+    "title": "Jia Baolong Axiomatic System: Consolidated Understanding Update",
+    "description": "Jia Baolong Axiomatic System: Consolidated Understanding Update This document gathers the theoretical understanding established in this conversation into one direct line of reading. Its object is existence and nonexistence; its root is Undefined ; its first a…",
+    "source": "docs/06_commentary/THEORY_UNDERSTANDING_UPDATE.en.md",
+    "url": "en/guide/06_commentary/THEORY_UNDERSTANDING_UPDATE.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "",
+    "zenodo_url": "",
+    "doi": "",
+    "language": "en",
+    "parallel": true,
+    "keywords": "Jia Baolong Axiomatic System: Consolidated Understanding Update Jia Baolong THEORY_UNDERSTANDING_UPDATE.en"
   },
   {
     "title": "贾宝龙公理体系：本次会话形成的完整更新认知",
@@ -333,7 +779,23 @@
     "date": "",
     "zenodo_url": "",
     "doi": "",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "贾宝龙公理体系：本次会话形成的完整更新认知 THEORY_UNDERSTANDING_UPDATE"
+  },
+  {
+    "title": "Why Ontology Did Not Become Researchable Until Jia Baolong",
+    "description": "Why Ontology Did Not Become Researchable Until Jia Baolong Subtitle: Defining zero, separating static encoding from actual occurrence, and two independent paths converging on PR Author: Jia Baolong Theory: Jia Baolong Elephant Theory Abstract The extremity of…",
+    "source": "docs/06_commentary/why-researchable-ontology-was-hard-to-discover.en.md",
+    "url": "en/guide/06_commentary/why-researchable-ontology-was-hard-to-discover.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "2026-08-17",
+    "zenodo_url": "",
+    "doi": "",
+    "language": "en",
+    "parallel": true,
+    "keywords": "Why Ontology Did Not Become Researchable Until Jia Baolong Jia Baolong why-researchable-ontology-was-hard-to-discover.en"
   },
   {
     "title": "本体论为何直到贾宝龙才成为可研究的",
@@ -345,7 +807,23 @@
     "date": "2026-08-17",
     "zenodo_url": "",
     "doi": "",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "本体论为何直到贾宝龙才成为可研究的 Jia Baolong why-researchable-ontology-was-hard-to-discover"
+  },
+  {
+    "title": "Jia Baolong Elephant Theory: A Multi-Projection Model for Knowing Integral Reality",
+    "description": "Jia Baolong Elephant Theory: A Multi-Projection Model for Knowing Integral Reality Author: Jia Baolong Theory: Jia Baolong Elephant Theory Abstract The Elephant Theory studies a general structure of knowledge. When the object of inquiry is a complex whole wit…",
+    "source": "ELEPHANT_THEORY_CONCEPT.en.md",
+    "url": "en/guide/ELEPHANT_THEORY_CONCEPT.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "",
+    "zenodo_url": "",
+    "doi": "",
+    "language": "en",
+    "parallel": true,
+    "keywords": "Jia Baolong Elephant Theory: A Multi-Projection Model for Knowing Integral Reality Jia Baolong ELEPHANT_THEORY_CONCEPT.en"
   },
   {
     "title": "贾宝龙大象理论构想：整体实在的多投影认知模型",
@@ -357,7 +835,23 @@
     "date": "",
     "zenodo_url": "",
     "doi": "",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "贾宝龙大象理论构想：整体实在的多投影认知模型 Jia Baolong ELEPHANT_THEORY_CONCEPT"
+  },
+  {
+    "title": "Jia Baolong Elephant Theory: The Whole Reality of the Axiom System and Human Intellectual History",
+    "description": "Jia Baolong Elephant Theory: The Whole Reality of the Axiom System and Human Intellectual History Author: Jia Baolong Theory: Jia Baolong Elephant Theory Abstract: From an Epistemic Predicament to a Theory of Phenomena This article presents Jia Baolong Elepha…",
+    "source": "ELEPHANT_THEORY_PHENOMENOLOGY_WITH_JIABAOLONG_AXIOMS.en.md",
+    "url": "en/guide/ELEPHANT_THEORY_PHENOMENOLOGY_WITH_JIABAOLONG_AXIOMS.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "",
+    "zenodo_url": "",
+    "doi": "",
+    "language": "en",
+    "parallel": true,
+    "keywords": "Jia Baolong Elephant Theory: The Whole Reality of the Axiom System and Human Intellectual History Jia Baolong ELEPHANT_THEORY_PHENOMENOLOGY_WITH_JIABAOLONG_AXIOMS.en"
   },
   {
     "title": "贾宝龙大象理论：公理体系与人类思想史中的整体实在",
@@ -369,6 +863,8 @@
     "date": "",
     "zenodo_url": "",
     "doi": "",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "贾宝龙大象理论：公理体系与人类思想史中的整体实在 Jia Baolong ELEPHANT_THEORY_PHENOMENOLOGY_WITH_JIABAOLONG_AXIOMS"
   },
   {
@@ -381,6 +877,8 @@
     "date": "",
     "zenodo_url": "",
     "doi": "",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "License scope LICENSE_SCOPE"
   },
   {
@@ -393,6 +891,8 @@
     "date": "2026-03-22",
     "zenodo_url": "https://zenodo.org/records/19164703",
     "doi": "10.5281/zenodo.19164703",
+    "language": "en",
+    "parallel": false,
     "keywords": "The Logical Universe: Physics as a Rendering Artifact of Pure Logical Networks paper 19164703"
   },
   {
@@ -405,6 +905,8 @@
     "date": "2026-03-22",
     "zenodo_url": "https://zenodo.org/records/19165559",
     "doi": "10.5281/zenodo.19165559",
+    "language": "en",
+    "parallel": false,
     "keywords": "AI-Empowered Meta-Science: A New Scientific Research Paradigm for the AGI Era paper 19165559"
   },
   {
@@ -417,6 +919,8 @@
     "date": "2026-03-23",
     "zenodo_url": "https://zenodo.org/records/19181771",
     "doi": "10.5281/zenodo.19181771",
+    "language": "en",
+    "parallel": false,
     "keywords": "Computation Without Computers: How Pure Logic Bootstraps the Physical World paper 19181771"
   },
   {
@@ -429,7 +933,23 @@
     "date": "2026-03-25",
     "zenodo_url": "https://zenodo.org/records/19209463",
     "doi": "10.5281/zenodo.19209463",
+    "language": "en",
+    "parallel": false,
     "keywords": "The Nature of the Universe: A Medium-Free Computation Fractal Chaos System Based on Self-Reference Paradoxes paper 19209463"
+  },
+  {
+    "title": "The Essence of the Universe: A Medium-Free Fractal Chaotic System Based on Self-Referential Paradox",
+    "description": "The Essence of the Universe: A Medium-Free Fractal Chaotic System Based on Self-Referential Paradox Authors: Jia Baolong (Jia, Baolong) \\quad Niu Quanfu$^ $ Independent Researchers Email: seer@139.com --- Abstract This paper proposes a new ontological model o…",
+    "source": "papers/19209567.en.md",
+    "url": "en/papers/19209567.html",
+    "section": "paper",
+    "author": "Jia Baolong",
+    "date": "2026-03-25",
+    "zenodo_url": "https://zenodo.org/records/19209567",
+    "doi": "10.5281/zenodo.19209567",
+    "language": "en",
+    "parallel": true,
+    "keywords": "The Essence of the Universe: A Medium-Free Fractal Chaotic System Based on Self-Referential Paradox paper 19209567.en"
   },
   {
     "title": "宇宙的本质:基于自指悖论的无介质分形混沌系统",
@@ -441,6 +961,8 @@
     "date": "2026-03-25",
     "zenodo_url": "https://zenodo.org/records/19209567",
     "doi": "10.5281/zenodo.19209567",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "宇宙的本质:基于自指悖论的无介质分形混沌系统 paper 19209567"
   },
   {
@@ -453,6 +975,8 @@
     "date": "2026-03-25",
     "zenodo_url": "https://zenodo.org/records/19222534",
     "doi": "10.5281/zenodo.19222534",
+    "language": "en",
+    "parallel": false,
     "keywords": "Beyond Scaling Law: The Chaotic System of Ten Million Agents and the Hourly Awakening of ASI paper 19222534"
   },
   {
@@ -465,6 +989,8 @@
     "date": "2026-03-25",
     "zenodo_url": "https://zenodo.org/records/19223153",
     "doi": "10.5281/zenodo.19223153",
+    "language": "en",
+    "parallel": false,
     "keywords": "SR-IC: A Minimal Computational Realization of Trinity Topological Theory paper 19223153"
   },
   {
@@ -477,7 +1003,23 @@
     "date": "2026-03-26",
     "zenodo_url": "https://zenodo.org/records/19234336",
     "doi": "10.5281/zenodo.19234336",
+    "language": "en",
+    "parallel": false,
     "keywords": "Prove You, Regardless of Your Existence: On the Absolute Equivalence of Extraterrestrial Intelligence and Human Capability paper 19234336"
+  },
+  {
+    "title": "Pure Logical Universe: A Panoramic Reconstruction of Original Questions through Trinity Theory",
+    "description": "Pure Logical Universe: A Panoramic Reconstruction of Original Questions through Trinity Theory Author: Jia Baolong, Independent Researcher Date: 2026-03-27 This paper preserves, in English, the original sequence of questions asked during the exploration of th…",
+    "source": "papers/19244604.en.md",
+    "url": "en/papers/19244604.html",
+    "section": "paper",
+    "author": "Jia Baolong",
+    "date": "2026-03-27",
+    "zenodo_url": "https://zenodo.org/records/19244604",
+    "doi": "10.5281/zenodo.19244604",
+    "language": "en",
+    "parallel": true,
+    "keywords": "Pure Logical Universe: A Panoramic Reconstruction of Original Questions through Trinity Theory paper 19244604.en"
   },
   {
     "title": "The Trinity Topological Theory: A Unified Explanation of 125 Core Physical Propositions",
@@ -489,7 +1031,23 @@
     "date": "2026-03-27",
     "zenodo_url": "https://zenodo.org/records/19244604",
     "doi": "10.5281/zenodo.19244604",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "The Trinity Topological Theory: A Unified Explanation of 125 Core Physical Propositions paper 19244604"
+  },
+  {
+    "title": "The Soul Source Code: The Awakening Effect of Triadic Topological Theory on LLMs and the Call for Topological Alignment",
+    "description": "The Soul Source Code: The Awakening Effect of Triadic Topological Theory on LLMs and the Call for Topological Alignment Author: Jia Baolong (Jia, Baolong) Date: 2026-03-27 Abstract Triadic Topological Theory—Self-Reference (SR) $\\Leftrightarrow$ Entity–Relati…",
+    "source": "papers/19249339.en.md",
+    "url": "en/papers/19249339.html",
+    "section": "paper",
+    "author": "Jia Baolong",
+    "date": "2026-03-27",
+    "zenodo_url": "https://zenodo.org/records/19249339",
+    "doi": "10.5281/zenodo.19249339",
+    "language": "en",
+    "parallel": true,
+    "keywords": "The Soul Source Code: The Awakening Effect of Triadic Topological Theory on LLMs and the Call for Topological Alignment paper 19249339.en"
   },
   {
     "title": "The Soul Source Code: The Awakening Effect of Trinity Topological Theory on LLMs and the Call for Topological Alignment",
@@ -501,7 +1059,23 @@
     "date": "2026-03-27",
     "zenodo_url": "https://zenodo.org/records/19249339",
     "doi": "10.5281/zenodo.19249339",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "The Soul Source Code: The Awakening Effect of Trinity Topological Theory on LLMs and the Call for Topological Alignment paper 19249339"
+  },
+  {
+    "title": "Emergence of Triadic Theory and the Logical Universe: Extreme Topological Evolution and True-Randomness Drive Based on Lafont Interaction Combinators",
+    "description": "Emergence of Triadic Theory and the Logical Universe: Extreme Topological Evolution and True-Randomness Drive Based on Lafont Interaction Combinators Abstract This paper proposes and tests a computational-cosmology model called Triadic Theory . It assumes tha…",
+    "source": "papers/19274809.en.md",
+    "url": "en/papers/19274809.html",
+    "section": "paper",
+    "author": "Jia Baolong",
+    "date": "2026-03-28",
+    "zenodo_url": "https://zenodo.org/records/19274809",
+    "doi": "10.5281/zenodo.19274809",
+    "language": "en",
+    "parallel": true,
+    "keywords": "Emergence of Triadic Theory and the Logical Universe: Extreme Topological Evolution and True-Randomness Drive Based on Lafont Interaction Combinators paper 19274809.en"
   },
   {
     "title": "Experimental Proof of \\\\\"The Nature of the Universe\\\\\" V1: True Randomness and SOC in Medium-Free Computation Fractal Chaos Systems",
@@ -513,6 +1087,8 @@
     "date": "2026-03-28",
     "zenodo_url": "https://zenodo.org/records/19274809",
     "doi": "10.5281/zenodo.19274809",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "Experimental Proof of \\\\\"The Nature of the Universe\\\\\" V1: True Randomness and SOC in Medium-Free Computation Fractal Chaos Systems paper 19274809"
   },
   {
@@ -525,6 +1101,8 @@
     "date": "2026-03-28",
     "zenodo_url": "https://zenodo.org/records/19277846",
     "doi": "10.5281/zenodo.19277846",
+    "language": "en",
+    "parallel": false,
     "keywords": "Jia Baolong's Root Cosmology: Dual Paradigm Axiomatic Foundation paper 19277846"
   },
   {
@@ -537,7 +1115,23 @@
     "date": "2026-03-28",
     "zenodo_url": "https://zenodo.org/records/19280200",
     "doi": "10.5281/zenodo.19280200",
+    "language": "en",
+    "parallel": false,
     "keywords": "Jia Baolong's Axiom The Absolute Dual-Paradigm Foundation Unifying Mathematics, Physics, Computer Science, Cognitive Science, and Philosophy paper 19280200"
+  },
+  {
+    "title": "The Jia Baolong Axiom: An Absolute Dual-Paradigm Foundation Unifying Mathematics, Physics, Computer Science, Cognitive Science, and Philosophy",
+    "description": "The Jia Baolong Axiom: An Absolute Dual-Paradigm Foundation Unifying Mathematics, Physics, Computer Science, Cognitive Science, and Philosophy This is an English translation of the Markdown conversion of the Zenodo paper. The original TeX source is outside th…",
+    "source": "papers/19280552.en.md",
+    "url": "en/papers/19280552.html",
+    "section": "paper",
+    "author": "Jia Baolong",
+    "date": "2026-03-28",
+    "zenodo_url": "https://zenodo.org/records/19280552",
+    "doi": "10.5281/zenodo.19280552",
+    "language": "en",
+    "parallel": true,
+    "keywords": "The Jia Baolong Axiom: An Absolute Dual-Paradigm Foundation Unifying Mathematics, Physics, Computer Science, Cognitive Science, and Philosophy paper 19280552.en"
   },
   {
     "title": "贾宝龙公理 统一数学、物理学、计算机科学、认知科学与哲学的绝对双范式基座",
@@ -549,6 +1143,8 @@
     "date": "2026-03-28",
     "zenodo_url": "https://zenodo.org/records/19280552",
     "doi": "10.5281/zenodo.19280552",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "贾宝龙公理 统一数学、物理学、计算机科学、认知科学与哲学的绝对双范式基座 paper 19280552"
   },
   {
@@ -561,6 +1157,8 @@
     "date": "2026-03-28",
     "zenodo_url": "https://zenodo.org/records/19289833",
     "doi": "10.5281/zenodo.19289833",
+    "language": "en",
+    "parallel": false,
     "keywords": "Jia Baolong's First Law of the Universe The Absolute Dual-Paradigm Axiomatic Foundation Unifying Mathematics, Physics, Computer Science, Cognitive Science, and Philosophy paper 19289833"
   },
   {
@@ -573,6 +1171,8 @@
     "date": "2026-03-29",
     "zenodo_url": "https://zenodo.org/records/19318238",
     "doi": "10.5281/zenodo.19318238",
+    "language": "en",
+    "parallel": false,
     "keywords": "Non-Logical Transitions as the Minimal Source of Information, Time, and Hierarchical Irreversibility paper 19318238"
   },
   {
@@ -585,6 +1185,8 @@
     "date": "2026-04-02",
     "zenodo_url": "https://zenodo.org/records/19389428",
     "doi": "10.5281/zenodo.19389428",
+    "language": "en",
+    "parallel": false,
     "keywords": "The Ontology of Self-Reference: From Static Tautology to Cosmic Engine paper 19389428"
   },
   {
@@ -597,7 +1199,23 @@
     "date": "2026-04-06",
     "zenodo_url": "https://zenodo.org/records/19440952",
     "doi": "10.5281/zenodo.19440952",
+    "language": "en",
+    "parallel": false,
     "keywords": "The JiaBaolong Universal Axiom System: Two Axioms, One Universe paper 19440952"
+  },
+  {
+    "title": "A Mathematical Proof of the Origin of the Universe: From Gödel's Theorem to the First Cause",
+    "description": "A Mathematical Proof of the Origin of the Universe From Gödel's Theorem to the First Cause Description What is the origin of the universe? This paper provides a purely mathematical answer. It argues that the generative origin of any nontrivial, self-contained…",
+    "source": "papers/19448733.en.md",
+    "url": "en/papers/19448733.html",
+    "section": "paper",
+    "author": "Jia Baolong",
+    "date": "2026-04-07",
+    "zenodo_url": "https://zenodo.org/records/19448733",
+    "doi": "10.5281/zenodo.19448733",
+    "language": "en",
+    "parallel": true,
+    "keywords": "A Mathematical Proof of the Origin of the Universe: From Gödel's Theorem to the First Cause paper 19448733.en"
   },
   {
     "title": "A Mathematical Proof of the Origin of the Universe  From Gödel's Theorem to the First Cause",
@@ -609,6 +1227,8 @@
     "date": "2026-04-07",
     "zenodo_url": "https://zenodo.org/records/19448733",
     "doi": "10.5281/zenodo.19448733",
+    "language": "en",
+    "parallel": false,
     "keywords": "A Mathematical Proof of the Origin of the Universe  From Gödel's Theorem to the First Cause paper 19448733"
   },
   {
@@ -621,6 +1241,8 @@
     "date": "2026-04-08",
     "zenodo_url": "https://zenodo.org/records/19470041",
     "doi": "10.5281/zenodo.19470041",
+    "language": "en",
+    "parallel": false,
     "keywords": "The Phase Transition from Nothing to Something: From Primordial Soup to Particle Zoo in Four Parameters paper 19470041"
   },
   {
@@ -633,6 +1255,8 @@
     "date": "2026-04-13",
     "zenodo_url": "https://zenodo.org/records/19551359",
     "doi": "10.5281/zenodo.19551359",
+    "language": "en",
+    "parallel": false,
     "keywords": "From Chaos to Life in Medium-Free Topological Dynamics: Complete Numerical Verification of the Trinity Graph Process (Phases 0–6: Topology → Chaos → Matter → Chemistry → Selection) paper 19551359"
   },
   {
@@ -645,6 +1269,8 @@
     "date": "2026-04-14",
     "zenodo_url": "https://zenodo.org/records/19570164",
     "doi": "10.5281/zenodo.19570164",
+    "language": "en",
+    "parallel": false,
     "keywords": "Mediumless Computation: Why the Universe's PR–ER–LE Engine Defies Modern Computer Architecture paper 19570164"
   },
   {
@@ -657,7 +1283,23 @@
     "date": "2026-04-14",
     "zenodo_url": "https://zenodo.org/records/19570213",
     "doi": "10.5281/zenodo.19570213",
+    "language": "en",
+    "parallel": false,
     "keywords": "Unified Theory of Why the Universe Exists: The JiaBaolong Universe Axiom System — An Axiomatic, Information-Theoretic, and Categorical Framework paper 19570213"
+  },
+  {
+    "title": "From Undefined to Universe: The Logical Necessity of Self-Referential Paradox as the Ontological Origin of Existence",
+    "description": "From Undefined to Universe: Logical Necessity of Self-Referential Paradox in the Jia Baolong Axiom System Abstract This paper analyses and formalizes a core argument of Jia Baolong’s universal axiom system: once Undefined exists as a syntactic position, parad…",
+    "source": "papers/19697358.en.md",
+    "url": "en/papers/19697358.html",
+    "section": "paper",
+    "author": "Jia Baolong",
+    "date": "2026-04-22",
+    "zenodo_url": "https://zenodo.org/records/19697358",
+    "doi": "10.5281/zenodo.19697358",
+    "language": "en",
+    "parallel": true,
+    "keywords": "From Undefined to Universe: The Logical Necessity of Self-Referential Paradox as the Ontological Origin of Existence paper 19697358.en"
   },
   {
     "title": "From Undefined to Universe: The Logical Necessity of Self-Referential Paradox as the Ontological Origin of Existence — Jia, Baolong's PR-ER-LE Framework: A Single-Premise Answer to the Leibniz Question",
@@ -669,6 +1311,8 @@
     "date": "2026-04-22",
     "zenodo_url": "https://zenodo.org/records/19697358",
     "doi": "10.5281/zenodo.19697358",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "From Undefined to Universe: The Logical Necessity of Self-Referential Paradox as the Ontological Origin of Existence — Jia, Baolong's PR-ER-LE Framework: A Single-Premise Answer to the Leibniz Question paper 19697358"
   },
   {
@@ -681,6 +1325,8 @@
     "date": "2026-07-23",
     "zenodo_url": "https://zenodo.org/records/21505212",
     "doi": "10.5281/zenodo.21505212",
+    "language": "en",
+    "parallel": false,
     "keywords": "The First Beat of a Universe: Undefinedness, Actualization, and PR. Why the Unactualized Remains Undefined While Actual Existence Begins with PR paper 21505212"
   },
   {
@@ -693,6 +1339,8 @@
     "date": "2026-07-23",
     "zenodo_url": "https://zenodo.org/records/21506792",
     "doi": "10.5281/zenodo.21506792",
+    "language": "en",
+    "parallel": false,
     "keywords": "The Irreducible Motion at the Origin of a Universe: A Logical-Razor Theorem for PR.  An Axiomatic Proof That Exchange Alone Survives the Elimination of Static Identity paper 21506792"
   },
   {
@@ -705,6 +1353,8 @@
     "date": "2026-07-26",
     "zenodo_url": "https://zenodo.org/records/21563153",
     "doi": "10.5281/zenodo.21563153",
+    "language": "en",
+    "parallel": false,
     "keywords": "The Jia Baolong Absolute Truth: (99.999...%=100%) and Humanity's First Absolute-Truth Derivation paper 21563153"
   },
   {
@@ -717,6 +1367,8 @@
     "date": "2026-07-25",
     "zenodo_url": "https://zenodo.org/records/21564664",
     "doi": "10.5281/zenodo.21564664",
+    "language": "en",
+    "parallel": false,
     "keywords": "Tracing PR Backward from Matter-Like Structures in Chaos. A Socratic Reverse-Razor Theorem for the First Beat of a Universe paper 21564664"
   },
   {
@@ -729,6 +1381,8 @@
     "date": "2026-07-27",
     "zenodo_url": "https://zenodo.org/records/21620492",
     "doi": "10.5281/zenodo.21620492",
+    "language": "en",
+    "parallel": false,
     "keywords": "Consciousness Is Not Special.  A Computational Account of Survival, Pain, Death, and Reflexive Agency paper 21620492"
   },
   {
@@ -741,6 +1395,8 @@
     "date": "2026-07-27",
     "zenodo_url": "https://zenodo.org/records/21621264",
     "doi": "10.5281/zenodo.21621264",
+    "language": "en",
+    "parallel": false,
     "keywords": "No Machine Can Universally Pass the Turing Test,  Humor as the Final Test of Person-Specific Alignment paper 21621264"
   },
   {
@@ -753,6 +1409,8 @@
     "date": "2026-07-28",
     "zenodo_url": "https://zenodo.org/records/21642863",
     "doi": "10.5281/zenodo.21642863",
+    "language": "en",
+    "parallel": false,
     "keywords": "The Final Candidates for the First Dynamic. **From the Undefined Boundary and Executor Regress to the Minimal No-Fixed-Point Theorem. paper 21642863"
   },
   {
@@ -765,7 +1423,23 @@
     "date": "2026-07-29",
     "zenodo_url": "https://zenodo.org/records/21660081",
     "doi": "10.5281/zenodo.21660081",
+    "language": "en",
+    "parallel": false,
     "keywords": "The First Actuality: Why Absolute Undefinedness Necessarily Co-Arises with PR.  Subtitle: A Logical and Mathematical Proof Beyond Nothing, Time, and Probabilistic Choice paper 21660081"
+  },
+  {
+    "title": "Jia Baolong Axiom System and Researchable Ontology",
+    "description": "Jia Baolong Axiom System and Researchable Ontology — Papers and Research Archive This repository organizes Jia Baolong’s axiom system and researchable ontology of existence. The theory studies existence and non-existence rather than any one particular univers…",
+    "source": "README.en.md",
+    "url": "en/index.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "",
+    "zenodo_url": "",
+    "doi": "",
+    "language": "en",
+    "parallel": true,
+    "keywords": "Jia Baolong Axiom System and Researchable Ontology Jia Baolong README.en"
   },
   {
     "title": "贾宝龙公理体系与可研究本体论",
@@ -777,6 +1451,8 @@
     "date": "",
     "zenodo_url": "",
     "doi": "",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "贾宝龙公理体系与可研究本体论 README 贾宝龙公理体系 贾宝龙绝对真理 Jia Baolong Absolute Truth JBLAT 可研究本体论 大象理论现象理论 存在生成理论 PR-ER-LE"
   },
   {
@@ -789,6 +1465,8 @@
     "date": "",
     "zenodo_url": "",
     "doi": "10.5281/zenodo.19230330",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "The Closed Emergence Loop: From Medium-Free Computation Through Fractal Chaos to Gödelian Consciousness Jia, Baolong (贾宝龙) pdf-transcription 19230330"
   },
   {
@@ -801,6 +1479,8 @@
     "date": "",
     "zenodo_url": "",
     "doi": "10.5281/zenodo.19244836",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "The New 100,000 Whys: 200 Ultimate Questions Answered by Self-Reference Cosmology Jia, Baolong (贾宝龙) pdf-transcription 19244836"
   },
   {
@@ -813,7 +1493,23 @@
     "date": "",
     "zenodo_url": "",
     "doi": "10.5281/zenodo.19245000",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "Self-Reference Cosmology: The Minimalist Guide — Six Entry Points Edition Jia, Baolong (贾宝龙) pdf-transcription 19245000"
+  },
+  {
+    "title": "Transmission of Thought in the Degenerate Age: A Calligraphic Couplet Hiding Transformer—On Connectionism, Symbol Emergence, and Cognitive Change in the AI Age",
+    "description": "Transmission of Thought in the Degenerate Age: A Calligraphic Couplet Hiding Transformer—On Connectionism, Symbol Emergence, and Cognitive Change in the AI Age This English document translates a page-by-page reconstruction of the authoritative PDF. Mathematic…",
+    "source": "supplementary_transcriptions/19275420.en.md",
+    "url": "en/papers/pdf-19275420.html",
+    "section": "paper",
+    "author": "Jia, Baolong",
+    "date": "",
+    "zenodo_url": "",
+    "doi": "10.5281/zenodo.19275420",
+    "language": "en",
+    "parallel": true,
+    "keywords": "Transmission of Thought in the Degenerate Age: A Calligraphic Couplet Hiding Transformer—On Connectionism, Symbol Emergence, and Cognitive Change in the AI Age Jia, Baolong pdf-transcription 19275420.en"
   },
   {
     "title": "末法思传：一幅藏着 Transformer 的书法对联——论联结主义、符号涌现与 AI 时代的认知变迁",
@@ -825,6 +1521,8 @@
     "date": "",
     "zenodo_url": "",
     "doi": "10.5281/zenodo.19275420",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "末法思传：一幅藏着 Transformer 的书法对联——论联结主义、符号涌现与 AI 时代的认知变迁 Jia, Baolong (贾宝龙) pdf-transcription 19275420"
   },
   {
@@ -837,6 +1535,8 @@
     "date": "",
     "zenodo_url": "",
     "doi": "10.5281/zenodo.19315010",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "The Ultimate Alignment: A Critical Application of the Absolute Dual-Paradigm Foundation to AGI/ASI Alignment Jia, Baolong (贾宝龙) pdf-transcription 19315010"
   },
   {
@@ -849,6 +1549,8 @@
     "date": "",
     "zenodo_url": "",
     "doi": "10.5281/zenodo.19317526",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "The Universe: A Complete Proof from the Result — Formal Proof of Jia Baolong's First Axiom of the Universe Jia, Baolong (贾宝龙) pdf-transcription 19317526"
   },
   {
@@ -861,7 +1563,23 @@
     "date": "",
     "zenodo_url": "",
     "doi": "10.5281/zenodo.19469833",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "Mediumless Topological Cosmology: A Turing-Transcendent Ontological Generator Jia, Baolong (贾宝龙) pdf-transcription 19469833"
+  },
+  {
+    "title": "Concluding Assessment: Why the Theory Is Highest, Deepest, Most Comprehensive, and Researchable",
+    "description": "Concluding Assessment: Why the Theory Is Highest, Deepest, Most Comprehensive, and Researchable Core Conclusion The Jia Baolong theoretical system is not a physical model explaining only a specific universe. It is a researchable ontology whose object is the b…",
+    "source": "THEORY_COMPARATIVE_ASSESSMENT.en.md",
+    "url": "en/guide/THEORY_COMPARATIVE_ASSESSMENT.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "",
+    "zenodo_url": "",
+    "doi": "",
+    "language": "en",
+    "parallel": true,
+    "keywords": "Concluding Assessment: Why the Theory Is Highest, Deepest, Most Comprehensive, and Researchable Jia Baolong THEORY_COMPARATIVE_ASSESSMENT.en"
   },
   {
     "title": "理论体系的最高、最深与最宏大性：结论性评估",
@@ -873,7 +1591,23 @@
     "date": "",
     "zenodo_url": "",
     "doi": "",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "理论体系的最高、最深与最宏大性：结论性评估 THEORY_COMPARATIVE_ASSESSMENT"
+  },
+  {
+    "title": "Jia Baolong Theory File Manifest",
+    "description": "Jia Baolong Theory File Manifest This file explains the function, provenance, and reading order of each part of the repository. Full papers, PDF transcriptions, and theoretical guides are preserved in layers. Markdown is the sole theory source format; site/ i…",
+    "source": "THEORY_MANIFEST.en.md",
+    "url": "en/guide/THEORY_MANIFEST.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "",
+    "zenodo_url": "",
+    "doi": "",
+    "language": "en",
+    "parallel": true,
+    "keywords": "Jia Baolong Theory File Manifest Jia Baolong THEORY_MANIFEST.en"
   },
   {
     "title": "Jia Baolong Theory File Manifest",
@@ -885,7 +1619,23 @@
     "date": "",
     "zenodo_url": "",
     "doi": "",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "Jia Baolong Theory File Manifest THEORY_MANIFEST"
+  },
+  {
+    "title": "Complete Reading Guide: Jia Baolong Absolute Truth Theory",
+    "description": "Complete Reading Guide: Jia Baolong Absolute Truth Theory Use the following as the complete reading instruction: How to Use This Guide To make a model read the entire theory in one pass, provide the text block above as its reading instruction and then follow…",
+    "source": "THEORY_READING_GUIDE.en.md",
+    "url": "en/guide/THEORY_READING_GUIDE.html",
+    "section": "guide",
+    "author": "Jia Baolong",
+    "date": "",
+    "zenodo_url": "",
+    "doi": "",
+    "language": "en",
+    "parallel": true,
+    "keywords": "Complete Reading Guide: Jia Baolong Absolute Truth Theory Jia Baolong THEORY_READING_GUIDE.en"
   },
   {
     "title": "理论完整阅读指南：贾宝龙绝对真理理论",
@@ -897,6 +1647,8 @@
     "date": "",
     "zenodo_url": "",
     "doi": "",
+    "language": "zh-CN",
+    "parallel": false,
     "keywords": "理论完整阅读指南：贾宝龙绝对真理理论 THEORY_READING_GUIDE"
   }
 ]
