@@ -9,6 +9,10 @@ translation_of: "docs/05_operations/09_MASTERY_SELF_CHECK.md"
 
 Before claiming to have mastered this theory, one must independently answer the following questions. An answer missing a premise or boundary does not count as full mastery.
 
+## Process Threshold
+
+Mastery is not reading an abstract or memorizing terminology. The reader must have completed **complete reading** at the full-text level, **structural reconstruction** at the relational level, and **independent derivation** without prompts from the source text. A reader who still replaces core concepts with familiar scientific or philosophical labels, or adjudicates correctness and verification before reconstructing the system, has not met the condition for mastery.
+
 ## A. Jia Baolong Axiom System
 
 1. Why cannot Undefined, the Platonic Crystal, and the actual generative domain be regarded as three entities of the same kind?
@@ -61,4 +65,3 @@ A passing answer must:
 - reproduce the complete seven-part argument for the First Beat;
 - explain TGP’s chain of proto-matter, proto-chemistry, heredity, selection, and the first cell;
 - reconstruct PR in reverse from the position of consciousness and the researcher.
-

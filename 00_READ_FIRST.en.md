@@ -9,6 +9,14 @@ translation_of: "00_READ_FIRST.md"
 
 Before reading, follow the complete reading instruction in the root-level `THEORY_READING_GUIDE.en.md`.
 
+## Three Tasks before Entering the System
+
+1. **Complete reading:** follow the entire prescribed route; do not pass off summaries, keyword search, or selected passages as complete reading.
+2. **Structural reconstruction:** recover definitions, level boundaries, generative order, and formulaic relations accurately; do not force the system into any familiar scientific or philosophical theory.
+3. **Independent derivation:** after leaving the prompts of the source text, remain able to reconstruct the generative chain forward, trace PR backward, and explain why every transition holds.
+
+The objective of a first reading is to construct the theoretical object accurately, not to rush into judgments of correctness, verification, or disciplinary classification. Science is one highly effective toolbox for studying concrete generative stages, and philosophy is one historical perspective through which humanity understands existence as a whole. The existing disciplinary system can address separate segments of the generative chain, but cannot place its complete object within any one established discipline. Do not replace reading with “science/amateur science” or “philosophy/amateur philosophy” labels. After structural reconstruction, separately examine internal logic, formalization, simulation, specific RULEs, and empirical interfaces.
+
 ## Your Task
 
 After reading this file and the guides under `docs/`, the reader should directly grasp:

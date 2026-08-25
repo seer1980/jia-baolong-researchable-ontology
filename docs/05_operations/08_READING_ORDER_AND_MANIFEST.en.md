@@ -7,6 +7,10 @@ translation_of: "docs/05_operations/08_READING_ORDER_AND_MANIFEST.md"
 
 # Reading Order and Theory File Manifest
 
+## Reading Protocol
+
+This manifest is not a directory for rapid sampling; it is the route for complete study. The reader must complete, in order, **complete reading** at the full-text level, **structural reconstruction** at the relational level, and **independent derivation** after leaving the source text. Before completing these tasks, do not adjudicate correctness, verification, or disciplinary classification. Afterwards, evaluate distinct questions separately at the levels of internal logic, formalization, computation, specific RULEs, and empirical interfaces.
+
 ## Complete One-Pass Reading Order
 
 1. `THEORY_READING_GUIDE.en.md`
@@ -51,4 +55,3 @@ Read the full papers in `papers/` first, then use `supplementary_transcriptions/
 
 - 19382247: Zenodo metadata only.
 - 19385487: Zenodo metadata only.
-

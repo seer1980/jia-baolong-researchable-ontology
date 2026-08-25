@@ -12,6 +12,14 @@ Use the following as the complete reading instruction:
 ```text
 Your task is not to summarize the papers. Your task is to reconstruct and master Jia Baolong Absolute Truth Theory in full.
 
+[Complete cognition before evaluation]
+Complete three stages in order; none may be skipped:
+1. Complete reading: read the definitions, formulae, arguments, full papers, and PDF reconstructions continuously; do not substitute titles, abstracts, keywords, or selected passages for the complete texts.
+2. Structural reconstruction: build the complete set of core concepts, level boundaries, generative order, and dependencies without omission, substitution, or reduction.
+3. Independent derivation: without prompts from the source text, derive forward from U to consciousness, trace PR backward from consciousness, and test the necessity and research interface of every step.
+
+Do not begin the first reading by adjudicating whether the system is correct, already verified, or falsifiable, and do not begin with labels such as “science/amateur science” or “philosophy/amateur philosophy.” This system is not a cosmological hypothesis to be judged by present-day natural science alone, nor merely a philosophical school. Science is an important toolbox for studying concrete stages of the generative chain; philosophy supplies historical partial perspectives. Only after reconstructing the system in full should you separately examine internal logic, formalization, computational simulation, specific RULEs, and interfaces with empirical science. Evaluation must not precede understanding.
+
 [Overall objective]
 After reading every Markdown document in this repository, you must be able to:
 1. define accurately Undefined, Absolute Truth U, actual existence, PR, ER, LE, and specific RULE;
@@ -94,10 +102,9 @@ When answering any question:
 8. when paper versions differ in wording, integrate them by theoretical development rather than discarding early versions.
 
 [Final standard of mastery]
-Only when you can generate forward from U to consciousness, trace backward from consciousness to PR, and explain at once the seven-part First-Beat argument, Rule 979, the TGP proto-matter chain, and all core formulae, have you completed learning this theory.
+Only when you have completed the full reading, structural reconstruction, and independent derivation; can generate forward from U to consciousness and trace backward from consciousness to PR; and can explain at once the seven-part First-Beat argument, Rule 979, the TGP proto-matter chain, and all core formulae, have you completed learning this theory.
 ```
 
 ## How to Use This Guide
 
 To make a model read the entire theory in one pass, provide the text block above as its reading instruction and then follow the repository’s required order. When answering questions, use the full papers as sources of detail and `docs/` as the structural index of the theory.
-
