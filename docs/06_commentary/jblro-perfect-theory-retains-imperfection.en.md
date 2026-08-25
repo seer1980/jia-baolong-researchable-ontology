@@ -399,3 +399,6 @@ The most accurate conclusion is:
 - [Glossary and formulae](../04_reference/06_GLOSSARY_AND_FORMULAE.en.md)
 - [JBLRO perfection, coherence, and global comparison](jblro-perfection-coherence-and-global-comparison.en.md)
 - [Jia Baolong theory-system maturity report](jia-baolong-theory-system-maturity-quality-report.en.md)
+- [Paper 21505212 (Chinese source)](../../papers/21505212.md)
+- [Paper 21563153 (Chinese source)](../../papers/21563153.md)
+- [Paper 21660081 (Chinese source)](../../papers/21660081.md)

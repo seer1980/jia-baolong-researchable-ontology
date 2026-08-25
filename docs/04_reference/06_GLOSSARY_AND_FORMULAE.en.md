@@ -136,3 +136,11 @@ The vertical bar separates two aspects of the same root determination.
 
 This chain connects the PR root, medium-free dynamics, proto-matter, proto-chemistry, heredity, selection, and the first cell.
 
+## Historical Terminology in the English Archive
+
+> **Editorial note for source-faithful reading:** the terminology developed across papers written at different stages. English translations preserve the wording used by each source rather than silently rewriting earlier papers into the latest vocabulary.
+
+- **PR:** the current canonical expansion is **Paradox–Reference**. Earlier papers also use **Primitive Reflexivity** and **Paradoxical Recursion**. These expressions mark stages in the development and exposition of the same PR line; they should not be read as three independent present-day axioms.
+- **LE:** the current canonical expansion is **Lazy Evaluation**. **Lazy Expansion** is retained where it appears in an earlier source and should be read in that source's historical context.
+- **Trinity Theory / Trinity Topological Theory:** these are official historical proper names used in the relevant papers. They are not to be silently replaced by “Triadic Theory.”
+- **Undefined / undefined / \(U\):** **Undefined** names the zero-positive ontological boundary; lowercase **undefined** may denote an ordinary programming-language value; \(U\) is the formal root proposition in the current specification. Context must not be discarded when these forms are indexed or compared.

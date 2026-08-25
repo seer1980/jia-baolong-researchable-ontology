@@ -478,3 +478,4 @@ $$
 - [JBLAT, meaningful absolute truth, and the Gödelian boundary](jblat-meaningful-absolute-truth-and-godel-boundary.en.md)
 - [A perfect theory retains imperfection](jblro-perfect-theory-retains-imperfection.en.md)
 - [Integrated understanding of Jia Baolong existence-generation theory](jia-baolong-existence-generation-theory-integrated-understanding.en.md)
+- [Paper 21563153 (Chinese source)](../../papers/21563153.md)

@@ -23,9 +23,9 @@
   const normalize=s=>(s||'').toLocaleLowerCase().replace(/\s+/g,' ');
   function score(item,q){
     const query=normalize(q); if(!query)return 0;
-    const fields=[normalize(item.title),normalize(item.keywords),normalize(item.description),normalize(item.source)];
-    let n=0; if(fields[0].includes(query))n+=100; if(fields[1].includes(query))n+=35; if(fields[2].includes(query))n+=15; if(fields[3].includes(query))n+=10;
-    query.split(/[\s,，、。/]+/).filter(Boolean).forEach(t=>fields.forEach((f,i)=>{if(f.includes(t))n+=(i===0?18:3)})); return n;
+    const fields=[normalize(item.title),normalize(item.keywords),normalize(item.description),normalize(item.source),normalize(item.content)];
+    let n=0; if(fields[0].includes(query))n+=100; if(fields[1].includes(query))n+=35; if(fields[2].includes(query))n+=15; if(fields[3].includes(query))n+=10; if(fields[4].includes(query))n+=8;
+    query.split(/[\s,，、。/]+/).filter(Boolean).forEach(t=>fields.forEach((f,i)=>{if(f.includes(t))n+=(i===0?18:i===4?1:3)})); return n;
   }
   function render(){
     const q=input.value.trim(); if(!q){status.textContent=copy.prompt;results.innerHTML='';return;}
