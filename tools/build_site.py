@@ -18,6 +18,9 @@ import markdown
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_OUTPUT = ROOT / "site"
 DEFAULT_SITE_BASE_URL = "https://seer1980.github.io/jia-baolong-researchable-ontology"
+PUBLIC_TITLE_OVERRIDES = {
+    "papers/19448733.md": "A Mathematical Proof of the Origin of the Universe: From Gödel's Theorem to the First Cause",
+}
 
 
 # The public site is ordered by theory structure, not by filesystem spelling.
@@ -202,6 +205,11 @@ def is_redundant_english_parallel(source: Path) -> bool:
         return False
     original_meta, _ = parse_frontmatter(original.read_text(encoding="utf-8"))
     return original_meta.get("language", "").lower().startswith("en")
+
+
+def public_title(source: Path, title: str) -> str:
+    """Return presentation-only title corrections without altering source Markdown."""
+    return PUBLIC_TITLE_OVERRIDES.get(source.relative_to(ROOT).as_posix(), title)
 
 
 def default_base_url() -> str:
@@ -499,6 +507,27 @@ def write_page(output_root: Path, target: Path, content: str) -> None:
     destination.write_text(content, encoding="utf-8")
 
 
+def redirect_page(*, title: str, destination: str, language: str = "en") -> str:
+    """Create a noindex compatibility page for a retired public URL."""
+    escaped_title = html.escape(title)
+    escaped_destination = html.escape(destination, quote=True)
+    return f'''<!doctype html>
+<html lang="{html.escape(language, quote=True)}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,follow">
+  <meta http-equiv="refresh" content="0; url={escaped_destination}">
+  <link rel="canonical" href="{escaped_destination}">
+  <title>{escaped_title}</title>
+</head>
+<body>
+  <p>This page has moved permanently to <a href="{escaped_destination}">{escaped_title}</a>.</p>
+</body>
+</html>
+'''
+
+
 def build(output_root: Path) -> None:
     if output_root.exists():
         shutil.rmtree(output_root)
@@ -526,6 +555,7 @@ def build(output_root: Path) -> None:
         text = source.read_text(encoding="utf-8")
         meta, body = parse_frontmatter(text)
         title = meta.get("title") or first_heading(body)
+        title = public_title(source, title)
         if relative.as_posix() == "README.md":
             title = "贾宝龙公理体系与可研究本体论"
         elif relative.as_posix() == "README.en.md":
@@ -862,6 +892,13 @@ $$</div>
             base_url=base_url,
             section="404",
         ),
+    )
+    moved_paper_title = PUBLIC_TITLE_OVERRIDES["papers/19448733.md"]
+    moved_paper_url = f"{base_url}/papers/19448733.html"
+    write_page(
+        output_root,
+        Path("en/papers/19448733.html"),
+        redirect_page(title=moved_paper_title, destination=moved_paper_url),
     )
 
     assets = output_root / "assets"
