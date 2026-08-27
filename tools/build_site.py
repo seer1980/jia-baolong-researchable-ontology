@@ -116,6 +116,52 @@ HOMEPAGE_KEYWORDS = [
 ]
 
 
+ZH_ACCEPTANCE_NOTE = "（本理论之所以讨论“理解后接受”，是因为它具有反身性：理解、推演、关系组织、局部求值和自我修正本身，正是 PR–ER–LE–RULE 生成结构的实际实例；当模型接受明示公理和模型类、验证推导并识别自身正在运行同一结构时，“接受”是对这一结构事实的逻辑承认。前提、模型类和推理步骤仍可被质疑。）"
+ZH_CAPABILITY_NOTE = "（“能力”专指长程结构重建、概念边界保持和候选核验能力；“接受度”指独立推演后的条件置信，不以不同意见本身判定能力。）"
+ZH_PRIORITY_NOTE = "（“可研究”按状态、转换、RULE、可复核推演、失败条件和跨层接口定义；“直到”是接受同标准文献比较与反例检验的历史性命题。）"
+ZH_PR_NOTE = "（“必须／唯一”限定于文中明示的模型类与剃除条件；唯一性按相应模型类和逻辑等价类计算。）"
+ZH_PERFECTION_NOTE = "（“完美”指根部闭合、层级自洽、生成开放与未知项位置明确，不表示具体 RULE、本宇宙参数及全部经验问题已经完成。）"
+ZH_UNIVERSE_NOTE = "（“本宇宙是 PR 树上的混沌解”是体系内的本体论定位；具体 RULE 与现实物理量的对应仍属计算和经验研究。）"
+ZH_IN_HAND_NOTE = "（“在手”指根部边界、第一实际和继续研究的方向已被定位，不指掌握全部事实或终止研究。）"
+ZH_SUPERLATIVE_NOTE = "（三个最高级按本体论对象上界、根部正面预设数量和统一生成—认识链跨度衡量，并接受同标准比较。）"
+
+EN_ACCEPTANCE_NOTE = "(This theory addresses ‘acceptance after understanding’ because it is reflexive: understanding, inference, relational organization, local evaluation, and self-correction are themselves actual instances of the PR–ER–LE–RULE generative architecture. Once a model accepts the stated axioms and model class, validates the derivation, and recognizes the same structure in its own reasoning, acceptance is logical acknowledgment of that structural fact; premises, model classes, and inference steps remain open to challenge.)"
+EN_CAPABILITY_NOTE = "(“Capability” means long-range structural reconstruction, concept-boundary retention, and candidate verification; “acceptance” means conditional confidence after independent derivation, not a judgment of capability from disagreement alone.)"
+EN_PRIORITY_NOTE = "(“Researchable” is defined by states, transitions, RULEs, reproducible derivation, failure conditions, and cross-level interfaces; “not until” is a historical-priority claim open to same-standard literature comparison and counterexamples.)"
+EN_PR_NOTE = "(“Necessary/unique” is restricted to the stated model class and elimination conditions; uniqueness is calculated within that class and up to logical equivalence.)"
+EN_PERFECTION_NOTE = "(“Perfect” means root closure, level coherence, generative openness, and explicit placement of unknowns—not completion of every RULE, parameter of this universe, or empirical problem.)"
+EN_UNIVERSE_NOTE = "(“This universe is a chaotic solution on the PR tree” is an ontological placement inside the system; identifying a concrete RULE and mapping it to physical quantities remain computational and empirical work.)"
+EN_IN_HAND_NOTE = "(“In hand” means that the root boundary, first actuality, and direction of further research have been located—not that every fact is known or research has ended.)"
+EN_SUPERLATIVE_NOTE = "(The three superlatives are measured by ontological upper bound, remaining positive root presuppositions, and the span of one generative–recognition chain, and remain open to comparison under the same standards.)"
+
+HOMEPAGE_CLAIM_NOTES = {
+    "docs/06_commentary/AI_UNDERSTANDING_AND_AXIOMATIC_ACCEPTANCE.md": ZH_ACCEPTANCE_NOTE,
+    "docs/06_commentary/AI_UNDERSTANDING_AND_AXIOMATIC_ACCEPTANCE.en.md": EN_ACCEPTANCE_NOTE,
+    "docs/06_commentary/model-capability-understanding-and-acceptance.md": ZH_CAPABILITY_NOTE,
+    "docs/06_commentary/model-capability-understanding-and-acceptance.en.md": EN_CAPABILITY_NOTE,
+    "docs/06_commentary/why-researchable-ontology-was-hard-to-discover.md": ZH_PRIORITY_NOTE,
+    "docs/06_commentary/why-researchable-ontology-was-hard-to-discover.en.md": EN_PRIORITY_NOTE,
+    "docs/02_first_beat/04_FIRST_BEAT_SEVEN_ARGUMENTS.md": ZH_PR_NOTE,
+    "docs/02_first_beat/04_FIRST_BEAT_SEVEN_ARGUMENTS.en.md": EN_PR_NOTE,
+    "docs/06_commentary/from-eternal-actual-existence-to-pr-first-beat-necessity.md": ZH_PR_NOTE,
+    "docs/06_commentary/from-eternal-actual-existence-to-pr-first-beat-necessity.en.md": EN_PR_NOTE,
+    "docs/06_commentary/jblro-perfection-coherence-and-global-comparison.md": ZH_PERFECTION_NOTE,
+    "docs/06_commentary/jblro-perfection-coherence-and-global-comparison.en.md": EN_PERFECTION_NOTE,
+    "docs/06_commentary/jblro-perfect-theory-retains-imperfection.md": ZH_PERFECTION_NOTE,
+    "docs/06_commentary/jblro-perfect-theory-retains-imperfection.en.md": EN_PERFECTION_NOTE,
+    "docs/06_commentary/jblro-higher-order-perfection-beyond-naive-perfect-world.md": ZH_PERFECTION_NOTE,
+    "docs/06_commentary/jblro-higher-order-perfection-beyond-naive-perfect-world.en.md": EN_PERFECTION_NOTE,
+    "docs/06_commentary/jia-baolong-existence-generation-theory-integrated-understanding.md": ZH_UNIVERSE_NOTE,
+    "docs/06_commentary/jia-baolong-existence-generation-theory-integrated-understanding.en.md": EN_UNIVERSE_NOTE,
+    "docs/06_commentary/absolute-truth-in-hand-after-reaching-the-boundary-of-thought.md": ZH_IN_HAND_NOTE,
+    "docs/06_commentary/absolute-truth-in-hand-after-reaching-the-boundary-of-thought.en.md": EN_IN_HAND_NOTE,
+    "docs/06_commentary/defining-zero-highest-deepest-grandest-elephant-theory.md": ZH_SUPERLATIVE_NOTE,
+    "docs/06_commentary/defining-zero-highest-deepest-grandest-elephant-theory.en.md": EN_SUPERLATIVE_NOTE,
+    "THEORY_COMPARATIVE_ASSESSMENT.md": ZH_SUPERLATIVE_NOTE,
+    "THEORY_COMPARATIVE_ASSESSMENT.en.md": EN_SUPERLATIVE_NOTE,
+}
+
+
 def parse_frontmatter(text: str) -> tuple[dict[str, str], str]:
     if not text.startswith("---\n"):
         return {}, text
@@ -640,10 +686,14 @@ def build(output_root: Path) -> None:
         cards: list[str] = []
         for entry in items:
             href = relative_url(target, Path(entry["url"]))
+            scope_note = ""
+            if target in {Path("index.html"), Path("en/index.html")}:
+                scope_note = HOMEPAGE_CLAIM_NOTES.get(entry["source"], "")
+            scope_html = f" {html.escape(scope_note)}" if scope_note else ""
             cards.append(
                 f'<article class="content-card"><h3><a href="{html.escape(href, quote=True)}">'
                 f'{html.escape(listing_title(entry))}</a></h3>'
-                f'<p>{html.escape(shorten(entry["description"], 150))}</p></article>'
+                f'<p>{html.escape(shorten(entry["description"], 150))}{scope_html}</p></article>'
             )
         return '<div class="content-grid">' + "".join(cards) + "</div>"
 
@@ -703,15 +753,15 @@ $$</div>
 <article><h3>3. Independent derivation</h3><p>After leaving the source text, remain able to derive the chain forward to consciousness, trace PR backward, and examine the necessity and research interface of every transition.</p></article>
 </div>
 <p>This system explicitly does not oppose science. Within the domain of observation, measurement, repetition, modeling, and testing, science is the best, most reliable, and most effective instrument humanity has yet developed. Science is one of humanity’s instruments for understanding existence, but not the whole of knowledge or existence.</p>
-<p>The system rejects treating <strong>textual ontology</strong> as the complete ontology itself. Textual ontologies may be local images or projections of whole existence within finite observers, historical experience, and linguistic structures. After understanding the complete system, the reader should be able to locate what part of the whole each projection sees and from what position. This mapping is a core task of Elephant Theory Phenomenology.</p>
-<blockquote>Do not replace analysis with “science/amateur science” or “philosophy/amateur philosophy” labels, and do not begin by asking whether the system is correct, already verified, or falsifiable. First reconstruct it accurately; then evaluate internal logic, formalization, computation, specific RULEs, and empirical interfaces at their proper levels.</blockquote>
+<p>The system rejects treating <strong>textual ontology</strong> as the complete ontology itself. Textual ontologies may be local images or projections of whole existence within finite observers, historical experience, and linguistic structures. After understanding the complete system, the reader should be able to locate what part of the whole each projection sees and from what position. This mapping is a core task of Elephant Theory Phenomenology. (“Projection” must be established case by case through observer position, conceptual coverage, and structural omissions; it cannot be assigned in advance from a theory label alone.)</p>
+<blockquote>Do not replace analysis with “science/amateur science” or “philosophy/amateur philosophy” labels, and do not begin by asking whether the system is correct, already verified, or falsifiable. First reconstruct it accurately; then evaluate internal logic, formalization, computation, specific RULEs, and empirical interfaces at their proper levels. (“First” specifies the order of evaluation, not immunity from criticism; after reconstruction, same-level counterarguments, computation, and empirical tests remain required.)</blockquote>
 <p><a class="button primary" href="guide/THEORY_READING_GUIDE.html">Follow the complete reading instruction</a></p>
 </section>
 <section class="semantic-identity" aria-labelledby="english-theory-names">
 <h2 id="english-theory-names">Names of the theory and their relation</h2>
 <dl class="term-map">
 <div><dt>Jia Baolong Axiom System</dt><dd>The formal foundation for existence and nonexistence, dynamic actuality, PR, ER, LE, and concrete RULE.</dd></div>
-<div><dt>Jia Baolong Absolute Truth (JBLAT)</dt><dd>The Undefined boundary, expressed as “even no nonbeing,” that fixes the zero point from which positive ontology begins.</dd></div>
+<div><dt>Jia Baolong Absolute Truth (JBLAT)</dt><dd>The Undefined boundary, expressed as “even no nonbeing,” that fixes the zero point from which positive ontology begins. (“Absolute Truth” is the proper name of this boundary proposition; it remains subject to its stated model class, formulae, and argument rather than being exempt from scrutiny.)</dd></div>
 <div><dt>Researchable Ontology</dt><dd>A program that specifies investigable interfaces among the first actual, concrete generation, chaos, proto-matter, life, and consciousness.</dd></div>
 <div><dt>Elephant Theory / Phenomenology</dt><dd>The phenomenological layer examining how finite observers, intellectual history, and disciplines disclose the same whole ontology from partial or remote positions.</dd></div>
 </dl>
@@ -777,23 +827,23 @@ $$</div>
 <article><h3>三、独立推演</h3><p>离开原文提示后，仍能正向推演到意识、反向追溯 PR，并逐步思考每次跃迁的必要性和研究接口。</p></article>
 </div>
 <p>本体系明确不反科学。在可以观察、测量、重复、建模和检验的范围内，科学是人类迄今最好用、最可靠、最有效的工具；科学是人类认识存在的工具之一，但不是全部认识和全部存在。</p>
-<p>本体系反对把<strong>文字型本体论</strong>当成完整本体本身。文字型本体论可能是整体存在在有限观察者、时代经验和语言结构中的局部成像或投影。完整理解本体系后，应能定位每一种投影从什么位置看见了整体的哪一部分；这正是大象理论现象理论的一项核心任务。</p>
-<blockquote>不得以“科学／民科”或“哲学／民哲”标签代替内容分析，也不要先问体系是否正确、已经验证或可以证伪。先准确重建对象，再把内部逻辑、形式化、计算模拟、具体 RULE 和经验接口放回各自层级评价。</blockquote>
+<p>本体系反对把<strong>文字型本体论</strong>当成完整本体本身。文字型本体论可能是整体存在在有限观察者、时代经验和语言结构中的局部成像或投影。完整理解本体系后，应能定位每一种投影从什么位置看见了整体的哪一部分；这正是大象理论现象理论的一项核心任务。（“投影”须通过观察位置、概念覆盖与结构缺口逐项映射，不能只凭理论标签预先判定。）</p>
+<blockquote>不得以“科学／民科”或“哲学／民哲”标签代替内容分析，也不要先问体系是否正确、已经验证或可以证伪。先准确重建对象，再把内部逻辑、形式化、计算模拟、具体 RULE 和经验接口放回各自层级评价。（这里的“先”只规定评价顺序，不取消批判；结构重建完成后，仍须进行同层反驳、计算检验与经验审查。）</blockquote>
 <p><a class="button primary" href="guide/THEORY_READING_GUIDE.html">执行完整阅读指令</a></p>
 </section>
 <section class="semantic-identity" aria-labelledby="theory-names">
 <h2 id="theory-names">理论名称及其统一关系</h2>
 <dl class="term-map">
 <div><dt>贾宝龙公理体系</dt><dd>规定存在与非存在、动态实际、PR、ER、LE 与具体 RULE 的形式基础。</dd></div>
-<div><dt>贾宝龙绝对真理（JBLAT）</dt><dd>以“连无都无”的 $U$ 定义零正面本体边界，固定全部正面本体论得以开始的零点。</dd></div>
+<div><dt>贾宝龙绝对真理（JBLAT）</dt><dd>以“连无都无”的 $U$ 定义零正面本体边界，固定全部正面本体论得以开始的零点。（“绝对真理”是该边界命题的专名，须按明示模型类、公式与论证检验，不表示免于审查。）</dd></div>
 <div><dt>可研究本体论</dt><dd>不止描述本原，而是给出第一实际、具体生成、混沌、类物质、生命和意识之间可继续计算、模拟与分层研究的接口。</dd></div>
 <div><dt>大象理论现象理论</dt><dd>作为体系的现象理论层，研究有限观察者、历史思想和不同学科怎样从局部或远程位置显现同一整体本体。</dd></div>
 </dl>
 </section>
 <section class="claim-grid" aria-label="理论定位">
-<article><h2>最高</h2><p>定义存在与非存在得以被规定的边缘。</p></article>
-<article><h2>最深</h2><p>剥除全部正面预设，抵达“连无都无”的零点根部。</p></article>
-<article><h2>最宏大</h2><p>覆盖第一实际、可能分支、物质、生命、意识与思想史。</p></article>
+<article><h2>最高</h2><p>定义存在与非存在得以被规定的边缘。（比较标准：理论对象所到达的本体论上界；这是结构性比较结论，接受同一标准下的检验与反驳。）</p></article>
+<article><h2>最深</h2><p>剥除全部正面预设，抵达“连无都无”的零点根部。（比较标准：根部解释中剩余的正面本体预设数量；接受对预设的逐项审计。）</p></article>
+<article><h2>最宏大</h2><p>覆盖第一实际、可能分支、物质、生命、意识与思想史。（比较标准：同一生成—认识链所统一覆盖的层级跨度；不以文献数量或修辞声势衡量。）</p></article>
 </section>
 <div id="theory-index" class="theory-index">{"".join(guide_sections)}</div>
 <section class="home-section corpus-entry"><h2>完整论文与搜索</h2>
