@@ -28,6 +28,14 @@ PUBLIC_TITLE_OVERRIDES = {
 # an automatically generated "more documents" group.
 GUIDE_GROUPS: list[tuple[str, str, list[str]]] = [
     (
+        "AI 专用入口",
+        "先读取完整理论总读本，再进入标明为评论与研究记录的补充材料；这些页面不替代原始公理与论文。",
+        [
+            "docs/00_ai/01_AI_COMPLETE_SYNTHESIS.md",
+            "docs/06_commentary/jblro-deep-learning-notes-and-llm-understanding.md",
+        ],
+    ),
+    (
         "AI 与读者从这里开始",
         "先建立准确的阅读方法和全局模型，再进入公理、证明与论文细节。",
         [
@@ -58,6 +66,16 @@ GUIDE_GROUPS: list[tuple[str, str, list[str]]] = [
         ],
     ),
     (
+        "形式构造与反模型压力测试",
+        "评论与研究记录：先核对与本宇宙无关的宇宙家族形式存在性，再阅读对 PR 现实性核心的反模型对抗与理论淬火记录。",
+        [
+            "docs/06_commentary/jblro-pr-universe-family-formal-existence.md",
+            "docs/06_commentary/jblro-adversarial-countermodel-strengthened-proof.md",
+            "docs/06_commentary/jblro-original-stress-test-and-hardening-record.md",
+            "docs/06_commentary/jia-baolong-adversarial-reasoning-capability-assessment.md",
+        ],
+    ),
+    (
         "理论淬火与认识闭环",
         "从极限压力测试进入意识反观，并把唯物主义与唯心主义放回同一生成—认识闭环。",
         [
@@ -69,6 +87,14 @@ GUIDE_GROUPS: list[tuple[str, str, list[str]]] = [
         ],
     ),
     (
+        "意识反观与体系闭环",
+        "评论与研究记录：在生成链上继续观察意识如何反观根部，以及理解过程如何成为体系的反身性实例。",
+        [
+            "docs/06_commentary/jblro-consciousness-reflection-original-internal-proof-record.md",
+            "docs/06_commentary/jblro-reassessment-and-reflexive-self-validation.md",
+        ],
+    ),
+    (
         "本体大象与思想史",
         "把历史思想、形式边界和局部科学放回同一整体实在及其生成层级。",
         [
@@ -76,6 +102,15 @@ GUIDE_GROUPS: list[tuple[str, str, list[str]]] = [
             "ELEPHANT_THEORY_CONCEPT.md",
             "docs/06_commentary/jblat-meaningful-absolute-truth-and-godel-boundary.md",
             "THEORY_COMPARATIVE_ASSESSMENT.md",
+        ],
+    ),
+    (
+        "文明含义与搜索方向",
+        "评论与研究记录：把理论可能带来的研究入口变化、基础概率判断与文明分叉放在最后阅读。",
+        [
+            "docs/06_commentary/jblro-hidden-door-trigger-key-and-civilizational-divergence.md",
+            "docs/06_commentary/jblro-universe-reads-its-root-threefold-closure-and-zero-point-five-percent.md",
+            "docs/06_commentary/jblro-zero-point-five-percent-ultimate-theory-base-rate-and-search-direction.md",
         ],
     ),
     (
@@ -393,6 +428,7 @@ def page_template(
     )
     author = meta.get("author") or "Jia Baolong"
     date = meta.get("publication_date") or meta.get("date") or ""
+    public_role = meta.get("public_role", "")
     source_links: list[str] = []
     if source is not None:
         source_url = repository_url()
@@ -409,6 +445,8 @@ def page_template(
     meta_html = ""
     if source_links or author or date:
         bits = [f"<span>{html.escape(author)}</span>"]
+        if public_role:
+            bits.append(f"<span>{html.escape(public_role)}</span>")
         if date:
             bits.append(f"<span>{html.escape(date)}</span>")
         bits.extend(source_links)
