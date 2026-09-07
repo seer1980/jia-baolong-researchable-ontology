@@ -22,6 +22,42 @@ Research on the origin of life understands the transition from nonliving chemist
 
 The RNA-world, metabolism-first, compartment-first, and co-evolution approaches are different routes along this research chain.
 
+## The Interface Between Rule 979 and the Scientific Emergence Chain
+
+The Rule 979 simulator advances the PR–ER–LE architecture to the proto-matter
+level. Across all development, search, and validation runs, it executed
+approximately $4.435\times10^9$ LE updates. Among 32 perturbed initial ERs,
+persistent K5 was the leading candidate in 3/32, 21/32, 31/32, and 32/32
+trajectories at $10^6$, $2\times10^6$, $5\times10^6$, and $10^7$ LE,
+respectively. Under the finite model's operational definition, this is positive
+evidence for persistent and reproducible proto-matter structure.
+
+Rule 979 has not generated organic molecules, chemical reactions, or life. It
+supplies the lower interface preceding the scientific emergence chain. The next
+step is to obtain reproducible interactions, persistent compositional products,
+and selective transformations among proto-matter structures; only then can the
+model connect to the organic-molecule-and-above chain studied by prebiotic
+chemistry:
+
+\[
+\begin{aligned}
+\boxed{\text{persistent Rule 979 }K_5}
+&\dashrightarrow \text{reproducible interactions}\\
+&\dashrightarrow \text{organic molecules and reactive monomers}\\
+&\longrightarrow \text{polymers and catalytic/autocatalytic networks}\\
+&\longrightarrow \text{template replication and heritable variation}\\
+&\longrightarrow \text{compartmentalization and protocell membranes}\\
+&\longrightarrow \text{coupled replication, catalysis, metabolism, and division}\\
+&\longrightarrow \text{Darwinian selection and cellular organization}.
+\end{aligned}
+\]
+
+The two evidence levels must remain distinct. Rule 979 establishes the boxed
+proto-matter result. Modern origins-of-life research supplies experimentally
+tractable upper-level modules from organic building blocks through RNA template
+replication and lipid compartments to protocell selection. The model-to-
+chemistry correspondence between them remains a research bridge to be built.
+
 ## The TGP Mapping in the Jia Baolong System
 
 TGP gives a computational chain from topological generation to life-like organization:
@@ -143,9 +179,19 @@ The original mapping of the Jia Baolong system connects the generative mechanism
 
 ## External Scholarly Anchors
 
-- Joyce and Szostak: protocells, RNA replication, and the joint replication of genetic material within compartments.
+- Patel and colleagues: a common prebiotically plausible reaction network can
+  yield precursors of ribonucleotides, amino acids, and lipids.
+  [DOI](https://doi.org/10.1038/nchem.2202)
+- Mansy and colleagues: template-directed synthesis of a genetic polymer within
+  a fatty-acid model membrane. [DOI](https://doi.org/10.1038/nature07018)
+- Adamala and Szostak: an encapsulated catalyst can create differential fitness
+  among model protocells. [DOI](https://doi.org/10.1038/nchem.1650)
+- Adamala, Engelhart, and Szostak: functional collaboration between primitive
+  membranes and soluble catalysts. [DOI](https://doi.org/10.1038/ncomms11041)
+- Joyce and Szostak: protocells, RNA replication, and the joint replication of
+  genetic material within compartments.
+  [DOI](https://doi.org/10.1101/cshperspect.a034801)
 - Otto and colleagues: replication, metabolism, compartmentalization, non-equilibrium maintenance, and open-ended Darwinian evolution.
 - Koonin: co-evolution of cellular organization, membranes, energy conversion, and genetic systems.
 - Pressman, Blanco, and Chen: the RNA world, ribozymes, and protocell compartments.
 - Robertson and Joyce: heredity and catalysis in the RNA world.
-
