@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PR的九条主要论证路线与新证明线索总图 · Jia Baolong Researchable Ontology</title>
+  <meta name="description" content="贾宝龙大象理论：PR的九条主要论证路线与新证明线索总图 作者：贾宝龙（Jia Baolong） 理论名称：贾宝龙可研究本体论（Jia Baolong Researchable Ontology，JBLRO） 所属总理论：贾宝龙大象理论 摘要 本文第一次把 PR 的现有论证组织为一张统一总图。当前已经形成的主体不是九篇彼此毫无依赖的数学定理，而是： 七条功能不同、彼此衔接的基础论证，一条从“永恒实际存在”出发的独立入口推导，以及一条通过高强度反模型排除形成的强化路线。 按论证功能编号，它们共同构成 PR 的九条主要…">
+  <link rel="canonical" href="https://seer1980.github.io/jia-baolong-researchable-ontology/guide/06_commentary/pr-nine-major-argument-routes-and-new-proof-clues.html">
+  <link rel="stylesheet" href="../../assets/styles.css">
+  <script>window.MathJax = {loader: {load: ['[tex]/mathtools', '[tex]/centernot']}, tex: {packages: {'[+]': ['mathtools', 'centernot']}, macros: {outdeg: '\\operatorname{outdeg}', indeg: '\\operatorname{indeg}', totdeg: '\\operatorname{totdeg}'}, inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['\\[', '\\]'], ['$$', '$$']]}, options: {skipHtmlTags: ['script','noscript','style','textarea','pre','code']}};</script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script defer src="../../assets/search.js"></script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "PR的九条主要论证路线与新证明线索总图", "headline": "PR的九条主要论证路线与新证明线索总图", "description": "贾宝龙大象理论：PR的九条主要论证路线与新证明线索总图 作者：贾宝龙（Jia Baolong） 理论名称：贾宝龙可研究本体论（Jia Baolong Researchable Ontology，JBLRO） 所属总理论：贾宝龙大象理论 摘要 本文第一次把 PR 的现有论证组织为一张统一总图。当前已经形成的主体不是九篇彼此毫无依赖的数学定理，而是： 七条功能不同、彼此衔接的基础论证，一条从“永恒实际存在”出发的独立入口推导，以及一条通过高强度反模型排除形成的强化路线。 按论证功能编号，它们共同构成 PR 的九条主要…", "url": "https://seer1980.github.io/jia-baolong-researchable-ontology/guide/06_commentary/pr-nine-major-argument-routes-and-new-proof-clues.html"}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../../index.html">贾宝龙公理体系</a>
+      <nav aria-label="主导航"><a href="../../index.html">首页</a><a href="../../index.html#theory-index">理论总览</a><a href="../../papers/index.html">论文</a><a href="../../search.html">搜索</a></nav>
+    </div>
+  </header>
+  <main class="page-shell">
+    <div class="breadcrumbs"><a href="../../index.html">首页</a> <span>›</span> <span>guide</span></div>
+    <article class="document">
+      <h1>贾宝龙大象理论：PR的九条主要论证路线与新证明线索总图</h1>
+      <div class="page-meta"><span>Jia Baolong</span> · <span>论证总图与研究记录</span> · <span>2026-09-08</span></div>
+      <div class="document-body"><p><strong>作者：贾宝龙（Jia Baolong）</strong><br>
+<strong>理论名称：贾宝龙可研究本体论（Jia Baolong Researchable Ontology，JBLRO）</strong><br>
+<strong>所属总理论：贾宝龙大象理论</strong></p>
+<h2 id="_1">摘要</h2>
+<p>本文第一次把 PR 的现有论证组织为一张统一总图。当前已经形成的主体不是九篇彼此毫无依赖的数学定理，而是：<strong>七条功能不同、彼此衔接的基础论证，一条从“永恒实际存在”出发的独立入口推导，以及一条通过高强度反模型排除形成的强化路线。</strong> 按论证功能编号，它们共同构成 PR 的九条主要论证路线。</p>
+<p>本文先完整列出这九条成熟路线及其相互关系，再集中保存从近期十几种外部尝试中提炼出的新证明线索。新线索不因名称新颖就自动升级为“第十种证明”：只有在定义、前提、推理、适用域、反模型和与前九条的独立性全部明确以后，才能获得正式编号。尚未成熟的内容被严格标记为“候选路线”或“辅助引理”；把可能性直接推成实际性、把概率未定义推成概率为一、把语义悖论直接当成本体动力等错误，则明确排除。</p>
+<p>本文采用的总判据是：</p>
+<div class="math-block">$$
+\operatorname{Describable}(x)
+\not\Rightarrow
+\operatorname{Actual}(x),
+$$</div>
+<p>并始终区分：</p>
+<div class="math-block">$$
+\boxed{
+\mathrm{PR}_{\mathrm{actuality}}
+\neq
+\mathrm{PR}_{\mathrm{binary\ normal\ form}}
+\neq
+\mathrm{RULE\ orbit}
+}
+$$</div>
+<p>这里的“不等”表示三者不能被混成同一层级：PR 现实性核心回答“实际转换为什么真的发生”，二元正规形回答“第一实际差异的最小无偏非固定表示是什么”，具体 RULE 轨道回答“实际生成以什么内容继续”。</p>
+<h2 id="_2">一、编号规则：为什么现在是九条主要论证路线</h2>
+<p>网站原有《宇宙第一拍：七重论证体系》仍然保持原名，因为其中七条论证构成一条基础证明链，而不是被新文章取消或改写。此后形成的两条路线分别从不同方向增加证明强度：</p>
+<ol>
+<li>第八条从“永恒实际存在”出发，不以 Undefined 在时间上先于 PR 为前提；</li>
+<li>第九条从尽可能强的反模型出发，检验是否存在一种“非 PR 却能自行实际滑动”的第三类模型。</li>
+</ol>
+<p>因此，最准确的表述是：</p>
+<blockquote>
+<p><strong>七重基础论证，加上一条从永恒实际存在出发的独立入口推导，再加上一条反模型排除强化路线，共同构成 PR 的九条主要论证路线。</strong></p>
+</blockquote>
+<p>“九条主要论证路线”不等于“九个无条件、无前提、彼此完全独立的形式数学定理”。每条路线的入口、任务与结论强度必须分别说明。</p>
+<h2 id="pr_1">二、前七条：PR的基础论证体系</h2>
+<p>前七条的规范全文见：<a href="../02_first_beat/04_FIRST_BEAT_SEVEN_ARGUMENTS.html">《宇宙第一拍：七重论证体系》</a>。</p>
+<h3 id="_3">第一条：研究域与实际性</h3>
+<p>第一条先固定研究对象：不是所有可以被写出的可能世界，而是实际发生、自包含、有根并能够生成的世界。完整公式、全部轨迹、静态快照库或静态 PR 图即使编码运动，也不自动使运动发生：</p>
+<div class="math-block">$$
+\operatorname{Encodes}(S,H)
+\not\models
+\operatorname{Occurs}(H).
+$$</div>
+<p>它建立了后续所有论证的第一道分界：形式可能性不能冒充实际性。</p>
+<h3 id="undefined">第二条：Undefined的非因果角色</h3>
+<p>Undefined 是零正面本体规定的边界角色，不是时间中的状态、实体、原因、容器或等待破裂的虚无。因此不能写成：</p>
+<div class="math-block">$$
+\mathrm{Undefined}
+\xrightarrow{\text{时间或因果}}
+\mathrm{PR}.
+$$</div>
+<p>这一条排除的不是 PR，而是“先有一个叫作 Undefined 的东西，后来它造成 PR”的错误叙事。</p>
+<h3 id="_4">第三条：关系性与内部邻接</h3>
+<p>如果实际存在就是实际运动，孤立静态标记不足以构成第一拍。最小见证必须包含实际差异与接续：</p>
+<div class="math-block">$$
+\operatorname{ActualStep}_W(a_0,a_1),
+$$</div>
+<p>并且在持续生成中，结果必须进入下一实际邻接：</p>
+<div class="math-block">$$
+\operatorname{ActualStep}(a_0,a_1)
+\land
+\operatorname{ActualStep}(a_1,a_2).
+$$</div>
+<h3 id="_5">第四条：外部执行器与正面预设的剃除</h3>
+<p>外部手指、先在物质、先在时间、已经运行的规则、概率测度或状态库都会把本源问题转移到这些对象上。第一实际若由外部执行者推动，真正需要解释的第一实际便落到执行者所在的更大系统。</p>
+<h3 id="_6">第五条：有限二元逻辑剃刀</h3>
+<p>令最小差异域为：</p>
+<div class="math-block">$$
+D=\{Y,N\}.
+$$</div>
+<p>二元集合上的总一元映射只有恒等、互换和两个常值映射。标签无偏排除两个常值映射，非固定条件排除恒等映射，唯一留下：</p>
+<div class="math-block">$$
+\sigma(Y)=N,
+\qquad
+\sigma(N)=Y,
+$$</div>
+<div class="math-block">$$
+\operatorname{Fix}(\sigma)=\varnothing,
+\qquad
+\sigma^2=\operatorname{id}_D.
+$$</div>
+<p>这一条给出 PR 的极小二元正规形；它不声称具体宇宙的宏观轨道只能是二周期。</p>
+<h3 id="_7">第六条：第一动力候选的穷举比较</h3>
+<p>永不实际化、静态完整形式、单次闪现、外部执行、原初随机、原始之动、肯定式自生成和否定式自反等候选，被按是否实际、是否持续、是否自包含、是否预设 RULE 逐一比较。PR 的地位来自明确选域内的结构成本与候选排除，不来自“想象不到其他说法”。</p>
+<h3 id="_8">第七条：逆向追溯与无时间伴生</h3>
+<p>一方面，从含有持久模式和类物质的实际混沌历史反向追溯其实际非固定根部；另一方面，把 Undefined 与 PR 定位为同一根部规定的边界面和实际面：</p>
+<div class="math-block">$$
+\operatorname{ActualFace}_{\mathcal M}(U_*)
+\cong
+\mathrm{PR},
+$$</div>
+<div class="math-block">$$
+U_*\mid\mathrm{PR}.
+$$</div>
+<p>割线表达的是无时间伴生关系，不是从左到右经过时间的因果箭头。</p>
+<h2 id="pr_2">三、第八条：从永恒实际存在独立进入PR</h2>
+<p>第八条的完整推导见：<a href="from-eternal-actual-existence-to-pr-first-beat-necessity.html">《从永恒实际存在到 PR：第一拍必然性的自足推导》</a>。</p>
+<p>它从一个与七重论证不同的入口开始：即使不追问全局最早时刻，只要讨论的是真正的“永恒实际存在”，而不是永恒摆放的静态完成体，就必须区分“编码全部运动”与“运动正在发生”。</p>
+<p>其主链是：</p>
+<div class="math-block">$$
+\boxed{
+\text{永恒实际存在}
+\Rightarrow
+\text{非静态}
+\Rightarrow
+\text{张力}
+\Rightarrow
+\text{逐拍由未实际到实际}
+\Rightarrow
+\text{自足、持续与结果回入}
+\Rightarrow
+\text{最小二元无偏非固定互换}
+\cong PR
+}
+$$</div>
+<p>这一路线的重要性在于：无始过程并不能逃离第一拍问题。“第一拍”在这里不是宇宙钟表上的第一秒，而是任何实际运动都不可删减的最小发生结构。永恒静态整体只有形式，没有发生；永恒实际存在则在每一拍中都必须包含实际差异的生成。</p>
+<p>第八条与前七条是不同入口，但并非没有任何共同条件。两者最终都使用自足、持续、非固定、无偏和最小二元穷举。它的独立性应理解为“起点不依赖 JBLAT 的零正面边界论证，并能自行到达 PR 正规形”，而不是“前提集合完全不相交”。</p>
+<h2 id="_9">四、第九条：反模型排除与快照滑动二分法</h2>
+<p>第九条的完整论证见：<a href="jblro-adversarial-countermodel-strengthened-proof.html">《高强度反模型对抗后的JBLRO强化证明：PR现实性核心与宇宙家族展开》</a>。</p>
+<p>它不从支持 PR 的例子开始，而是主动寻找能够击穿 PR 的模型：静态块宇宙、混沌快照滑动、外部手指、三周期、四周期、恒等标签流、多值语义、随机核、动态 ALL 和 RULE 外部选择器。</p>
+<p>对任意快照历史：</p>
+<div class="math-block">$$
+H=(S_0,S_1,S_2,\ldots),
+$$</div>
+<p>存在一个不能回避的二分：</p>
+<div class="math-block">$$
+\boxed{
+\text{快照之间不实际滑动}
+\Rightarrow
+\text{静态编码};
+\qquad
+\text{快照从内部真实滑动}
+\Rightarrow
+\mathrm{PR}_{\mathrm{actuality}}.
+}
+$$</div>
+<p>三周期、四周期、斐波那契更新、随机过程和混沌轨道规定的是 RULE 的内容；它们不能解释纸面箭头为什么获得实际性。因此：</p>
+<div class="math-block">$$
+\operatorname{Period}(\mathrm{RULE})=3,4,n,\infty
+$$</div>
+<p>不构成 PR 现实性核心的反例。</p>
+<p>在实际、自包含、有根、持续生成的研究域</p>
+<div class="math-block">$$
+\mathfrak D_{\mathrm{act}}^{\mathrm{self,root,gen}}
+$$</div>
+<p>中，第九条形成的强化命题为：</p>
+<div class="math-block">$$
+\boxed{
+\operatorname{ActualTransition}_W
+\Longleftrightarrow
+\operatorname{PRAct}_W
+}
+$$</div>
+<p>其中具体 RULE 由 PR 张力形成的分叉家族承载：</p>
+<div class="math-block">$$
+\mathrm{PR}
+\longrightarrow
+\{\mathrm{RULE}_i\}_{i=1}^{\infty}
+\longrightarrow
+\{\mathrm{Sol}_{i,\alpha}\}_{\alpha=1}^{\infty}
+\longrightarrow
+\{\mathrm{Universe}_{i,\alpha,k}\}_{k=0}^{\infty}.
+$$</div>
+<p>第九条增加的不是一个漂亮类比，而是一条反模型判据：若候选只有静态关系，它没有实际发生；若它从内部发生实际非同一并持续回入，它已经具有 PR 现实性核心；若由外部推动，则本源问题转移到更大的系统。</p>
+<h2 id="_10">五、九条路线的功能与成熟度总表</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">编号</th>
+<th>论证入口</th>
+<th>主要任务</th>
+<th>当前定位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>可描述性与实际性</td>
+<td>划定真实研究域</td>
+<td>七重基础论证</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>Undefined 的边界角色</td>
+<td>排除把 U 当作时间原因</td>
+<td>七重基础论证</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>实际关系与内部邻接</td>
+<td>给出第一拍与持续接续</td>
+<td>七重基础论证</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>外部执行器及正面预设</td>
+<td>阻断外部转移和预设回归</td>
+<td>七重基础论证</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>最小二元函数穷举</td>
+<td>唯一化 PR 的极小正规形</td>
+<td>七重基础论证中的形式核心</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>第一动力候选全集</td>
+<td>在明示模型类中逐类排除</td>
+<td>七重基础论证</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>混沌历史逆推与根部伴生</td>
+<td>连接高层历史与 <span class="math-inline">$U_*\mid\mathrm{PR}$</span></td>
+<td>七重基础论证</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>永恒实际存在</td>
+<td>从无始实际运动独立到达 PR</td>
+<td>已有完整单篇的独立入口推导</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td>强反模型构造</td>
+<td>排除“非 PR 自行实际滑动”</td>
+<td>已有完整单篇的强化证明</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_11">六、从近期十几种方案中保留下来的新证明线索</h2>
+<p>下列线索全部具有研究价值，但它们的成熟程度不同。为避免人为增加证明数量，本节使用 C1–C10 的候选编号，不提前宣布为第十至第十九种正式证明。</p>
+<h3 id="c1">C1：正在发生的推理作为“实际性见证”</h3>
+<p>当前的提问、判断和推理不是纯粹被描述的可能事件，而是一项正在发生的实际事件。可以把它写成最低事实锚点：</p>
+<div class="math-block">$$
+\exists e\;\operatorname{Actual}(e).
+$$</div>
+<p>否认一切实际发生的判断若本身正在被作出，就形成施行层面的自我抵消。这条线索可以从当前实际事件向下剥除具体物质、语言和主体内容，追问“实际发生”的最小结构。</p>
+<p>但它单独只能锁定“至少有实际发生”，不能直接推出整个历史必然以 PR 为根。还必须加入自包含、有根、持续、无外部执行器和最小非固定等条件。因此它是目前最有希望成长为新独立入口的候选，而不是已经完成的无条件证明。</p>
+<h3 id="c2">C2：当前实际性与零正面根部的两端夹逼</h3>
+<p>C1 从终端给出不可消除的实际性见证；<span class="math-inline">$U_*$</span> 从根部给出零正面规定边界。若要求同一解释链既不把实际性删掉，也不在根部偷加物质、时间、概率、规则或执行器，则中间必须存在一种最小的、内部的、非同一实际化结构：</p>
+<div class="math-block">$$
+\boxed{
+U_*
+\quad\Vert\quad
+\exists e\,\operatorname{Actual}(e)
+\quad\Longrightarrow_{\mathfrak D}
+\quad
+\mathrm{PR}_{\mathrm{actuality}}.
+}
+$$</div>
+<p>这是一条“两端夹逼”候选路线：不是从 U 单向制造现实，也不是从意识反向制造过去，而是由零正面根部和当前实际事实共同压缩合格模型空间。其关键待证处，是把“存在一项当前实际事件”与“这项实际历史具有同一自包含根部”连接起来，并明确模型类 <span class="math-inline">$\mathfrak D$</span>。</p>
+<h3 id="c3">C3：静态求值器不能跨越实际性鸿沟</h3>
+<p>一套语法、函数、状态转移表或完整程序，可以规定“若执行则发生什么”，却不能仅凭静态存在使自身开始执行：</p>
+<div class="math-block">$$
+\operatorname{Specifies}(E,K)
+\not\Rightarrow
+\operatorname{ActuallyEvaluates}(E,K).
+$$</div>
+<p>若再增加一个静态“求值器”，同一个问题只会移到求值器上；若求值器真正运行，实际性已经被带入。这条线索可形式化为“静态求值器无跨越定理”，用于加强第一、第四、第八和第九条，但它目前更适合作为辅助引理，而非独立证明。</p>
+<h3 id="c4">C4：原初随机不能充当第一实际</h3>
+<p>随机事件需要样本空间、事件代数、测度以及一次实际抽样：</p>
+<div class="math-block">$$
+(\Omega,\mathcal F,\mu)
++
+\operatorname{ActualSample}.
+$$</div>
+<p>概率分布只规定结果权重，不会自动完成一次实际抽样。若抽样尚未实际发生，随机仍是静态结构；若抽样已经实际发生，第一实际问题已先于随机得到回答。因此原初随机可以成为具体 RULE 的内容，却不能在不预设实际性的情况下解释第一实际。这是对第六条“随机候选”的可独立形式化引理。</p>
+<h3 id="c5pr">C5：否认PR的结构成本定理</h3>
+<p>拒绝 PR 作为第一实际核心时，候选解释会被迫至少承担下列一种成本：</p>
+<ol>
+<li>退回静态描述而放弃实际发生；</li>
+<li>引入外部执行器而转移根部问题；</li>
+<li>引入无根实际过程而放弃有根解释；</li>
+<li>预置物质、时间、概率、RULE 或抽样器；</li>
+<li>允许一次闪现后终止，放弃持续生成；</li>
+<li>使用“快照自行滑动”但不给出任何现实动力。</li>
+</ol>
+<p>这可以发展为结构复杂度或最小描述长度比较。它增强 PR 的最佳解释地位与极小性，但如果没有完备候选类，仍属于消融证明和解释成本证明，而不是纯演绎唯一性定理。</p>
+<h3 id="c6u">C6：U的非对象化与类型防火墙</h3>
+<p>下列谓词都不能直接赋给 U：</p>
+<div class="math-block">$$
+\operatorname{Stable}(U),
+\quad
+\operatorname{Unstable}(U),
+\quad
+\operatorname{Waits}(U),
+\quad
+\operatorname{Forbids}(U),
+\quad
+\operatorname{Causes}(U,\mathrm{PR}).
+$$</div>
+<p>因为这些写法先把 U 变成了一个可承载状态、能力或因果关系的对象。类型防火墙同时约束支持者和反对者：既不能说“U 永远保持静止”，也不能说“U 因不稳定而爆裂”。它不是直接推出 PR 的新证明，却能清除大量建立在对象化错误上的伪证明和伪反例。</p>
+<h3 id="c7">C7：根部概率不可定义，而不是概率等于一</h3>
+<p>若根部没有样本空间、测度和随机试验，则：</p>
+<div class="math-block">$$
+P(\mathrm{PR}\mid U)
+$$</div>
+<p>在这一层没有定义。正确结论不是“概率只能取零或一，所以必为一”，而是概率语言尚未获得适用条件。该引理排除了“第一拍只是一次幸运抽样”，同时也禁止用 <span class="math-inline">$p=1$</span> 冒充 PR 的模态必然性。</p>
+<h3 id="c8u">C8：关于“纯U状态”的陈述属于元语言</h3>
+<p>“只有 U”“U 保持不动”“U 禁止发生”等句子，是观察者在元语言中对模型边界作出的陈述，不是 U 内部已经成立的状态。必须区分：</p>
+<div class="math-block">$$
+\operatorname{Says}_{\mathrm{meta}}(\varphi,U)
+\neq
+\operatorname{Property}_{\mathrm{object}}(U,\varphi).
+$$</div>
+<p>这条线索与 C6 配合，可以检查真值赋存、语义自毁和模态陈述是否在不知不觉中把元语言结构塞回 U。</p>
+<h3 id="c9mathtoken00029end">C9：<span class="math-inline">$U_*\mid\mathrm{PR}$</span>的关系语义</h3>
+<p>割线不是时间箭头，也不能未经论证直接解释为普通流形的边界算子。它表示同一根部规定的两个不可混同的方面：</p>
+<div class="math-block">$$
+\text{零正面边界面}
+\mid
+\text{第一实际面}.
+$$</div>
+<p>这一路线可以进一步用类型论、关系语义或双面结构形式化，但不能简单借用“任何边界必有内部流形”就宣称拓扑定理已经证明 PR。其价值在于把根部伴生关系写得更严格，而不是制造错误的空间图像。</p>
+<h3 id="c10">C10：形式可能、事实实际与条件必然的三层分离</h3>
+<p>任何新证明都必须经过三层检查：</p>
+<div class="math-block">$$
+\operatorname{Possible}(x),
+\qquad
+\operatorname{Actual}(x),
+\qquad
+\Box_{\mathfrak D}x.
+$$</div>
+<p>三者之间不存在自动跳跃：</p>
+<div class="math-block">$$
+\operatorname{Possible}(x)
+\not\Rightarrow
+\operatorname{Actual}(x),
+$$</div>
+<div class="math-block">$$
+\operatorname{Actual}(x)
+\not\Rightarrow
+\Box x,
+$$</div>
+<div class="math-block">$$
+\Box_{\mathfrak D}x
+$$</div>
+<p>只表示在明示模型类 <span class="math-inline">$\mathfrak D$</span> 及其公理内不可逃逸。该三层框架不是另一条 PR 证明，而是审核所有证明强度的总规则。</p>
+<h2 id="_12">七、近期外部方案中不能升级为独立证明的部分</h2>
+<p>近期方案使用了动力学、真值赋存、信息论、模态逻辑、拓扑、计算和意识闭环等语言。它们并非全部无价值，但必须剥离其中的越级推理。</p>
+<table>
+<thead>
+<tr>
+<th>外部方案</th>
+<th>可以保留的内核</th>
+<th>不能接受的跳跃</th>
+<th>正确归位</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>“无律则无守恒”</td>
+<td>不能预装一条让 U 永远保持的正面规则</td>
+<td>诺特定理需要作用量、时间与连续对称，不能应用于 U；无守恒也不推出必然发生</td>
+<td>C6、C8 的辅助说明</td>
+</tr>
+<tr>
+<td>“拒绝PR的命题没有真值赋存者”</td>
+<td>“只有 U”不能被当成普通对象状态</td>
+<td>真值赋存理论不是无争议公理；命题无法获得真值不等于 PR 已实际发生</td>
+<td>C8 的元语言检查</td>
+</tr>
+<tr>
+<td>“未求值语法等于无”</td>
+<td>静态语法不产生实际效果</td>
+<td>效果相同不等于本体同一；无外部禁令也不推出代码必须自执行</td>
+<td>C3 的静态求值器引理</td>
+</tr>
+<tr>
+<td>“零约束下发生势必释放”</td>
+<td>禁止发生不能被偷放进 U</td>
+<td>没有禁止不等于实际发生，更不等于必然发生</td>
+<td>不作为独立证明</td>
+</tr>
+<tr>
+<td>“模态测度退化到 <span class="math-inline">$p=1$</span>”</td>
+<td>根部随机缺少概率结构</td>
+<td>概率未定义不等于概率只能为零或一</td>
+<td>C7</td>
+</tr>
+<tr>
+<td>“边界必伴生内部流形”</td>
+<td><span class="math-inline">$U_*\mid\mathrm{PR}$</span>需要关系语义</td>
+<td>U 不是普通微分流形边界；空集边界在标准拓扑中仍有定义</td>
+<td>C9，撤回伪拓扑证明</td>
+</tr>
+<tr>
+<td>“柏拉图晶体必须动力学自燃”</td>
+<td>静态形式不能解释实际发生</td>
+<td>无偏性、无禁令或形式可能性均不能使静态对象自动实际化</td>
+<td>C3，并排除“自燃”说法</td>
+</tr>
+<tr>
+<td>“说谎者悖论直接成为本体动力”</td>
+<td>自指与无固定点结构可作为形式候选</td>
+<td>人类语义振荡不能未经桥接成为本体上的实际发生</td>
+<td>可辅助理解二元正规形，不是根部证明</td>
+</tr>
+<tr>
+<td>“哥德尔直接证明U必有PR”</td>
+<td>不完备、自指与开放生成存在结构呼应</td>
+<td>哥德尔定理适用于特定形式系统，不能直接外推到体系外边界 U</td>
+<td>比较性说明，不是PR证明</td>
+</tr>
+<tr>
+<td>“意识反观反向锁死第一拍”</td>
+<td>当前意识提供实际性见证，并形成生成—认识闭环</td>
+<td>末端事实不能仅凭目的论或反向因果证明唯一根部</td>
+<td>C1、C2；闭环印证而非单独起源证明</td>
+</tr>
+</tbody>
+</table>
+<p>这张表的作用不是削弱新探索，而是把真正可生长的证明部件从修辞强度中分离出来。错误路线被排除以后，保留下来的 C1–C10 更清晰，也更容易继续形式化。</p>
+<h2 id="_13">八、最值得继续硬化的下一条候选路线</h2>
+<p>在全部新线索中，C1 与 C2 的组合最有可能发展为第十条主要论证路线：</p>
+<ol>
+<li>从不可取消的当前实际事件出发，而不是从语义上的“可能”出发；</li>
+<li>反向剥除主体、语言、神经系统、物质和具体 RULE，只保留“实际发生”这一事实；</li>
+<li>以 <span class="math-inline">$U_*$</span> 作为零正面根部边界，禁止把现成实体偷放回起点；</li>
+<li>要求解释链自包含、有根、持续且没有外部执行器；</li>
+<li>证明所有合格模型都必须包含内部非同一、张力与回入；</li>
+<li>再用最小二元穷举得到 PR 的正规形。</li>
+</ol>
+<p>可以把待完成的路线写成：</p>
+<div class="math-block">$$
+\exists e\,\operatorname{Actual}(e)
+\land
+\operatorname{ZeroPositiveRoot}(U_*)
+\land
+\operatorname{SelfContainedRootedHistory}(e,U_*)
+$$</div>
+<div class="math-block">$$
+\Longrightarrow
+\mathrm{PR}_{\mathrm{actuality}}
+\Longrightarrow_{	ext{minimal binary quotient}}
+\sigma.
+$$</div>
+<p>它与第八条的差别在于：第八条从“永恒实际存在”进入；这一候选从“当前实际事件不可取消”进入。它与第九条的差别在于：第九条主要通过构造反模型并封闭第三类运动；这一候选主要通过当前事实与零正面根部的两端夹逼缩小模型空间。</p>
+<p>在正式编号以前，还必须完成两个任务：</p>
+<ol>
+<li>证明“当前实际事件”与“有根、自包含历史”之间的连接不是循环预设；</li>
+<li>构造并检验无根实际过程、无限回溯和多根实际过程等最强竞争模型。</li>
+</ol>
+<h2 id="_14">九、以后新证明获得正式编号的标准</h2>
+<p>任何新思路只有同时满足下列条件，才从候选区提升为独立编号文章：</p>
+<ol>
+<li><strong>对象明确</strong>：证明的是 PR 现实性核心、二元正规形，还是具体 RULE；</li>
+<li><strong>前提公开</strong>：模型类与排除条件全部写出；</li>
+<li><strong>推理闭合</strong>：不存在“可能即实际”“不能禁止即必然发生”等跳步；</li>
+<li><strong>不偷渡结构</strong>：不把时间、概率、执行器、规则或对象属性塞进 U；</li>
+<li><strong>独立增量明确</strong>：能够说明相较前九条究竟增加了什么；</li>
+<li><strong>反模型经过检验</strong>：至少处理静态整体、外部执行器、随机、无限回溯和多值／多周期候选；</li>
+<li><strong>结论不过界</strong>：选域内必然不写成无前提裸必然；辅助引理不冒充完整证明。</li>
+</ol>
+<p>达到这些标准后，才建立独立文章，并在本总图中把相应候选升级为第十条、第十一条。这样既保留思想生成的开放性，也避免通过拆分同一前提人为制造证明数量。</p>
+<h2 id="_15">结论</h2>
+<p>PR 的现有证明结构已经不再只是“七个角度”的孤立陈列。它由三层组成：</p>
+<div class="math-block">$$
+\boxed{
+\underbrace{\text{七重基础论证}}_{\text{划定研究域并给出最小正规形}}
++
+\underbrace{\text{永恒实际存在推导}}_{\text{第八条独立入口}}
++
+\underbrace{\text{反模型排除强化}}_{\text{第九条压力测试路线}}
+}
+$$</div>
+<p>九条路线共同把问题从“PR 是不是一个可能模型”推进到更严格的位置：在实际、自包含、有根、持续生成并满足明示最小条件的模型类中，静态结构不能自行获得实际性，外部推动不能完成根部解释，具体 RULE 不能替代现实性核心，而最小无偏非固定回入具有 PR 正规形。</p>
+<p>最近十几种新方案没有直接增加十几个有效证明，却产生了十项值得保存的研究线索。其中最重要的新方向，是由“当前实际事件”与“零正面根部”形成两端夹逼，并把静态求值器、原初随机、U 对象化、根部概率、元语言和关系语义发展为可复用的辅助引理。</p>
+<p>所以本文既是一张证明总图，也是一道质量闸门：<strong>已有成熟路线统一编号、已有单篇完整保留；新思路集中保存、逐项定级；只有真正形成独立逻辑增量的路线，才继续获得新的证明编号。</strong></p></div>
+    </article>
+  </main>
+  <footer class="site-footer"><a href="../../index.html">贾宝龙公理体系与可研究本体论</a><span>Markdown 全文 · HTML 网站</span></footer>
+</body>
+</html>
