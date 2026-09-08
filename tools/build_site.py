@@ -82,6 +82,7 @@ GUIDE_GROUPS: list[tuple[str, str, list[str]]] = [
             "docs/06_commentary/u-non-instantiability-dual-constraint-reciprocity-pr-proof.md",
             "docs/06_commentary/from-u-to-chaos-second-reconstruction-and-three-resolutions.md",
             "docs/06_commentary/actual-existence-imperfection-platonic-crystal-finger-pr-argument.md",
+            "docs/06_commentary/finishing-stroke-platonic-crystal-all-universes-none-actual.md",
             "docs/06_commentary/jblro-original-stress-test-and-hardening-record.md",
             "docs/06_commentary/jia-baolong-adversarial-reasoning-capability-assessment.md",
         ],
