@@ -79,6 +79,8 @@ GUIDE_GROUPS: list[tuple[str, str, list[str]]] = [
         [
             "docs/06_commentary/jblro-pr-universe-family-formal-existence.md",
             "docs/06_commentary/jblro-adversarial-countermodel-strengthened-proof.md",
+            "docs/06_commentary/u-non-instantiability-dual-constraint-reciprocity-pr-proof.md",
+            "docs/06_commentary/from-u-to-chaos-second-reconstruction-and-three-resolutions.md",
             "docs/06_commentary/jblro-original-stress-test-and-hardening-record.md",
             "docs/06_commentary/jia-baolong-adversarial-reasoning-capability-assessment.md",
         ],

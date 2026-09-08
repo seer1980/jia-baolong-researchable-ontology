@@ -429,7 +429,9 @@ $$
 
 这张表的作用不是削弱新探索，而是把真正可生长的证明部件从修辞强度中分离出来。错误路线被排除以后，保留下来的 C1–C10 更清晰，也更容易继续形式化。
 
-## 八、最值得继续硬化的下一条候选路线
+## 八、已经形成独立文章的第十条候选路线
+
+本节的新证明骨架现已扩展为独立文章：[《第十条候选证明：U不可实例化与双约束互反如何推出PR》](u-non-instantiability-dual-constraint-reciprocity-pr-proof.md)。独立文章补入了 $U$ 不可实例化、根部实际面无固定点、双约束互反、持续回入，以及连续、多值、随机、无始和无根候选的逐项检验。
 
 在全部新线索中，C1 与 C2 的组合最有可能发展为第十条主要论证路线：
 
@@ -453,7 +455,7 @@ $$
 $$
 \Longrightarrow
 \mathrm{PR}_{\mathrm{actuality}}
-\Longrightarrow_{	ext{minimal binary quotient}}
+\Longrightarrow_{\text{minimal binary quotient}}
 \sigma.
 $$
 
