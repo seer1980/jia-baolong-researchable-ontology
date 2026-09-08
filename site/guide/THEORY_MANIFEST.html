@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jia Baolong Theory File Manifest · Jia Baolong Researchable Ontology</title>
-  <meta name="description" content="Jia Baolong Theory File Manifest 本文件说明仓库各部分的功能、来源和阅读顺序。论文正文、PDF 全文转写与理论导读分层保存，Markdown 是唯一的理论源文件； site/ 是由 Markdown 生成的 GitHub Pages HTML 发布目录。 文件层级 层级 位置 数量 内容 --- --- ---: --- reading guide THEORY READING GUIDE.md 、 00 READ FIRST.md 2 完整阅读指南和理论入口 primary pa…">
+  <meta name="description" content="Jia Baolong Theory File Manifest 本文件说明仓库各部分的功能、来源和阅读顺序。论文正文、PDF 全文转写、理论导读和结构化入口分层保存，Markdown 是唯一的理论源文件； ai/ 提供机器可读索引， site/ 是由 Markdown 生成的 GitHub Pages HTML 发布目录。 文件层级 层级 位置 数量 内容 --- --- ---: --- reading guide THEORY READING GUIDE.md 、 00 READ FIRST.md 2 完整…">
   <link rel="canonical" href="https://seer1980.github.io/jia-baolong-researchable-ontology/guide/THEORY_MANIFEST.html">
   <link rel="alternate" hreflang="en" href="https://seer1980.github.io/jia-baolong-researchable-ontology/en/guide/THEORY_MANIFEST.html">
   <link rel="stylesheet" href="../assets/styles.css">
   <script>window.MathJax = {loader: {load: ['[tex]/mathtools', '[tex]/centernot']}, tex: {packages: {'[+]': ['mathtools', 'centernot']}, macros: {outdeg: '\\operatorname{outdeg}', indeg: '\\operatorname{indeg}', totdeg: '\\operatorname{totdeg}'}, inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['\\[', '\\]'], ['$$', '$$']]}, options: {skipHtmlTags: ['script','noscript','style','textarea','pre','code']}};</script>
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <script defer src="../assets/search.js"></script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Jia Baolong Theory File Manifest", "headline": "Jia Baolong Theory File Manifest", "description": "Jia Baolong Theory File Manifest 本文件说明仓库各部分的功能、来源和阅读顺序。论文正文、PDF 全文转写与理论导读分层保存，Markdown 是唯一的理论源文件； site/ 是由 Markdown 生成的 GitHub Pages HTML 发布目录。 文件层级 层级 位置 数量 内容 --- --- ---: --- reading guide THEORY READING GUIDE.md 、 00 READ FIRST.md 2 完整阅读指南和理论入口 primary pa…", "url": "https://seer1980.github.io/jia-baolong-researchable-ontology/guide/THEORY_MANIFEST.html"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Jia Baolong Theory File Manifest", "headline": "Jia Baolong Theory File Manifest", "description": "Jia Baolong Theory File Manifest 本文件说明仓库各部分的功能、来源和阅读顺序。论文正文、PDF 全文转写、理论导读和结构化入口分层保存，Markdown 是唯一的理论源文件； ai/ 提供机器可读索引， site/ 是由 Markdown 生成的 GitHub Pages HTML 发布目录。 文件层级 层级 位置 数量 内容 --- --- ---: --- reading guide THEORY READING GUIDE.md 、 00 READ FIRST.md 2 完整…", "url": "https://seer1980.github.io/jia-baolong-researchable-ontology/guide/THEORY_MANIFEST.html"}</script>
 </head>
 <body>
   <header class="site-header">
@@ -25,7 +25,7 @@
     <article class="document">
       <h1>Jia Baolong Theory File Manifest</h1>
       <div class="page-meta"><span>Jia Baolong</span></div>
-      <div class="document-body"><p>本文件说明仓库各部分的功能、来源和阅读顺序。论文正文、PDF 全文转写与理论导读分层保存，Markdown 是唯一的理论源文件；<code>site/</code> 是由 Markdown 生成的 GitHub Pages HTML 发布目录。</p>
+      <div class="document-body"><p>本文件说明仓库各部分的功能、来源和阅读顺序。论文正文、PDF 全文转写、理论导读和结构化入口分层保存，Markdown 是唯一的理论源文件；<code>ai/</code> 提供机器可读索引，<code>site/</code> 是由 Markdown 生成的 GitHub Pages HTML 发布目录。</p>
 <h2 id="_1">文件层级</h2>
 <table>
 <thead>
@@ -44,27 +44,47 @@
 <td>完整阅读指南和理论入口</td>
 </tr>
 <tr>
+<td><code>ai_entry</code></td>
+<td><code>docs/00_ai/</code></td>
+<td style="text-align: right;">8</td>
+<td>中文入口、术语、命题、关系、版本、测试和阅读协议</td>
+</tr>
+<tr>
 <td><code>primary_papers</code></td>
 <td><code>papers/</code></td>
-<td style="text-align: right;">32</td>
+<td style="text-align: right;">32（另有 6 篇英文平行稿）</td>
 <td>论文正文、YAML 元数据和 Zenodo record ID</td>
 </tr>
 <tr>
 <td><code>supplementary_pdf</code></td>
 <td><code>supplementary_transcriptions/</code></td>
-<td style="text-align: right;">7</td>
+<td style="text-align: right;">7（另有 1 篇英文平行稿）</td>
 <td>按 PDF 页面恢复的全文</td>
 </tr>
 <tr>
 <td><code>commentary</code></td>
 <td>根目录与 <code>docs/</code></td>
-<td style="text-align: right;">13</td>
+<td style="text-align: right;">48（含 10 篇新增中文记录）</td>
 <td>理论导读、公式、阅读工具和理解更新</td>
+</tr>
+<tr>
+<td><code>machine_readable</code></td>
+<td><code>ai/</code></td>
+<td style="text-align: right;">3 个 JSON/JSONL 数据集</td>
+<td>manifest、命题、关系和语义切块</td>
 </tr>
 </tbody>
 </table>
 <h2 id="_2">建议阅读顺序</h2>
 <ol>
+<li><code>docs/00_ai/00_AI_START_HERE.md</code></li>
+<li><code>docs/00_ai/01_AI_COMPLETE_SYNTHESIS.md</code></li>
+<li><code>docs/00_ai/02_AI_CANONICAL_GLOSSARY.md</code></li>
+<li><code>docs/00_ai/03_AI_CLAIM_LEDGER.md</code></li>
+<li><code>docs/00_ai/04_AI_RELATION_GRAPH.md</code></li>
+<li><code>docs/00_ai/05_AI_VERSION_MAP.md</code></li>
+<li><code>docs/00_ai/06_AI_COMPREHENSION_TEST.md</code></li>
+<li><code>docs/00_ai/07_AI_READING_PROTOCOL.md</code></li>
 <li><code>THEORY_READING_GUIDE.md</code></li>
 <li><code>00_READ_FIRST.md</code></li>
 <li><code>docs/01_foundation/</code></li>
@@ -91,6 +111,7 @@
 <li><code>parallel_group</code>（存在版本并行时）</li>
 </ul>
 <p>切块时应把这些字段与正文一起保留；检索先返回论文标题、日期、来源和摘要，再返回正文段落。</p>
+<p>机器可读层的字段、记录数和中文-only 范围见 <code>ai/manifest.json</code>。新增 AI 入口层和此前十篇新增评论与研究记录没有生成对应英文平行稿。</p>
 <h2 id="_4">数学与文件格式</h2>
 <p>数学使用 Markdown 数学定界符，LaTeX 只作为公式载体；表格使用 Markdown 表格；PDF 转写保留 <code>&lt;!-- PDF page N --&gt;</code> 页面锚点。论文正文、PDF 转写和导读文件均为 UTF-8 Markdown。</p>
 <h2 id="_5">版本关系</h2>

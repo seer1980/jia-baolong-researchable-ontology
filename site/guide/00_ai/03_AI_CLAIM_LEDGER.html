@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 命题账本：主张、状态与证明边界 · Jia Baolong Researchable Ontology</title>
+  <meta name="description" content="AI 命题账本：主张、状态与证明边界 每条命题都有稳定的 claim id 。 status 不是价值判断，而是回答时必须保留的证据等级。除非命题明确标为 conditional-theorem 或 construction ，否则不要把它写成无条件证明。 claim id 类型 命题 范围与限制 状态 主要来源 --- --- --- --- --- --- C001 definition 研究对象是实际存在如何从根部边界进入生成，并在内部形成世界、生命和认识。 是研究问题，不是经验结论。 canonical…">
+  <link rel="canonical" href="https://seer1980.github.io/jia-baolong-researchable-ontology/guide/00_ai/03_AI_CLAIM_LEDGER.html">
+  <link rel="stylesheet" href="../../assets/styles.css">
+  <script>window.MathJax = {loader: {load: ['[tex]/mathtools', '[tex]/centernot']}, tex: {packages: {'[+]': ['mathtools', 'centernot']}, macros: {outdeg: '\\operatorname{outdeg}', indeg: '\\operatorname{indeg}', totdeg: '\\operatorname{totdeg}'}, inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['\\[', '\\]'], ['$$', '$$']]}, options: {skipHtmlTags: ['script','noscript','style','textarea','pre','code']}};</script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script defer src="../../assets/search.js"></script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "AI 命题账本：主张、状态与证明边界", "headline": "AI 命题账本：主张、状态与证明边界", "description": "AI 命题账本：主张、状态与证明边界 每条命题都有稳定的 claim id 。 status 不是价值判断，而是回答时必须保留的证据等级。除非命题明确标为 conditional-theorem 或 construction ，否则不要把它写成无条件证明。 claim id 类型 命题 范围与限制 状态 主要来源 --- --- --- --- --- --- C001 definition 研究对象是实际存在如何从根部边界进入生成，并在内部形成世界、生命和认识。 是研究问题，不是经验结论。 canonical…", "url": "https://seer1980.github.io/jia-baolong-researchable-ontology/guide/00_ai/03_AI_CLAIM_LEDGER.html"}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../../index.html">贾宝龙公理体系</a>
+      <nav aria-label="主导航"><a href="../../index.html">首页</a><a href="../../index.html#theory-index">理论总览</a><a href="../../papers/index.html">论文</a><a href="../../search.html">搜索</a></nav>
+    </div>
+  </header>
+  <main class="page-shell">
+    <div class="breadcrumbs"><a href="../../index.html">首页</a> <span>›</span> <span>guide</span></div>
+    <article class="document">
+      <h1>AI 命题账本：主张、状态与证明边界</h1>
+      <div class="page-meta"><span>Jia Baolong</span> · <span>命题账本</span> · <span>2026-09-07</span></div>
+      <div class="document-body"><p>每条命题都有稳定的 <code>claim_id</code>。<code>status</code> 不是价值判断，而是回答时必须保留的证据等级。除非命题明确标为 <code>conditional-theorem</code> 或 <code>construction</code>，否则不要把它写成无条件证明。</p>
+<table>
+<thead>
+<tr>
+<th>claim_id</th>
+<th>类型</th>
+<th>命题</th>
+<th>范围与限制</th>
+<th>状态</th>
+<th>主要来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>C001</code></td>
+<td><code>definition</code></td>
+<td>研究对象是实际存在如何从根部边界进入生成，并在内部形成世界、生命和认识。</td>
+<td>是研究问题，不是经验结论。</td>
+<td><code>canonical</code></td>
+<td><code>docs/00_ai/01_AI_COMPLETE_SYNTHESIS.md</code> §一</td>
+</tr>
+<tr>
+<td><code>C002</code></td>
+<td><code>definition</code></td>
+<td>Undefined 是不能被正面规定成先在实体的根部边界。</td>
+<td>采用负面规定，不能实体化。</td>
+<td><code>canonical</code></td>
+<td><code>docs/01_foundation/02_JIABAOLONG_AXIOM_SYSTEM.md</code></td>
+</tr>
+<tr>
+<td><code>C003</code></td>
+<td><code>conditional-theorem</code></td>
+<td>JBLAT 在指定完整解释任务中要求根部边界具有不变性和根本唯一性。</td>
+<td>依赖完整解释任务、模型类和等价关系。</td>
+<td><code>conditional</code></td>
+<td><code>docs/01_foundation/03_JIABAOLONG_ABSOLUTE_TRUTH.md</code></td>
+</tr>
+<tr>
+<td><code>C004</code></td>
+<td><code>conditional-theorem</code></td>
+<td>静态完整编码不自动给出实际发生。</td>
+<td>需要实际性、持续、自包含和最小性条件。</td>
+<td><code>conditional</code></td>
+<td><code>docs/02_first_beat/04_FIRST_BEAT_SEVEN_ARGUMENTS.md</code></td>
+</tr>
+<tr>
+<td><code>C005</code></td>
+<td><code>research-interface</code></td>
+<td>第一拍的使命是让第一次实际在无外部正面本原时成立并可持续。</td>
+<td>“第一”是根部发生功能，不是外部时间点。</td>
+<td><code>canonical</code></td>
+<td><code>docs/00_ai/01_AI_COMPLETE_SYNTHESIS.md</code> §五</td>
+</tr>
+<tr>
+<td><code>C006</code></td>
+<td><code>conditional-theorem</code></td>
+<td>在二元总一元映射类中，满足内部非固定、结果回入和最小性时，交换是唯一正规形。</td>
+<td>只对明示模型类、条件和逻辑等价成立。</td>
+<td><code>conditional</code></td>
+<td><code>docs/02_first_beat/04_FIRST_BEAT_SEVEN_ARGUMENTS.md</code></td>
+</tr>
+<tr>
+<td><code>C007</code></td>
+<td><code>interpretation</code></td>
+<td>PR 的“唯一”首先是使命性唯一，再在选定模型类中表现为交换正规形。</td>
+<td>使命唯一不等于所有数学表示唯一。</td>
+<td><code>interpretive</code></td>
+<td><code>docs/00_ai/01_AI_COMPLETE_SYNTHESIS.md</code> §五—六</td>
+</tr>
+<tr>
+<td><code>C008</code></td>
+<td><code>definition</code></td>
+<td>ER 承载关系、身份、记忆和可回入结果。</td>
+<td>是架构层，不是独立终极本原。</td>
+<td><code>canonical</code></td>
+<td><code>docs/01_foundation/01_THEORY_MASTER_MAP.md</code></td>
+</tr>
+<tr>
+<td><code>C009</code></td>
+<td><code>definition</code></td>
+<td>LE 对局部状态实施有限更新，使生成可计算、可复核。</td>
+<td>不预装全部世界规则。</td>
+<td><code>canonical</code></td>
+<td><code>docs/01_foundation/01_THEORY_MASTER_MAP.md</code></td>
+</tr>
+<tr>
+<td><code>C010</code></td>
+<td><code>definition</code></td>
+<td>RULE 决定具体世界族的状态、转换、边界和尺度。</td>
+<td>具体 RULE 保持开放。</td>
+<td><code>open</code></td>
+<td><code>docs/00_ai/01_AI_COMPLETE_SYNTHESIS.md</code> §七</td>
+</tr>
+<tr>
+<td><code>C011</code></td>
+<td><code>construction</code></td>
+<td>在独立给定的有限状态、移位和异或更新构造中，可以得到严格混沌实例。</td>
+<td>构造证明“至少有一个形式世界”，不证明本宇宙物理。</td>
+<td><code>constructed</code></td>
+<td><code>docs/00_ai/01_AI_COMPLETE_SYNTHESIS.md</code> §八</td>
+</tr>
+<tr>
+<td><code>C012</code></td>
+<td><code>conditional-theorem</code></td>
+<td>PR–ER–LE 不能仅凭名字自动推出混沌；混沌需要满足具体更新和敏感依赖条件。</td>
+<td>防止把架构标签当作动力学证明。</td>
+<td><code>conditional</code></td>
+<td><code>docs/00_ai/01_AI_COMPLETE_SYNTHESIS.md</code> §八</td>
+</tr>
+<tr>
+<td><code>C013</code></td>
+<td><code>research-interface</code></td>
+<td>局部更新、稳定模式和相互作用可作为类物质、类化学的研究接口。</td>
+<td>需要明确状态空间、守恒/耗散和可复现实验。</td>
+<td><code>open</code></td>
+<td><code>docs/03_emergence/05_MATTER_TO_FIRST_CELL_EMERGENCE.md</code></td>
+</tr>
+<tr>
+<td><code>C014</code></td>
+<td><code>research-interface</code></td>
+<td>复制、变异、边界、持续和选择等条件可把类化学接口推进到生命样态。</td>
+<td>不能由“有混沌”单步推出生命。</td>
+<td><code>open</code></td>
+<td><code>docs/03_emergence/05_MATTER_TO_FIRST_CELL_EMERGENCE.md</code></td>
+</tr>
+<tr>
+<td><code>C015</code></td>
+<td><code>research-interface</code></td>
+<td>建模、记忆、选择和自我指涉可作为意识接口。</td>
+<td>主观体验和人类意识的对应仍开放。</td>
+<td><code>open</code></td>
+<td><code>docs/00_ai/01_AI_COMPLETE_SYNTHESIS.md</code> §十</td>
+</tr>
+<tr>
+<td><code>C016</code></td>
+<td><code>interpretation</code></td>
+<td>大象理论把学科和思想史视为同一整体存在—生成图的不同投影。</td>
+<td>需要保留投影间关系和观察者位置。</td>
+<td><code>interpretive</code></td>
+<td><code>ELEPHANT_THEORY_CONCEPT.md</code></td>
+</tr>
+<tr>
+<td><code>C017</code></td>
+<td><code>interpretation</code></td>
+<td>学科应按根部边界、生成层、涌现层和认识层重新排布。</td>
+<td>是体系内部的定位建议，不是现行学科制度事实。</td>
+<td><code>interpretive</code></td>
+<td><code>docs/00_ai/01_AI_COMPLETE_SYNTHESIS.md</code> §十四</td>
+</tr>
+<tr>
+<td><code>C018</code></td>
+<td><code>definition</code></td>
+<td>第三阶完美指根部闭合、层级自洽、生成开放和未知项位置明确。</td>
+<td>不等于所有经验问题已完成。</td>
+<td><code>canonical</code></td>
+<td><code>docs/00_ai/01_AI_COMPLETE_SYNTHESIS.md</code> §十一</td>
+</tr>
+<tr>
+<td><code>C019</code></td>
+<td><code>conditional-theorem</code></td>
+<td>哥德尔不完备性约束满足相应形式条件的认识层。</td>
+<td>不否定根部边界的确定性，也不封闭全部生成。</td>
+<td><code>conditional</code></td>
+<td><code>docs/00_ai/01_AI_COMPLETE_SYNTHESIS.md</code> §十二</td>
+</tr>
+<tr>
+<td><code>C020</code></td>
+<td><code>construction</code></td>
+<td>只要一个满足架构和 RULE 的形式世界构造存在，就能在模型意义下得到至少一个与本宇宙无关的宇宙。</td>
+<td>“宇宙”在此是形式世界，不是现实天文学断言。</td>
+<td><code>constructed</code></td>
+<td><code>docs/06_commentary/jblro-pr-universe-family-formal-existence.md</code></td>
+</tr>
+<tr>
+<td><code>C021</code></td>
+<td><code>commentary</code></td>
+<td>“零点五百分比”是研究方向的主观基率判断。</td>
+<td>不是测量值、统计估计或理论公理。</td>
+<td><code>commentary</code></td>
+<td><code>docs/06_commentary/jblro-zero-point-five-percent-ultimate-theory-base-rate-and-search-direction.md</code></td>
+</tr>
+<tr>
+<td><code>C022</code></td>
+<td><code>commentary</code></td>
+<td>新增十篇中文页面属于评论与研究记录。</td>
+<td>它们不替代原始公理、论文和 PDF 转写。</td>
+<td><code>commentary</code></td>
+<td><code>docs/06_commentary/</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_1">回答时的最小格式</h2>
+<p>先列 <code>claim_id</code>，再给结论，再写条件和“不蕴含”。例如：<code>C011</code> 支持“存在一个严格混沌构造”；它不支持“已证明本宇宙就是该构造”。如果问题跨越多个层级，同时列出各层命题，不把它们合并为一条无条件推论。</p></div>
+    </article>
+  </main>
+  <footer class="site-footer"><a href="../../index.html">贾宝龙公理体系与可研究本体论</a><span>Markdown 全文 · HTML 网站</span></footer>
+</body>
+</html>

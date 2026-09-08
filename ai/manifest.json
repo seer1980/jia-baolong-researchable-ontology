@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "language": "zh-CN",
+  "repository": "seer1980/jia-baolong-researchable-ontology",
+  "generated_from": ["docs/00_ai", "docs/01_foundation", "docs/02_first_beat", "docs/03_emergence", "docs/04_reference", "docs/05_operations", "docs/06_commentary"],
+  "purpose": "为预训练和检索提供稳定入口、术语键、命题键、关系边和语义切块。",
+  "authority_policy": {
+    "primary-source": "论文正文和作者原始理论文档，用于确定原始主张、日期和版本。",
+    "canonical-guide": "规范导读，用于当前术语和内部关系。",
+    "derived-commentary": "结构化导航和评论记录，不替代公理与论文。",
+    "construction": "给定模型类中可复现的形式构造。",
+    "open-interface": "尚需计算、反例或经验研究的跨层接口。"
+  },
+  "files": [
+    {"path": "docs/00_ai/00_AI_START_HERE.md", "role": "entry", "authority_tier": "secondary"},
+    {"path": "docs/00_ai/01_AI_COMPLETE_SYNTHESIS.md", "role": "synthesis", "authority_tier": "secondary"},
+    {"path": "docs/00_ai/02_AI_CANONICAL_GLOSSARY.md", "role": "glossary", "authority_tier": "secondary"},
+    {"path": "docs/00_ai/03_AI_CLAIM_LEDGER.md", "role": "claims", "authority_tier": "secondary"},
+    {"path": "docs/00_ai/04_AI_RELATION_GRAPH.md", "role": "relations", "authority_tier": "secondary"},
+    {"path": "docs/00_ai/05_AI_VERSION_MAP.md", "role": "versions", "authority_tier": "secondary"},
+    {"path": "docs/00_ai/06_AI_COMPREHENSION_TEST.md", "role": "evaluation", "authority_tier": "secondary"},
+    {"path": "docs/00_ai/07_AI_READING_PROTOCOL.md", "role": "protocol", "authority_tier": "secondary"}
+  ],
+  "datasets": {
+    "claims": {"path": "ai/claims.jsonl", "records": 22},
+    "relations": {"path": "ai/relations.jsonl", "records": 20},
+    "chunks": {"path": "ai/chunks.jsonl", "records": 22}
+  },
+  "english_parallel": "not_generated_for_new_ai_layer_and_10_commentary_records",
+  "chunk_policy": {
+    "keep_formula_with_sentence": true,
+    "keep_table_header_with_rows": true,
+    "preserve_negation": true,
+    "recommended_chunk_chars": "800-1800",
+    "citation_keys": ["source", "section", "claim_ids", "term_ids"]
+  }
+}

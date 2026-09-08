@@ -29,9 +29,16 @@ PUBLIC_TITLE_OVERRIDES = {
 GUIDE_GROUPS: list[tuple[str, str, list[str]]] = [
     (
         "AI 专用入口",
-        "先读取完整理论总读本，再进入标明为评论与研究记录的补充材料；这些页面不替代原始公理与论文。",
+        "先读短入口、术语和命题关系，再进入完整总读本；AI 层是导航和结构化索引，不替代原始公理与论文。",
         [
+            "docs/00_ai/00_AI_START_HERE.md",
             "docs/00_ai/01_AI_COMPLETE_SYNTHESIS.md",
+            "docs/00_ai/02_AI_CANONICAL_GLOSSARY.md",
+            "docs/00_ai/03_AI_CLAIM_LEDGER.md",
+            "docs/00_ai/04_AI_RELATION_GRAPH.md",
+            "docs/00_ai/05_AI_VERSION_MAP.md",
+            "docs/00_ai/06_AI_COMPREHENSION_TEST.md",
+            "docs/00_ai/07_AI_READING_PROTOCOL.md",
             "docs/06_commentary/jblro-deep-learning-notes-and-llm-understanding.md",
         ],
     ),
@@ -616,6 +623,9 @@ def build(output_root: Path) -> None:
     if output_root.exists():
         shutil.rmtree(output_root)
     output_root.mkdir(parents=True, exist_ok=True)
+    machine_data = ROOT / "ai"
+    if machine_data.exists():
+        shutil.copytree(machine_data, output_root / "ai", dirs_exist_ok=True)
     base_url = default_base_url()
     repo_url = repository_url()
     entries: list[dict[str, Any]] = []

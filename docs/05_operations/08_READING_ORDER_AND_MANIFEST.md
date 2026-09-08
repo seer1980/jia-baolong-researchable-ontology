@@ -8,17 +8,25 @@
 
 ## 完整单遍阅读顺序
 
-1. THEORY_READING_GUIDE.md
-2. 00_READ_FIRST.md
-3. docs/01_foundation/01_THEORY_MASTER_MAP.md
-4. docs/01_foundation/02_JIABAOLONG_AXIOM_SYSTEM.md
-5. docs/01_foundation/03_JIABAOLONG_ABSOLUTE_TRUTH.md
-6. docs/02_first_beat/04_FIRST_BEAT_SEVEN_ARGUMENTS.md
-7. docs/03_emergence/05_MATTER_TO_FIRST_CELL_EMERGENCE.md
-8. docs/04_reference/06_GLOSSARY_AND_FORMULAE.md
-9. docs/06_commentary/THEORY_UNDERSTANDING_UPDATE.md
-10. papers/
-11. supplementary_transcriptions/
+1. docs/00_ai/00_AI_START_HERE.md
+2. docs/00_ai/01_AI_COMPLETE_SYNTHESIS.md
+3. docs/00_ai/02_AI_CANONICAL_GLOSSARY.md
+4. docs/00_ai/03_AI_CLAIM_LEDGER.md
+5. docs/00_ai/04_AI_RELATION_GRAPH.md
+6. docs/00_ai/05_AI_VERSION_MAP.md
+7. docs/00_ai/06_AI_COMPREHENSION_TEST.md
+8. docs/00_ai/07_AI_READING_PROTOCOL.md
+9. THEORY_READING_GUIDE.md
+10. 00_READ_FIRST.md
+11. docs/01_foundation/01_THEORY_MASTER_MAP.md
+12. docs/01_foundation/02_JIABAOLONG_AXIOM_SYSTEM.md
+13. docs/01_foundation/03_JIABAOLONG_ABSOLUTE_TRUTH.md
+14. docs/02_first_beat/04_FIRST_BEAT_SEVEN_ARGUMENTS.md
+15. docs/03_emergence/05_MATTER_TO_FIRST_CELL_EMERGENCE.md
+16. docs/04_reference/06_GLOSSARY_AND_FORMULAE.md
+17. docs/06_commentary/THEORY_UNDERSTANDING_UPDATE.md
+18. papers/
+19. supplementary_transcriptions/
 
 ## 当前核心原文
 
@@ -34,13 +42,17 @@
 8. papers/21660081.md
 9. papers/19551359.md
 
+## AI 结构化层
+
+docs/00_ai/ 提供八个中文入口文件；ai/manifest.json、ai/claims.jsonl、ai/relations.jsonl 和 ai/chunks.jsonl 提供相同路线的机器可读键。该层负责路由、切块和关系复核，论文正文仍是原始主张的定案层。AI 入口层和此前新增的十篇评论与研究记录没有英文平行稿。
+
 ## 论文正文层
 
-papers/ 收录 32 篇论文，每个 Zenodo 记录保留一个 Markdown 正文。论文覆盖理论早期表达、公理体系、第一拍、绝对真理、TGP、类物质、意识和相关应用。
+papers/ 收录 32 篇中文论文正文，并保留 6 篇英文平行稿。每个 Zenodo 记录保留一个 Markdown 正文。论文覆盖理论早期表达、公理体系、第一拍、绝对真理、TGP、类物质、意识和相关应用。
 
 ## PDF 全文恢复层
 
-supplementary_transcriptions/ 收录 7 篇逐页恢复的 PDF 全文，每篇保留 PDF page N 页锚点、公式和可识别表格。
+supplementary_transcriptions/ 收录 7 篇中文逐页恢复的 PDF 全文，并保留 1 篇英文平行稿；每篇保留 PDF page N 页锚点、公式和可识别表格。
 
 ## 两类正文资料的关系
 
