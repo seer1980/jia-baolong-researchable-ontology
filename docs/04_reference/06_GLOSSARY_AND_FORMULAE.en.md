@@ -29,7 +29,7 @@ The minimal structure of actual occurrence when there is no pre-given matter, ph
 
 ## PR
 
-Paradox–Reference. In its current strict meaning, it is the minimal normal form that is self-contained, actually occurring, non-fixed, and permits result re-entry. It is not the simultaneous assertion of \(p\) and \(\neg p\) within the same fixed evaluation.
+Paradoxical Re-entry (formerly Paradox–Reference). In its current strict meaning, it is the minimal normal form that is self-contained, actually occurring, non-fixed, and permits result re-entry. It is not the simultaneous assertion of \(p\) and \(\neg p\) within the same fixed evaluation.
 
 \[
 \sigma(Y)=N,\qquad \sigma(N)=Y.
@@ -140,7 +140,7 @@ This chain connects the PR root, medium-free dynamics, proto-matter, proto-chemi
 
 > **Editorial note for source-faithful reading:** the terminology developed across papers written at different stages. English translations preserve the wording used by each source rather than silently rewriting earlier papers into the latest vocabulary.
 
-- **PR:** the current canonical expansion is **Paradox–Reference**. Earlier papers also use **Primitive Reflexivity** and **Paradoxical Recursion**. These expressions mark stages in the development and exposition of the same PR line; they should not be read as three independent present-day axioms.
+- **PR:** the current canonical expansion is **Paradoxical Re-entry**, formerly **Paradox–Reference**. Still earlier papers also use **Primitive Reflexivity** and **Paradoxical Recursion**. These expressions mark stages in the development and exposition of the same PR line; they should not be read as independent present-day axioms.
 - **LE:** the current canonical expansion is **Lazy Evaluation**. **Lazy Expansion** is retained where it appears in an earlier source and should be read in that source's historical context.
 - **Trinity Theory / Trinity Topological Theory:** these are official historical proper names used in the relevant papers. They are not to be silently replaced by “Triadic Theory.”
 - **JBLAT / JBAT:** the repository’s current canonical guides and commentary documents use **JBLAT**. **JBAT** in the original paper `papers/21563153.md` is its fixed release fingerprint, formal result name, and formula notation and must remain unchanged. Both abbreviations denote the same Jia Baolong Absolute Truth object, not two theories.

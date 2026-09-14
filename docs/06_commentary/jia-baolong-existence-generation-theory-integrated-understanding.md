@@ -235,7 +235,7 @@ $$
 
 ### 1. PR、ER、LE 与 RULE
 
-- **PR（Paradox-Reference）：** 提供实际、非固定、自反与回入；
+- **PR（Paradoxical Re-entry，悖论回入；旧称：Paradox–Reference）：** 提供实际、非固定、自反与回入；
 - **ER（Entity–Relation）：** 承载关系局面、邻接网络、局部身份和结构记忆；
 - **LE（Lazy Evaluation）：** 实现局部、延迟、有限、按需与截断式更新；
 - **RULE：** 决定 ER 状态空间中的具体更新、分岔、吸引子和复杂性路径。

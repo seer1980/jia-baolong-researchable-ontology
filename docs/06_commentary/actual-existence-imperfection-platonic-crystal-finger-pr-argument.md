@@ -31,7 +31,7 @@ theory: "贾宝龙大象理论"
 - $U_*$ 表示零正面本体规定的根部边界；
 - $\mathcal K$ 表示柏拉图水晶，即能够静态编码形式、状态、路径和完整历史的总域；
 - $\operatorname{ActualStep}(x,y)$ 表示从 $x$ 到 $y$ 的差异正在实际发生，而不只是被一个关系式描述；
-- PR（Paradox–Reference，悖论—引用）表示自包含、非固定、结果回入的最小第一实际核心。
+- PR（Paradoxical Re-entry，悖论回入；旧称：Paradox–Reference／悖论—引用）表示自包含、非固定、结果回入的最小第一实际核心。
 
 本文中的“完美世界”严格表示：
 

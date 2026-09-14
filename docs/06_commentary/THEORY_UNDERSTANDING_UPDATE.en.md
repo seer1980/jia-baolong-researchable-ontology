@@ -52,7 +52,7 @@ Absolute truth originates in $U$. Its absoluteness comes from removing positive 
 
 ### 3.1 PR: the minimal self-reflexive structure of the First Beat
 
-PR (Primitive Reflexivity) is the minimal normal form of the first actual structure. It writes “cannot stop” into structure itself rather than assigning change to an external mover.
+PR (Paradoxical Re-entry, formerly Primitive Reflexivity) is the minimal normal form of the first actual structure. It writes “cannot stop” into structure itself rather than assigning change to an external mover.
 
 Among two-state, deterministic, label-symmetric mappings that exclude fixed points, negating exchange is the only remaining structure:
 
@@ -216,7 +216,7 @@ It thereby raises ontology from linguistic compression to a structural theory th
 Undefined (U)
   └─ absolute boundary: being/nonbeing not yet applicable
        └─ PR
-            └─ first actuality: fixed-point-free primitive reflexivity
+            └─ first actuality: fixed-point-free Paradoxical Re-entry
                  └─ RULE
                       └─ ER + LE
                            └─ chaos and stable local structures

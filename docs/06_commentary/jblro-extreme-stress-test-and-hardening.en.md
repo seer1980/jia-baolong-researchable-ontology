@@ -113,7 +113,7 @@ This is why JBLRO reaches a summit of metaphysical systematic self-sufficiency: 
 
 JBLRO is neither the sentence “the universe comes from contradiction” nor the technological metaphor “the world is a computer.” Its hard structure is:
 
-- **PR (Paradoxical Recursion):** the minimal fixed-point-free self-reflexive structure of the First Beat. It is not the result of an external cause, but the self-contained dynamic of actual occurrence where no external mover exists.
+- **PR (Paradoxical Re-entry, formerly Paradoxical Recursion):** the minimal fixed-point-free self-reflexive structure of the First Beat. It is not the result of an external cause, but the self-contained dynamic of actual occurrence where no external mover exists.
 - **ER (Entity–Relation):** pure relational topology, in which difference opens into an entity–relation configuration rather than pre-existing entities later connected from outside.
 - **LE (Lazy Evaluation):** the topology of locality, delay, retention, and finite evaluation; it acts as damping that prevents generation from resetting everywhere at every beat.
 - **RULE:** the local rule by which a concrete branch evolves. RULE can be searched, simulated, compared, and discovered, but cannot be exhaustively fixed in advance by root axioms.

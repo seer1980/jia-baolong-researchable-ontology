@@ -209,7 +209,7 @@ $$
 
 ### 2.6 PR
 
-PR 是 Paradox-Reference 的缩写。其严格含义不是在同一赋值下断言 $p\land\neg p$，而是一个自足、非固定、结果回入的实际结构。其最小二元正规形为：
+PR 是 Paradoxical Re-entry（悖论回入）的缩写，旧称 Paradox–Reference（悖论—引用）。其严格含义不是在同一赋值下断言 $p\land\neg p$，而是一个自足、非固定、结果回入的实际结构。其最小二元正规形为：
 
 $$
 D=\{Y,N\},

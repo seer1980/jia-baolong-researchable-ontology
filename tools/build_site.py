@@ -60,6 +60,8 @@ GUIDE_GROUPS: list[tuple[str, str, list[str]]] = [
             "docs/06_commentary/pr-nine-major-argument-routes-and-new-proof-clues.md",
             "docs/02_first_beat/04_FIRST_BEAT_SEVEN_ARGUMENTS.md",
             "docs/06_commentary/from-eternal-actual-existence-to-pr-first-beat-necessity.md",
+            "docs/06_commentary/u-zero-positive-boundary-and-rail-switch.md",
+            "docs/06_commentary/u-actuality-pr-nontemporal-relation-clarification.md",
             "docs/03_emergence/05_MATTER_TO_FIRST_CELL_EMERGENCE.md",
             "docs/04_reference/06_GLOSSARY_AND_FORMULAE.md",
             "docs/06_commentary/THEORY_UNDERSTANDING_UPDATE.md",
@@ -123,6 +125,15 @@ GUIDE_GROUPS: list[tuple[str, str, list[str]]] = [
             "docs/06_commentary/jblro-hidden-door-trigger-key-and-civilizational-divergence.md",
             "docs/06_commentary/jblro-universe-reads-its-root-threefold-closure-and-zero-point-five-percent.md",
             "docs/06_commentary/jblro-zero-point-five-percent-ultimate-theory-base-rate-and-search-direction.md",
+            "docs/06_commentary/ultimate-truth-is-only-one-structure-infinite-intelligences.md",
+        ],
+    ),
+    (
+        "轻松话题与理论旁论",
+        "从名字映射的公开挑战与费米估算，到理论整体独特性的横向比较。",
+        [
+            "docs/06_commentary/three-cup-name-challenge-and-fermi-estimate.md",
+            "docs/06_commentary/why-jblro-has-no-close-equivalent-analysis.md",
         ],
     ),
     (

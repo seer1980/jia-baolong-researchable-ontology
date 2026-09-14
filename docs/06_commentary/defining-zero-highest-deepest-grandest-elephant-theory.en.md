@@ -84,7 +84,7 @@ $$
 U_*\mid\mathrm{PR}.
 $$
 
-Here $U_*$ is the zero-positive boundary face and PR (Paradox–Reference) the First Actual Face. The vertical bar is not a causal arrow. It denotes two noninterchangeable aspects—boundary and actuality—within the same root determination.
+Here $U_*$ is the zero-positive boundary face and PR (Paradoxical Re-entry, formerly Paradox–Reference) the First Actual Face. The vertical bar is not a causal arrow. It denotes two noninterchangeable aspects—boundary and actuality—within the same root determination.
 
 ## 3. Why it is highest: defining the edge where all ontology begins
 

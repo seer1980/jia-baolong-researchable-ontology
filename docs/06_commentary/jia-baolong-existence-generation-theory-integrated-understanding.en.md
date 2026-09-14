@@ -237,7 +237,7 @@ Together the seven arguments establish:
 
 ### 5.1 PR, ER, LE, and RULE
 
-- **PR (Paradox–Reference):** supplies actuality, fixed-point-freedom, self-reflexivity, and re-entry.
+- **PR (Paradoxical Re-entry, formerly Paradox–Reference):** supplies actuality, fixed-point-freedom, self-reflexivity, and re-entry.
 - **ER (Entity–Relation):** carries relational configurations, adjacency networks, local identity, and structural memory.
 - **LE (Lazy Evaluation):** realizes local, delayed, finite, demand-driven, and truncated updating.
 - **RULE:** determines concrete updates, bifurcations, attractors, and paths of complexity in ER state-space.

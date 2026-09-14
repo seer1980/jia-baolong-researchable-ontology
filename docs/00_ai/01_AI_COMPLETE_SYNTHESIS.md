@@ -206,7 +206,7 @@ $$
 
 ## 五、PR：第一实际的唯一使命与最小正规形
 
-PR 的当前规范名称是 Paradox–Reference，悖论—引用。其严格语义围绕四个要点：实际发生、非固定、自包含以及结果回入。
+PR 的当前规范名称是 Paradoxical Re-entry，悖论回入（旧称：Paradox–Reference，悖论—引用）。其严格语义围绕四个要点：实际发生、非固定、自包含以及结果回入。
 
 ### 1. 先理解使命，再理解符号
 
@@ -855,7 +855,7 @@ Undefined 所谓“体系外边界”，指它不能被当成生成域内的普�
 
 | 历史表述 | 当前阅读方法 |
 |---|---|
-| SR，自指；早期 PR 的 Primitive Reflexivity、Paradoxical Recursion | 保留其发展阶段；当前 PR 使用 Paradox–Reference，并以实际性、非固定和回入界定 |
+| SR，自指；早期 PR 的 Primitive Reflexivity、Paradoxical Recursion、Paradox–Reference | 保留其发展阶段；当前 PR 使用 Paradoxical Re-entry，并以实际性、非固定和回入界定 |
 | LE 的 Lazy Expansion | 历史名称；当前规范为 Lazy Evaluation |
 | 早期把 ER 用于完整静态关系或可能结构 | 区分静态形式域与当前运行中的 ER 关系局面 |
 | Undefined 被比作空地址、空状态 | 作为历史解释尝试阅读；当前规范将其明确为零正面边界角色 |

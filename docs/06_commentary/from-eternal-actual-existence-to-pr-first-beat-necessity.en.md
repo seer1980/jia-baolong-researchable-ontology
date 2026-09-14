@@ -207,7 +207,7 @@ $$
 
 ### 2.6 PR
 
-PR abbreviates Paradox–Reference. Strictly, it is not the assertion $p\land\neg p$ under one valuation. It is an actual structure that is self-sufficient, non-fixed, and result-reentering. Its minimum binary normal form is:
+PR abbreviates Paradoxical Re-entry (formerly Paradox–Reference). Strictly, it is not the assertion $p\land\neg p$ under one valuation. It is an actual structure that is self-sufficient, non-fixed, and result-reentering. Its minimum binary normal form is:
 
 $$
 D=\{Y,N\},

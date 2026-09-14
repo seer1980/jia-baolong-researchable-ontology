@@ -31,7 +31,7 @@
 <p>We present a comprehensive numerical study of the Trinity Graph Process (TGP),
 a medium-free dynamical system on directed graphs governed by four bounded-rate
 parameters <span class="math-inline">$(v_1, v_2, v_3, v_4)$</span> and three interacting mechanisms:
-Paradox-Referential selection (PR), Entity-Relation substrate (ER),
+Paradoxical Re-entry (PR; formerly Paradox-Referential selection), Entity-Relation substrate (ER),
 and Lazy Evaluation conflict resolution (LE).
 Through 500+ simulations across system sizes <span class="math-inline">$N = 50$</span> to <span class="math-inline">$N = 80{,}000$</span>,
 eight parallel-universe ensembles, and up to <span class="math-inline">$1.5 \times 10^6$</span> ticks,
@@ -86,7 +86,7 @@ space to emerge from graphs, but impose specific geometric building blocks
 <p>The Trinity Graph Process (TGP), introduced via the JiaBaolong Axiom [citation: jia2025],
 proposes a fundamentally different approach: a directed graph evolves under four
 bounded-rate parameters <span class="math-inline">$(v_1, v_2, v_3, v_4)$</span> with rules that are
-<em>read from the graph's own topology</em> through a Paradox-Referential (PR)
+<em>read from the graph's own topology</em> through a Paradoxical Re-entry (PR)
 selection function.
 Space, structure, and dynamics co-emerge from the same process.
 No lattice, no fixed node set, no externally imposed rules.</p>
@@ -240,7 +240,7 @@ The state evolves under four non-negative integer parameters:</p>
   v_4 &amp;: \text{edge decay rate (boundary dissipation)} \label{eq:v4}
 \end{align}
 $$</div>
-<h3 id="paradox-referential-selection-pr">Paradox-Referential Selection (PR)</h3>
+<h3 id="paradoxical-re-entry-pr">Paradoxical Re-entry (PR)</h3>
 <h4 id="definition-pr-selection-function">Definition — PR Selection Function</h4>
 <p>The PR selection function <span class="math-inline">$\mathcal{S}: V_t \to V_t \times V_t$</span> reads the
 <em>topological fingerprint</em> of a node <span class="math-inline">$u$</span>---specifically
@@ -265,7 +265,7 @@ to the 1-hop neighborhood <span class="math-inline">$\mathcal{N}(u)$</span>:</p>
 <p>The strategy is selected deterministically from <span class="math-inline">$u$</span>'s fingerprint:
 <span class="math-inline">$\text{strategy}(u) = (\outdeg(u) + \indeg(u) + r(u)) \bmod 4$</span>.</p>
 <h4 id="remark">Remark</h4>
-<p>The PR function is <em>paradox-referential</em>: the rule that generates the graph
+<p>The PR function implements <em>paradoxical re-entry</em>: the rule that generates the graph
 reads the graph that it generates.
 This circular dependency is the ``paradox'' in PR, distinguishing it from
 fixed external rules (as in cellular automata or Wolfram models).</p>

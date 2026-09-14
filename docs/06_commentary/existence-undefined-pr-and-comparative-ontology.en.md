@@ -396,7 +396,7 @@ The strict conclusion supported jointly by the seven arguments is:
 
 The First Beat is not the whole world. PR supplies only non-fixed re-entry in the First Actual; its two-periodicity is not chaos and does not automatically equal matter.
 
-- **PR (Paradox–Reference):** supplies actuality, non-fixedness, endogeneity, and result re-entry;
+- **PR (Paradoxical Re-entry, formerly Paradox–Reference):** supplies actuality, non-fixedness, endogeneity, and result re-entry;
 - **ER (Entity–Relation):** bears relational situations, adjacency, local identity, structural memory, and interaction;
 - **LE (Lazy Evaluation):** supplies local, finite, delayed, demand-driven, truncating implementation;
 - **RULE:** determines how ER updates, how LE executes, and which attractors and stable patterns a concrete branch forms.
