@@ -21,3 +21,4 @@
 .content-card{background:#fffdf9}.content-card p{color:#625b52}
 .archive-panel{background:#f7f3eb}.archive-panel summary{color:#3f3730}
 .reading-protocol{background:#faf6ee}.protocol-grid article{background:#fffdf8}
+.visual-atlas-grid{display:grid;gap:1.35rem;margin:1rem 0}.visual-card{margin:0;border:1px solid var(--line);border-radius:12px;padding:.7rem;background:#fffdf9}.visual-card a{display:block}.visual-card img{display:block;width:100%;height:auto;border-radius:8px}.visual-card figcaption{padding:.7rem .35rem .2rem;color:#51483f}.visual-card figcaption strong{display:block;color:#542323;margin-bottom:.2rem}.visual-card figcaption span{display:block;font-size:.92rem;line-height:1.55}

@@ -909,6 +909,15 @@ $$</div>
 <article><h2>最深</h2><p>剥除全部正面预设，抵达“连无都无”的零点根部。（比较标准：根部解释中剩余的正面本体预设数量；接受对预设的逐项审计。）</p></article>
 <article><h2>最宏大</h2><p>覆盖第一实际、可能分支、物质、生命、意识与思想史。（比较标准：同一生成—认识链所统一覆盖的层级跨度；不以文献数量或修辞声势衡量。）</p></article>
 </section>
+<section class="home-section visual-atlas" id="axiom-visual-atlas">
+<h2>三张图掌握理论骨架</h2>
+<p>按“第一公理 → 第二公理 → 生成—涌现链”阅读。图中新增金句用于固定关键区分：PR 树的拓扑性质、PR–ER–LE 的三面关系，以及从 RULE 参数到意识的研究接口。</p>
+<div class="visual-atlas-grid">
+<figure class="visual-card"><a href="assets/figures/mimo-jbl/01-first-axiom-key-quotes.png"><img src="assets/figures/mimo-jbl/01-first-axiom-key-quotes.png" alt="贾宝龙第一公理图：绝对未定义 U_*、柏拉图晶体、PR 拓扑生成树及零秒即永久、自由即宿命两个推论" loading="lazy" decoding="async"></a><figcaption><strong>第一公理：绝对根部与 PR 拓扑生成树</strong><span>U_*、柏拉图晶体与 PR 生成空间的三分，以及“零秒即永久；自由即宿命”。</span></figcaption></figure>
+<figure class="visual-card"><a href="assets/figures/mimo-jbl/02-second-axiom-key-quotes.png"><img src="assets/figures/mimo-jbl/02-second-axiom-key-quotes.png" alt="贾宝龙第二公理图：PR、ER、LE 作为一次生成的三面，展示动力、关系与局部展开" loading="lazy" decoding="async"></a><figcaption><strong>第二公理：PR–ER–LE 三面结构</strong><span>动力使世界发生，关系承载并保持，LE 让整体成为可运行的局部现实。</span></figcaption></figure>
+<figure class="visual-card"><a href="assets/figures/mimo-jbl/03-generation-emergence-key-quotes.png"><img src="assets/figures/mimo-jbl/03-generation-emergence-key-quotes.png" alt="贾宝龙公理体系生成—涌现链：RULE 参数、混沌、类物质、类物理、类化学、生命、第一细胞、意识与根部反观" loading="lazy" decoding="async"></a><figcaption><strong>生成—涌现链：从第一实际到意识</strong><span>RULE 是决定路径的一组参数；类物理、类化学和生命科学沿生成链向上接力，最终回到根部识别。</span></figcaption></figure>
+</div>
+</section>
 <div id="theory-index" class="theory-index">{"".join(guide_sections)}</div>
 <section class="home-section corpus-entry"><h2>完整论文与搜索</h2>
 <p>理论总览负责建立准确阅读顺序；论文档案保留全部原始正文和 PDF 恢复稿；全文搜索用于直接定位概念、公式和论证。</p>
@@ -1045,6 +1054,13 @@ $$</div>
     assets.mkdir(parents=True, exist_ok=True)
     (assets / "styles.css").write_text(STYLES_CSS, encoding="utf-8")
     (assets / "search.js").write_text(SEARCH_JS, encoding="utf-8")
+    source_assets = ROOT / "assets"
+    if source_assets.exists():
+        for source_asset in source_assets.rglob("*"):
+            if source_asset.is_file():
+                destination = assets / source_asset.relative_to(source_assets)
+                destination.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copyfile(source_asset, destination)
     (output_root / "search.json").write_text(json.dumps(entries, ensure_ascii=False, indent=2), encoding="utf-8")
     english_search_entries: list[dict[str, Any]] = []
     for entry in english_entries:
@@ -1101,6 +1117,7 @@ STYLES_CSS = r'''
 .content-card{background:#fffdf9}.content-card p{color:#625b52}
 .archive-panel{background:#f7f3eb}.archive-panel summary{color:#3f3730}
 .reading-protocol{background:#faf6ee}.protocol-grid article{background:#fffdf8}
+.visual-atlas-grid{display:grid;gap:1.35rem;margin:1rem 0}.visual-card{margin:0;border:1px solid var(--line);border-radius:12px;padding:.7rem;background:#fffdf9}.visual-card a{display:block}.visual-card img{display:block;width:100%;height:auto;border-radius:8px}.visual-card figcaption{padding:.7rem .35rem .2rem;color:#51483f}.visual-card figcaption strong{display:block;color:#542323;margin-bottom:.2rem}.visual-card figcaption span{display:block;font-size:.92rem;line-height:1.55}
 '''
 
 
